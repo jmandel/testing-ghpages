@@ -9,10 +9,13 @@ includenav: true
 
 <div id="toc"> </div>
 
-This document is a complete SMART-App-Building walk-through. You should first read the [[Main Page]].
+This document is a complete SMART-App-Building walk-through. You should first read the [Main Page](/).
 
 #ScreenCast
 We are re-recording the screencast to catch up with the latest API changes.  Please see the text-based tutorial below, or see the [http://vimeo.com/20113823 old screencast].
+
+<iframe src="http://player.vimeo.com/video/20113823" width="500" height="375" frameborder="0" webkitAllowFullScreen
+mozallowfullscreen allowFullScreen></iframe>
 
 #Setting up your Environment
 
@@ -43,9 +46,9 @@ You could set up Apache to serve these as static files. In this documentation, w
 
 The index file, served at <tt>http://localhost:8000/smartapp/index.html</tt> is where all the fun happens! Make sure to include the SMART page script:
 
-<pre>
-<script src="http://sample-apps.smartplatforms.org/framework/smart/scripts/smart-api-client.js"></script>
-</pre>
+{% highlight html %}
+    <script src="http://sample-apps.smartplatforms.org/framework/smart/scripts/smart-api-client.js"></script>
+{% endhighlight  %}
 
 This script serves to connect your HTML page to the SMART JavaScript library.
 
@@ -58,20 +61,17 @@ For a complete reference of the app context, check out [[Developers_Documentatio
 
 A more complete index file that displays the current patient's name might thus look like:
 
-``` html
-<!DOCTYPE html>
-<html>
- <head>
-  <script src="http://sample-apps.smartplatforms.org/framework/smart/scripts/smart-api-client.js"></script>
- </head>
- <body><h1>Hello <span id="name"></span></h1>
- 
- <script>
- SMART.ready(function(){
-   document.getElementById('name').innerHTML = SMART.record.full_name;
- });
- </script>
- </body>
-</html>
-```
-
+{% highlight html %}<!DOCTYPE html>
+    <html>
+     <head>
+      <script src="http://sample-apps.smartplatforms.org/framework/smart/scripts/smart-api-client.js"></script>
+     </head>
+     <body><h1>Hello <span id="name"></span></h1>
+     
+     <script>
+     SMART.ready(function(){
+       document.getElementById('name').innerHTML = SMART.record.full_name;
+     });
+     </script>
+     </body>
+    </html>{% endhighlight %}
