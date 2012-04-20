@@ -14,8 +14,7 @@ This document is a complete SMART-App-Building walk-through. You should first re
 #ScreenCast
 We are re-recording the screencast to catch up with the latest API changes.  Please see the text-based tutorial below, or see the [http://vimeo.com/20113823 old screencast].
 
-<iframe src="http://player.vimeo.com/video/20113823" width="500" height="375" frameborder="0" webkitAllowFullScreen
-mozallowfullscreen allowFullScreen></iframe>
+<iframe src="http://player.vimeo.com/video/20113823" width="500" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen> </iframe>
 
 #Setting up your Environment
 
