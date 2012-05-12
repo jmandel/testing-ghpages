@@ -1,9 +1,10 @@
 ---
 layout: page
-title: "Index"
+title: "Main"
 description: ""
 ---
 {% include JB/setup %}
+
 <div id="globalWrapper">
 <div id="column-content">
 <div id="content">
