@@ -53,7 +53,7 @@ The index file, served at [http://localhost:8000/smartapp/index.html](http://loc
 
 	
 {% highlight html %}	
-	<script src="http://sample-apps.smartplatforms.org/framework/smart/scripts/smart-api-client.js"></script>
+<script src="http://sample-apps.smartplatforms.org/framework/smart/scripts/smart-api-client.js"></script>
 {% endhighlight  %}		
 	
 
