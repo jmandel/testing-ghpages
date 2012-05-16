@@ -24,7 +24,7 @@ You can choose any toolkit you want to write a web app: Java Spring, Ruby on Rai
 We also provide you with a SMART EMR hosted at sandbox.smartplatforms.org. We call it the SMART Reference EMR, and we've loaded it with 50 patient records on which you can try out your app. To get going, you'll need to: 
 
  <ol>
-            <li>Navigate to the [<a href="http://sandbox.smartplatforms.org/login" class="external text" title="http://sandbox.smartplatforms.org/login" rel="nofollow">developers' sandbox</a>] </li>
+            <li>Navigate to the [developers' sandbox](http://sandbox.smartplatforms.org/login")</li>
             <li>If you haven't done so already, create an account, otherwise just log back in </li>
             <li>Select a patient </li>
             <li>Run the app called &quot;My App&quot; </li>
@@ -32,7 +32,7 @@ We also provide you with a SMART EMR hosted at sandbox.smartplatforms.org. We ca
 
 
 
-This will open a SMART app iframe pointing to localhost:8000, which is where your app should be running. If you need an app with a different hostname (say, my_internal_server.net), just e-mail joshua dot mandel at childrens.harvard.edu with a [<a href="http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_Packaging_Applications_via_SMART_Manifest" title="Developers Documentation: Packaging Applications via SMART Manifest"> manifest file</a>] and we'll set you up! 
+This will open a SMART app iframe pointing to localhost:8000, which is where your app should be running. If you need an app with a different hostname (say, my_internal_server.net), just e-mail joshua dot mandel at childrens.harvard.edu with a manifest file and we'll set you up! 
 
 
 ##SMART Connect
