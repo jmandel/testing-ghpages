@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Quick Intro to SMART
+title: HOWTO Build a SMART App - REST API Calls
 tagline: for developers
 includenav: smartnav.markdown
 ---
@@ -8,20 +8,10 @@ includenav: smartnav.markdown
 
 <div id="toc"> </div>
 
-#What is SMART?
-SMART provides a unified mechanism for diverse applications to interact with medical-record data. <em>SMART Apps</em>
-built against the SMART API can be embedded within any <em>SMART Container</em>. A SMART Container is, most often, an
-Electronic Medical Record (EMR) system used by physicians, but might also be a Personal Health Record (PHR) such as
-[http://indivohealth.org/ Indivo] used by patients, or a data-analytics platform such as [https://www.i2b2.org/ i2b2]
-used by researchers.
+#HOWTO Build a SMART App - REST API Calls
+This document shows you how to build a more advanced SMART App with server-side logic and REST API Calls. 
 
-For example, a SMART app might analyze a person's risk of heart disease based on recent labs and demographic
-information. This app can then be deployed on Regenstrief's CareWeb EHR, Children Hospital Boston's Indivo PCHR, or
-Harvard Medical School's i2b2 analytics engine. As other EMR vendors adopt the SMART platform, the app's reach increases
-''without changing a single line of code''.
-
-<img src="http://wiki.chip.org/smart-project/images/thumb/e/e8/Demo.screenshot.smart-reference.png/300px-Demo.screenshot.smart-reference.png">
-<img src="http://wiki.chip.org/smart-project/images/thumb/9/90/Demo.screenshot.smart-i2b2.png/300px-Demo.screenshot.smart-i2b2.png">
+You should first read the Main Page and HOWTO Build a SMART App. 
 
 #Anatomy of a SMART App
 
