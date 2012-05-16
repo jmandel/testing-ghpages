@@ -34,7 +34,7 @@ And now we can fetch some data from the patient record:
 SMART.MEDICATIONS_get().success(function(meds) { ... });
 {% endhighlight  %}
 
-As you may remember from the HOWTO, meds is a SMART Response object that includes an RDF graph of medications (type sp:Medication). These medications include fields such as the [RxNorm](http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_RDF_Data) concept ID, as well as fulfillment history when available. The whole RDF graph is wrapped up in an [rdfquery](http://code.google.com/p/rdfquery/) object, providing convenience query functions such as .where(), .optional(), and .filter() which we can use to interact with the graph. 
+As you may remember from the HOWTO, meds is a SMART Response object that includes an RDF graph of medications (type sp:Medication). These medications include fields such as the [RxNorm](http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_RDF_Data) concept ID, as well as fulfillment history when available. The whole RDF graph is wrapped up in an [rdfquery](http://code.google.com/p/rdfquery/) object, providing convenience query functions such as `.where()`, `.optional()`, and `.filter()` which we can use to interact with the graph. 
 
 In this demo app, we use a very low-tech way to figure out of a medication is a station: find its dcterms:title, and string match against the names of all known statins. 
 
