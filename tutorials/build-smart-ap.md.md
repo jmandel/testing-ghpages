@@ -15,6 +15,37 @@ This document is a complete SMART-App-Building walk-through. You should first re
 We are re-recording the screencast to catch up with the latest API old [screencast](http://vimeo.com/20113823).
 
 
+#Setting up your Environment
+
+A SMART app is a web application that is loaded in an IFRAME hosted by a SMART container. 
+That means you need to
+(a) write a web app, and 
+(b) connect it to a SMART container. 
+
+		  <p>You can choose any toolkit you want to write a web app: Java 
+		    Spring, Ruby on Rails, Python/Django, etc. For the purposes of this 
+		    documentation, we've chosen <a href="http://webpy.org/" class="external text" title="http://webpy.org" rel="nofollow">webpy</a>,
+		    a very simple, minimalist Python web framework, which helps us show you
+		    the important SMART-related code more quickly. Also, if you want to get
+		    going quickly with the more advanced app features, you probably want to
+		    stick with Java or Python for now, as those are the two programming 
+		    languages in which we've built client libraries. That said, if you're 
+		    comfortable with OAuth and REST, you can use another programming 
+		    language without fear. </p>
+		  <p>We also provide you with a SMART EMR hosted at <tt>sandbox.smartplatforms.org</tt>.
+		    We call it the SMART Reference EMR, and we've loaded it with 50 patient
+		    records on which you can try out your app. To get going, you'll need 
+		    to: </p>
+          <ol>
+            <li>Navigate to the [<a href="http://sandbox.smartplatforms.org/login" class="external text" title="http://sandbox.smartplatforms.org/login" rel="nofollow">developers' sandbox</a>] </li>
+            <li>If you haven't done so already, create an account, otherwise just log back in </li>
+            <li>Select a patient </li>
+            <li>Run the app called &quot;My App&quot; </li>
+          </ol>
+          <p>This will open a SMART app iframe pointing to <tt>localhost:8000</tt>, which is where your app should be running. If you need an app with a different hostname (say, <tt>my_internal_server.net</tt>), just e-mail joshua dot mandel at childrens.harvard.edu with a <a href="http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_Packaging_Applications_via_SMART_Manifest" title="Developers Documentation: Packaging Applications via SMART Manifest"> manifest file</a> and we'll set you up! 
+
+
+
 ##SMART Connect
 
 Writing a purely browser-based app in HTML5 and JavaScript is as easy as including the client-side JavaScript libraries
