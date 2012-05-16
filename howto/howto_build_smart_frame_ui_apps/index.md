@@ -9,7 +9,7 @@ includenav: smartnav.markdown
 <div id="toc"> </div>
 
 
-##What is a Frame UI App?
+#What is a Frame UI App?
 
 <img src="http://wiki.chip.org/smart-project/images/thumb/1/17/Frame-ui-screenshot.png/180px-Frame-ui-screenshot.png" style="float: right">
 
