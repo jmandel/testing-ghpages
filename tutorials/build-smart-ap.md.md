@@ -6,7 +6,7 @@ includenav: smartnav.markdown
 ---
 {% include JB/setup %}
 
-<div id="toc"> </div>
+<div id="toc">fgddfg </div>
 
 #HOWTO Build a SMART App
 This document is a complete SMART-App-Building walk-through. You should first read the [Main Page](../) 
