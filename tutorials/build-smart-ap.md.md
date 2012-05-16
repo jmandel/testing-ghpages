@@ -40,9 +40,9 @@ This will open a SMART app iframe pointing to localhost:8000, which is where you
 
 Your app needs to serve at least the following URL:
 
-   <ol>
+   <ul>
         <li> [http://localhost:8000/smartapp/index.html](http://localhost:8000/smartapp/index.html) </li>
-	</ol>
+	</ul>
 
 You could set up Apache to serve these as static files. In this documentation, we're using webpy for everything, just for consistency. Also, you may find that, for putting up a couple of static files, it's easier to get going with webpy than with Apache. 
 
