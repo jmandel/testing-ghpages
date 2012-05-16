@@ -8,7 +8,7 @@ includenav: smartnav.markdown
 
 <div id="toc"> </div>
 
-This document is a complete SMART-App-Building walk-through. You should first read the [Main Page](../) 
+This document is a complete SMART-App-Building walk-through. You should first read the [Main Page](../../) 
 
 #ScreenCast
 
