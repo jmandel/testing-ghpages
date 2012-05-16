@@ -1,6 +1,6 @@
 ---
 layout: page
-title: HOWTO Build a SMART App - REST API Calls
+title: HOWTO Build a SMART App
 tagline: for developers
 includenav: smartnav.markdown
 ---
@@ -8,10 +8,8 @@ includenav: smartnav.markdown
 
 <div id="toc"> </div>
 
-#HOWTO Build a SMART App - REST API Calls
-This document shows you how to build a more advanced SMART App with server-side logic and REST API Calls. 
-
-You should first read the [Main Page](../) and HOWTO Build a SMART App. 
+#HOWTO Build a SMART App
+This document is a complete SMART-App-Building walk-through. You should first read the [Main Page](../) 
 
 #Anatomy of a SMART App
 
