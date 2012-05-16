@@ -1,7 +1,7 @@
 ---
 layout: page
 title: HOWTO Build a SMART App
-tagline: for developers
+tagline: first steps
 includenav: smartnav.markdown
 ---
 {% include JB/setup %}
