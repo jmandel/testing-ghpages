@@ -42,22 +42,17 @@ SMART employs (1), but implements a much simpler approach to (2), providing your
 
 ##Passing Tokens via URL Parameter
 
-The SMART container will pass all necessary fields to your app via the `oauth_header` URL parameter. Specifically, the actual request sent to your app's backend server for index.html looks like this: 
-
-	
+The SMART container will pass all necessary fields to your app via the `oauth_header` URL parameter. Specifically, the actual request sent to your app's backend server for index.html looks like this: 	
 {% highlight html %}	
 GET /index.html?oauth_header={Header value here...}
 {% endhighlight  %}		
-	
 
 You need to first extract that header from the GET parameter: 
-
 {% highlight html %}	
 oauth_header = web.input().oauth_header
 {% endhighlight  %}	
 
 You'll also to need to URL-decode it:
-
 {% highlight html %}	
 oauth_header = urllib.unquote(oauth_header)
 {% endhighlight  %}	
