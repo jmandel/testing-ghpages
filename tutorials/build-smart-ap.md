@@ -15,6 +15,8 @@ This document is a complete SMART-App-Building walk-through. You should first re
 
 We are re-recording the screencast to catch up with the latest API old [screencast](http://vimeo.com/20113823).
 
+<iframe src="http://player.vimeo.com/video/20113823" width="500" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen> </iframe>
+
 
 #Setting up your Environment
 
@@ -23,7 +25,7 @@ A SMART app is a web application that is loaded in an IFRAME hosted by a SMART c
 
 You can choose any toolkit you want to write a web app: Java Spring, Ruby on Rails, Python/Django, etc. For the purposes of this documentation, we've chosen webpy, a very simple, minimalist Python web framework, which helps us show you the important SMART-related code more quickly. Also, if you want to get going quickly with the more advanced app features, you probably want to stick with Java or Python for now, as those are the two programming languages in which we've built client libraries. That said, if you're comfortable with OAuth and REST, you can use another programming language without fear. 
 
-We also provide you with a SMART EMR hosted at sandbox.smartplatforms.org. We call it the SMART Reference EMR, and we've loaded it with 50 patient records on which you can try out your app. To get going, you'll need to: 
+We also provide you with a SMART EMR hosted at `sandbox.smartplatforms.org`. We call it the SMART Reference EMR, and we've loaded it with 50 patient records on which you can try out your app. To get going, you'll need to: 
 
  <ol>
             <li>Navigate to the [developers' sandbox](http://sandbox.smartplatforms.org/login")</li>
@@ -34,15 +36,13 @@ We also provide you with a SMART EMR hosted at sandbox.smartplatforms.org. We ca
 
 
 
-This will open a SMART app iframe pointing to localhost:8000, which is where your app should be running. If you need an app with a different hostname (say, my_internal_server.net), just e-mail joshua dot mandel at childrens.harvard.edu with a manifest file and we'll set you up! 
+This will open a SMART app iframe pointing to <tt>localhost:8000</tt>, which is where your app should be running. If you need an app with a different hostname (say, my_internal_server.net), just e-mail joshua dot mandel at childrens.harvard.edu with a manifest file and we'll set you up! 
 
 #Barebones App
 
 Your app needs to serve at least the following URL:
 
-   <ul>
-        <li> [http://localhost:8000/smartapp/index.html](http://localhost:8000/smartapp/index.html) </li>
-	</ul>
+   * test [http://localhost:8000/smartapp/index.html](http://localhost:8000/smartapp/index.html)
 
 You could set up Apache to serve these as static files. In this documentation, we're using webpy for everything, just for consistency. Also, you may find that, for putting up a couple of static files, it's easier to get going with webpy than with Apache. 
 
@@ -52,24 +52,22 @@ You could set up Apache to serve these as static files. In this documentation, w
 The index file, served at [http://localhost:8000/smartapp/index.html](http://localhost:8000/smartapp/index.html) is where all the fun happens! Make sure to include the SMART page script:
 
 	
-		
+{% highlight html %}	
 	<script src="http://sample-apps.smartplatforms.org/framework/smart/scripts/smart-api-client.js"></script>
-		
+{% endhighlight  %}		
 	
 
 This script serves to connect your HTML page to the SMART JavaScript library.
 
 Once the client-side library has loaded, your index HTML page has access to a SMART JavaScript object that provides some basic context:
-<ul>
-<li>
-SMART.user, which provides the name and ID of the user who launched the app, typically the physician logged into the SMART EMR.</li>
-    <li>SMART.record, which provides the name and ID of the patient whose record is loaded. </li>
-	</ul>
+* <tt>SMART.user</tt>, which provides the name and ID of the user who launched the app, typically the physician logged into the SMART EMR.
+* <tt>SMART.record</tt>, which provides the name and ID of the patient whose record is loaded.
+	
 
 For a complete reference of the app context, check out the JavaScript Library reference.
 
 A more complete index file that displays the current patient's name might thus look like: 
-
+{% highlight html %}
 	<!DOCTYPE html>
 	<html>
 	 <head>
@@ -84,6 +82,7 @@ A more complete index file that displays the current patient's name might thus l
 	 </script>
 	 </body>
 	</html>
+{% endhighlight  %}	
 
 #Using the SMART API
 
