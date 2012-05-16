@@ -36,7 +36,7 @@ We also provide you with a SMART EMR hosted at `sandbox.smartplatforms.org`. We 
 
 
 
-This will open a SMART app iframe pointing to <tt>localhost:8000</tt>, which is where your app should be running. If you need an app with a different hostname (say, my_internal_server.net), just e-mail joshua dot mandel at childrens.harvard.edu with a manifest file and we'll set you up! 
+This will open a SMART app iframe pointing to `localhost:8000`, which is where your app should be running. If you need an app with a different hostname (say, my_internal_server.net), just e-mail joshua dot mandel at childrens.harvard.edu with a manifest file and we'll set you up! 
 
 #Barebones App
 
@@ -61,8 +61,8 @@ This script serves to connect your HTML page to the SMART JavaScript library.
 
 Once the client-side library has loaded, your index HTML page has access to a SMART JavaScript object that provides some basic context:
  <ul>
-            <li><tt>SMART.user</tt>, which provides the name and ID of the user who launched the app, typically the physician logged into the SMART EMR.</li>
-<li><tt>SMART.record</tt>, which provides the name and ID of the patient whose record is loaded.</li>
+            <li>`SMART.user`, which provides the name and ID of the user who launched the app, typically the physician logged into the SMART EMR.</li>
+<li>`SMART.record`, which provides the name and ID of the patient whose record is loaded.</li>
 </ul>	
 
 For a complete reference of the app context, check out the JavaScript Library reference.
