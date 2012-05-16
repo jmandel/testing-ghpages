@@ -32,7 +32,7 @@ We also provide you with a SMART EMR hosted at sandbox.smartplatforms.org. We ca
 
 
 
-This will open a SMART app iframe pointing to localhost:8000, which is where your app should be running. If you need an app with a different hostname (say, my_internal_server.net), just e-mail joshua dot mandel at childrens.harvard.edu with a manifest file and we'll set you up! 
+This will open a SMART app iframe pointing to localhost:8000, which is where your app should be running. If you need an app with a different hostname (say, my_internal_server.net), just e-mail joshua dot mandel at childrens.harvard.edu with a [<a href="http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_Packaging_Applications_via_SMART_Manifest" title="Developers Documentation: Packaging Applications via SMART Manifest"> manifest file</a>] and we'll set you up! 
 
 
 ##SMART Connect
