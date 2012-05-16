@@ -112,7 +112,7 @@ meds is an RDF graph, then:
 	
 	meds.graph.where("?medication rdf:type sp:Medication")
 	
-selects all of "objects" in the graph that have a datatype sp:Medication, where sp stands for [http://smartplatforms.org/ns](http://smartplatforms.org/ns)#, the location of the SMART vocabulary.
+selects all of "objects" in the graph that have a datatype sp:Medication, where sp stands for [http://smartplatforms.org/ns#](http://smartplatforms.org/ns#), the location of the SMART vocabulary.
 
 Of course, we want more than just the raw "objects," we want their properties, in particular the name of the drug. The following selects the drug names, which are coded-values, and then the value of those coded values, which are the actual drug-name strings:
 
@@ -131,3 +131,52 @@ This is effectively a JavaScript query on the RDF graph, and it returns a set of
 	 med_names.each(function(i, single_med) {
 		 // do something with single_med.drugname
 	   });
+	   
+	   
+##The Complete App
+
+So, to display the patient's medications, we set up an HTML list, <ul>, and we append to it with the name of each drug in our iteration:
+
+	<!DOCTYPE html>
+	<html>
+	 <head>
+	  <script src="http://sample-apps.smartplatforms.org/framework/smart/scripts/smart-api-client.js"></script>
+	 </head>
+	 <body><h1>Hello <span id="name"></span></h1>
+	 
+	 <ul id="med_list">
+	 </ul>
+	 
+	 <script>
+	 SMART.ready(function(){
+	   document.getElementById('name').innerHTML = SMART.record.full_name;
+	   SMART.MEDICATIONS_get().success(function(meds) {
+		 var med_names = meds.graph
+		   .where("?medication rdf:type sp:Medication")
+		   .where("?medication sp:drugName ?drug_name_code")
+		   .where("?drug_name_code dcterms:title ?drugname");
+		 
+		 var med_list = document.getElementById('med_list');
+		 med_names.each(function(i, single_med) {
+		   med_list.innerHTML += "<li> " + single_med.drugname + "</li>";
+		 });
+	   }).error(function(err) {
+			 alert ("An error has occurred");
+	   });
+	 });
+	 </script>
+	 </body>
+	</html>
+
+And that's it! In a few lines of HTML and JavaScript code, we've got ourselves an app that can request the medications from the current record and display them. 
+
+
+#What Next?
+
+<ul>
+    <li>learn more about SMART Connect with GotStatins.</li>
+    <li>build a more powerful SMART App, learn HOWTO Build a SMART App - REST API Calls.</li>
+    <li>build SMART Apps that work while the user is offline: HOWTO Build SMART Background and Helper Apps.</li>
+</ul>
+
+
