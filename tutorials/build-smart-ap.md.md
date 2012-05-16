@@ -122,12 +122,12 @@ Of course, we want more than just the raw "objects," we want their properties, i
     .where("?drug_name_code dcterms:title ?drugname");
 
 This is effectively a JavaScript query on the RDF graph, and it returns a set of JavaScript objects with properties we're interested in, in particular drugname. We can then iterate over the list of returned objects and extract the drugname property for each one:
-
-   var med_names = meds.graph
-     .where("?medication rdf:type sp:Medication")
-     .where("?medication sp:drugName ?drug_name_code")
-     .where("?drug_name_code dcterms:title ?drugname");
-     
-   med_names.each(function(i, single_med) {
-     // do something with single_med.drugname
-   });
+	
+	var med_names = meds.graph
+		 .where("?medication rdf:type sp:Medication")
+		 .where("?medication sp:drugName ?drug_name_code")
+		 .where("?drug_name_code dcterms:title ?drugname");
+		 
+	   med_names.each(function(i, single_med) {
+		 // do something with single_med.drugname
+	   });
