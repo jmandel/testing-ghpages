@@ -23,13 +23,12 @@ You can choose any toolkit you want to write a web app: Java Spring, Ruby on Rai
 
 We also provide you with a SMART EMR hosted at sandbox.smartplatforms.org. We call it the SMART Reference EMR, and we've loaded it with 50 patient records on which you can try out your app. To get going, you'll need to: 
 
-Navigate to the [developers' sandbox] 
-
-If you haven't done so already, create an account, otherwise just log back in 
-
-Select a patient 
-
-Run the app called "My App" 
+ <ol>
+            <li>Navigate to the [<a href="http://sandbox.smartplatforms.org/login" class="external text" title="http://sandbox.smartplatforms.org/login" rel="nofollow">developers' sandbox</a>] </li>
+            <li>If you haven't done so already, create an account, otherwise just log back in </li>
+            <li>Select a patient </li>
+            <li>Run the app called &quot;My App&quot; </li>
+          </ol>
 
 
 
