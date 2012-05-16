@@ -11,7 +11,7 @@ includenav: smartnav.markdown
 #HOWTO Build a SMART App - REST API Calls
 This document shows you how to build a more advanced SMART App with server-side logic and REST API Calls. 
 
-You should first read the Main Page and HOWTO Build a SMART App. 
+You should first read the [Main Page](../) and HOWTO Build a SMART App. 
 
 #Anatomy of a SMART App
 
