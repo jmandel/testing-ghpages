@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Got Statins? App
-tagline: fourth steps
+tagline: for developer
 includenav: smartnav.markdown
 ---
 {% include JB/setup %}
