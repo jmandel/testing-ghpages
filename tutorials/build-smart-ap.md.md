@@ -135,7 +135,7 @@ This is effectively a JavaScript query on the RDF graph, and it returns a set of
 	   
 ##The Complete App
 
-So, to display the patient's medications, we set up an HTML list, <ul>, and we append to it with the name of each drug in our iteration:
+So, to display the patient's medications, we set up an HTML list, \<ul>, and we append to it with the name of each drug in our iteration:
 
 	<!DOCTYPE html>
 	<html>
