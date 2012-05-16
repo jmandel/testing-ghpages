@@ -84,3 +84,18 @@ A more complete index file that displays the current patient's name might thus l
 	 </script>
 	 </body>
 	</html>
+
+#Using the SMART API
+
+At this point, your SMART app is ready to make API calls to obtain health data. Remember that your app is instantiated in an IFRAME for the specific purpose of accessing a single medical record. This means that, from JavaScript, you can request medical data without specifying patient context, because it's already determined by the JavaScript context.
+Asynchronous Calls
+
+Let's load the patient's medications using SMART.MEDICATIONS_get(). The most important thing you need to know about all SMART JavaScript APIs is that they are asynchronous: you won't get the meds as a result of the SMART.MEDICATIONS_get() call. Instead, you need to specify callback functions that will be invoked when the results are ready:
+
+	SMART.MEDICATIONS_get().success(function(meds) {
+	  // do something with those meds
+	}).error(function(err) {
+	  // handle the error
+	});
+
+Why did we design the API this way? Because, in most cases, the SMART container will need to make a call to a server to obtain the requested data. That could take some time, and it would be very unfortunate if your app was forced to block for a couple of seconds. Instead, your app gets control back from the SMART library call almost immediately and is free to display some pretty progress bar or, more substantively, make additional API calls to obtain a few data points in parallel. 
