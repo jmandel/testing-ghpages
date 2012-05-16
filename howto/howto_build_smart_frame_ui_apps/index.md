@@ -8,12 +8,12 @@ includenav: smartnav.markdown
 
 <div id="toc"> </div>
 
-#HOWTO Build SMART Frame UI Apps:
+
 ##What is a Frame UI App?
 
 <img src="http://wiki.chip.org/smart-project/images/thumb/1/17/Frame-ui-screenshot.png/180px-Frame-ui-screenshot.png" style="float: right">
 
-SMART v0.4 allows developers to build a kind of meta-app, or “Frame UI App” that can lay out multiple traditional UI Apps at the same time. For example, let's say you'd like to display a medication list app right alongside a medication adherence app. You can accomplish this by writing a Frame UI app that lays them both out on the screen simultaneously.
+SMART v0.4 allows developers to build a kind of meta-app, or "Frame UI App" that can lay out multiple traditional UI Apps at the same time. For example, let's say you'd like to display a medication list app right alongside a medication adherence app. You can accomplish this by writing a Frame UI app that lays them both out on the screen simultaneously.
 
 For example, the Frame UI app in this screenshot allows a user to select two apps to display side-by-side: 
 
@@ -88,4 +88,12 @@ You can view the example app at: [http://sandbox-dev.smartplatforms.org](http://
 You can see the code at: [https://github.com/chb/smart_sample_apps/tree/dev/static/framework/frame_ui_example](https://github.com/chb/smart_sample_apps/tree/dev/static/framework/frame_ui_example) 
 
 #Learning more
+
+At heart, a Frame UI acts as an app and a container. To learn more about how these components work, take a look at our Reference material: 
+
+<ul>
+<li>SMART App Javascript Library</li>
+<li>SMART Container Javascript Library</li>
+</ul>
+
 
