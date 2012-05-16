@@ -43,18 +43,15 @@ SMART employs (1), but implements a much simpler approach to (2), providing your
 ##Passing Tokens via URL Parameter
 
 The SMART container will pass all necessary fields to your app via the `oauth_header` URL parameter. Specifically, the actual request sent to your app's backend server for index.html looks like this: 	
-{% highlight html %}	
-GET /index.html?oauth_header={Header value here...}
+{% highlight html %}GET /index.html?oauth_header={Header value here...}
 {% endhighlight  %}		
 
 You need to first extract that header from the GET parameter: 
-{% highlight html %}	
-oauth_header = web.input().oauth_header
+{% highlight html %}oauth_header = web.input().oauth_header
 {% endhighlight  %}	
 
 You'll also to need to URL-decode it:
-{% highlight html %}	
-oauth_header = urllib.unquote(oauth_header)
+{% highlight html %}oauth_header = urllib.unquote(oauth_header)
 {% endhighlight  %}	
 
 The field contains a complete OAuth Authorization header that includes a few extra fields, including notably smart\_record\_id, smart\_oauth\_token and smart\_oauth\_token\_secret. smart\_record\_id indicates the medical record ID of the current context, while the OAuth token and secret are the credentials your app needs to make REST API calls back into the SMART EMR. Why, then, are they themselves delivered in OAuth authorization header format? So you can verify that these tokens are authentic before you actually use them!
