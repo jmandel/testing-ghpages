@@ -51,11 +51,11 @@ You could set up Apache to serve these as static files. In this documentation, w
 
 The index file, served at [http://localhost:8000/smartapp/index.html](http://localhost:8000/smartapp/index.html) is where all the fun happens! Make sure to include the SMART page script:
 
-	<div>
+	
 		
 	<script src="http://sample-apps.smartplatforms.org/framework/smart/scripts/smart-api-client.js"></script>
 		
-	</div>
+	
 
 This script serves to connect your HTML page to the SMART JavaScript library.
 
