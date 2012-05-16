@@ -69,3 +69,18 @@ SMART.user, which provides the name and ID of the user who launched the app, typ
 For a complete reference of the app context, check out the JavaScript Library reference.
 
 A more complete index file that displays the current patient's name might thus look like: 
+
+	<!DOCTYPE html>
+	<html>
+	 <head>
+	  <script src="http://sample-apps.smartplatforms.org/framework/smart/scripts/smart-api-client.js"></script>
+	 </head>
+	 <body><h1>Hello <span id="name"></span></h1>
+	 
+	 <script>
+	 SMART.ready(function(){
+	   document.getElementById('name').innerHTML = SMART.record.full_name;
+	 });
+	 </script>
+	 </body>
+	</html>
