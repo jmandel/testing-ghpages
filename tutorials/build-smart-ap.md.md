@@ -12,10 +12,12 @@ This document is a complete SMART-App-Building walk-through. You should first re
 
 #ScreenCast
 
+
 We are re-recording the screencast to catch up with the latest API old [screencast](http://vimeo.com/20113823).
 
 
 #Setting up your Environment
+
 
 A SMART app is a web application that is loaded in an IFRAME hosted by a SMART container. That means you need to (a) write a web app, and (b) connect it to a SMART container. 
 
