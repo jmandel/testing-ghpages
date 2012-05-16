@@ -117,9 +117,9 @@ selects all of "objects" in the graph that have a datatype sp:Medication, where 
 Of course, we want more than just the raw "objects," we want their properties, in particular the name of the drug. The following selects the drug names, which are coded-values, and then the value of those coded values, which are the actual drug-name strings:
 
 	meds.graph
-    .where("?medication rdf:type sp:Medication")
-    .where("?medication sp:drugName ?drug_name_code")
-    .where("?drug_name_code dcterms:title ?drugname");
+		.where("?medication rdf:type sp:Medication")
+		.where("?medication sp:drugName ?drug_name_code")
+		.where("?drug_name_code dcterms:title ?drugname");
 
 This is effectively a JavaScript query on the RDF graph, and it returns a set of JavaScript objects with properties we're interested in, in particular drugname. We can then iterate over the list of returned objects and extract the drugname property for each one:
 	
@@ -128,6 +128,6 @@ This is effectively a JavaScript query on the RDF graph, and it returns a set of
 		 .where("?medication sp:drugName ?drug_name_code")
 		 .where("?drug_name_code dcterms:title ?drugname");
 		 
-	   med_names.each(function(i, single_med) {
+	 med_names.each(function(i, single_med) {
 		 // do something with single_med.drugname
 	   });
