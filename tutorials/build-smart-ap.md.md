@@ -36,13 +36,16 @@ We also provide you with a SMART EMR hosted at sandbox.smartplatforms.org. We ca
 
 This will open a SMART app iframe pointing to localhost:8000, which is where your app should be running. If you need an app with a different hostname (say, my_internal_server.net), just e-mail joshua dot mandel at childrens.harvard.edu with a manifest file and we'll set you up! 
 
+#Barebones App
 
-##SMART Connect
+Your app needs to serve at least the following URL:
 
-Writing a purely browser-based app in HTML5 and JavaScript is as easy as including the client-side JavaScript libraries
-and making API calls!  Keep in mind that SMART Connect calls can only access data while the end-user remains online,
-since authentication depends on that user's existing session with the SMART container. If your app needs to access data
-from your web application's backend or while the user is offline, you'll need to make some REST calls as well.
+   <ol>
+        <li> [http://localhost:8000/smartapp/index.html](http://localhost:8000/smartapp/index.html) </li>
+	</ol>
+
+You could set up Apache to serve these as static files. In this documentation, we're using webpy for everything, just for consistency. Also, you may find that, for putting up a couple of static files, it's easier to get going with webpy than with Apache. 
+
 
 ##SMART REST
 
