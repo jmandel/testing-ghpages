@@ -90,7 +90,7 @@ A more complete index file that displays the current patient's name might thus l
 At this point, your SMART app is ready to make API calls to obtain health data. Remember that your app is instantiated in an IFRAME for the specific purpose of accessing a single medical record. This means that, from JavaScript, you can request medical data without specifying patient context, because it's already determined by the JavaScript context.
 Asynchronous Calls
 
-Let's load the patient's medications using SMART.MEDICATIONS\_\get(). The most important thing you need to know about all SMART JavaScript APIs is that they are asynchronous: you won't get the meds as a result of the SMART.MEDICATIONS_get() call. Instead, you need to specify callback functions that will be invoked when the results are ready:
+Let's load the patient's medications using SMART.MEDICATIONS\_get(). The most important thing you need to know about all SMART JavaScript APIs is that they are asynchronous: you won't get the meds as a result of the SMART.MEDICATIONS\_get() call. Instead, you need to specify callback functions that will be invoked when the results are ready:
 
 	SMART.MEDICATIONS_get().success(function(meds) {
 	  // do something with those meds
