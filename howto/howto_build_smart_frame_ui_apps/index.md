@@ -46,7 +46,7 @@ Frame UI apps occupy a unique place in the SMART architecture, since they're \*a
 
 Let's work through an example of a simple Frame UI app that can display three SMART apps a time, and allows the user to select these apps. First off, let's see what apps are available to launch and load them into a "Carousel" of choices to display: 
 
-##Displaying a "carousel" of available apps:
+###Displaying a "carousel" of available apps:
 
 {% highlight html %}
 SMART.MANIFESTS_get(function(response) {
@@ -68,7 +68,7 @@ SMART.MANIFESTS_get(function(response) {
 
 This code fetches a list of manifests from the container \(SMART.MANIFESTS\_get\), loops through them, and displays an icon for each app available. It then attaches a click handler to each icon: when clicked, we call SMART_HOST.launch\_app to initiate the launch of this new app. We pass in the app's manifests \(m\) and our current context \(SMART.context\), which specifies the user and record. 
 
-##Handling an app launch:
+###Handling an app launch:
 
 When a user clicks on an app icon and SMART\_HOST.launch_app is called, the SMART libraries take care of most details of the app launch process. But the SMART libraries expect a little bit of \"help\" \(in the form of a helper function\) to determine which IFRAME element to use in positioning the newly-launched app. Since our Frame UI app will perform a pretty simple layout, this doesn't take much. We'll assume that three IFRAMES are available on the screen at all times, and we'll just populate them in order, looping back to the beginning when they're all full. 
 {% highlight html %}
