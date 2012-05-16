@@ -60,9 +60,10 @@ The index file, served at [http://localhost:8000/smartapp/index.html](http://loc
 This script serves to connect your HTML page to the SMART JavaScript library.
 
 Once the client-side library has loaded, your index HTML page has access to a SMART JavaScript object that provides some basic context:
-* <tt>SMART.user</tt>, which provides the name and ID of the user who launched the app, typically the physician logged into the SMART EMR.
-* <tt>SMART.record</tt>, which provides the name and ID of the patient whose record is loaded.
-	
+ <ul>
+            <li><tt>SMART.user</tt>, which provides the name and ID of the user who launched the app, typically the physician logged into the SMART EMR.</li>
+<li><tt>SMART.record</tt>, which provides the name and ID of the patient whose record is loaded.</li>
+</ul>	
 
 For a complete reference of the app context, check out the JavaScript Library reference.
 
