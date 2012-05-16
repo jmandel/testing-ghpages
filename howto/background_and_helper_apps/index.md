@@ -12,10 +12,8 @@ includenav: smartnav.markdown
 
 <img src="http://wiki.chip.org/smart-project/images/d/d7/Background-app.png" style="float: right">
 
-So far, we have talked about SMART apps that access medical record data on behalf of an active user of the EMR/PCHR/data-mining platform. What about apps that autonomously take action when no one is logged in? An app might want to check every medical record for a particular datapoint (e.g. a recalled drug). The SMART Platform supports this background app use case as follows: 
-
-
-    <ul>
+So far, we have talked about SMART apps that access medical record data on behalf of an active user of the EMR/PCHR/data-mining platform. What about apps that autonomously take action when no one is logged in? An app might want to check every medical record for a particular datapoint (e.g. a recalled drug). The SMART Platform supports this background app use case as follows:
+<ul>
 	<li>the app is specially authorized to loop through every known record in the system</li>
     <li>on each looped record, the app obtains OAuth credentials necessary to access that one record.</li>
     <li>for each record, the app can access the SMART REST API as it normally would, using the credentials obtained for that record. </li>
