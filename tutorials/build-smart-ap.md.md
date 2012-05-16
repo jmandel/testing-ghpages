@@ -6,41 +6,16 @@ includenav: smartnav.markdown
 ---
 {% include JB/setup %}
 
-<div id="toc">fgddfg </div>
+<div id="toc"> </div>
 
 #HOWTO Build a SMART App
+
 This document is a complete SMART-App-Building walk-through. You should first read the [Main Page](../) 
 
-#Anatomy of a SMART App
+##ScreenCast
 
-<img src="http://wiki.chip.org/smart-project/images/c/c0/Anatomy-smart-app.png" style="float: right">
+We are re-recording the screencast to catch up with the latest API old [screencast](http://vimeo.com/20113823).
 
-A SMART app is a normal web application, embedded as a frame within the SMART Container's user interface, with access to
-the SMART API for interacting with health data. A patient, Penny, may use a medication browser app within her PCHR.
-Meanwhile, a primary care doctor Dave may use the same app within his clinic-based EMR to view the medications of a
-patient scheduled for an appointment next week. Penny's PCHR and Dave's EMR are both SMART containers; they both expose
-the SMART API; and they can both display the medication browser app. Though they may function very differently behind
-the scenes, they can both embed the exact same medication-list-manager app because they present the same API.
-Importantly, in any given user session (Penny's or Dave's), the medication-list-manager is connected to only ''one''
-SMART container. 
-
-The screenshots to the right demonstrate the same medication list application running in the context of two different
-SMART containers: a simplified EMR, and the analytics platform i2b2.
-
-A SMART app can access the SMART API in two ways:
-
-1. via "SMART Connect", using Javascript calls from our client library
-2. via "SMART REST", using OAuth-signed REST calls to a SMART container
-
-Both of these approaches can be used to get at the same underlying data. SMART Connect is for simple applications whose
-logic can be completely built in HTML and JavaScript. SMART REST is for applications that may need to perform
-significant back-end processing, in particular when using additional external data sources.
-
-Whether you access data via SMART Connect, SMART REST, or a combination, your app will load the
-[[Developers_Documentation:_SMART_App_Javascript_Libraries |
-SMART App Javascript Libraries]]. In the case of SMART Connect, this library is the sole access point. In the case of
-SMART REST, the library provides the OAuth token handoff and medical-record context, which your app can then send back
-to its back-end for use in REST calls. 
 
 ##SMART Connect
 
