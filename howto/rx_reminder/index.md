@@ -11,7 +11,7 @@ includenav: smartnav.markdown
 
 #Developers Documentation: RxReminder - SMART REST in Action
 
-You should read [HOWTO Build a SMART App - REST API](../../build_a_rest_app) Calls first. 
+You should read [HOWTO Build a SMART App - REST API](../build_a_rest_app) Calls first. 
 
 #Choosing the right tools
 
