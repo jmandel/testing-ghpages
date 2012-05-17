@@ -77,7 +77,7 @@ If you're building your application from scratch without using the sample code, 
 
 #Generating Reminders
 
-Now that we've got access tokens, and initialized a client object, let's interact with some health data! RxReminder needs to get a list of medications due for refills. We'll accomplish this by finding the most recent fulfillment event for each medication. Then we'll look at how many days' supply of medication were dispensed to find out on what day the patient will run out.
+Now that we've got access tokens, and initialized a client object, let's interact with some health data! *RxReminder* needs to get a list of medications due for refills. We'll accomplish this by finding the most recent fulfillment event for each medication. Then we'll look at how many days' supply of medication were dispensed to find out on what day the patient will run out.
 
 We use our SmartClient object called client to fetch a SMART Response object including a list of medications, via records\_X\_medications\_GET() (or, in more verbose form, client.get("/records/%s/medications/{record_id}") SMART API call.
 
