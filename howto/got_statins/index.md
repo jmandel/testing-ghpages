@@ -11,7 +11,7 @@ includenav: smartnav.markdown
 
 ##Developers Documentation: GotStatins - SMART Connect in Action
 
-You should read [HOWTO Build a SMART App](../../build_a_smart_app) first.
+You should read [HOWTO Build a SMART App](../build_a_smart_app) first.
 
 Here, we build a complete SMART Connect app from pure HTML and Javascript. Modeled on the uniquely popular, laser-focused chef-d'oeuvre [isitchristmas.com](http://isitchristmas.com/), this app obtains a patient's medication list, determines whether there are statins on board, and relays the answer in large, bold typeface. Using the SMART Connect API, there's no need for explicit authentication, session-management, or AJAX calls. 
 
