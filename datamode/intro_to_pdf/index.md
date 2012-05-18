@@ -72,7 +72,7 @@ What about more complex relationships? For example, what if I want to represent 
 	</ul>
 
 
-<ul><li>subject _stuff_I_ate_this_morning\</tt>
+<ul><li>subject _stuff_I_ate_this_morning</li>
     <li>predicate rdf li </li>
     <li>object "milk"</li>
 	</ul>
