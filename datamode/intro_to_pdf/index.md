@@ -8,7 +8,7 @@ includenav: smartnav.markdown
 
 <div id="toc"> </div>
 
-#Developers Documentation: Quick Introduction to RDF and SPARQL
+#Developers Documentation Quick Introduction to RDF and SPARQL
 
 The SMART API supplies patient record data in the form of an RDF graph. If you've never used (or even heard of!) RDF, this document should help you get up to speed. So let's jump right in! 
 
