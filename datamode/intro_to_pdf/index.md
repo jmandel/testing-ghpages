@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Developers Documentation Quick Introduction to RDF and SPARQL
-tagline: third steps
+tagline: for developers
 includenav: smartnav.markdown
 ---
 {% include JB/setup %}
@@ -19,12 +19,13 @@ RDF, the Resource Description Framework, is a web standard "for representing inf
 <ol><li>subject Mr. Smith</li>
     <li>predicate takes</li>
     <li>object atorvastatin </li>
+	</ol>
 	
 There are two key ideas here
 
 <ul><li>Everything (almost) is a resource.</li>
     <li>Resources are related by triples</li>
-	</ul>
+</ul>
 
 Let's explore each in more depth
 
