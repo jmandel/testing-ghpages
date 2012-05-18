@@ -14,10 +14,10 @@ The SMART API supplies patient record data in the form of an RDF graph. If you'v
 
 RDF, the Resource Description Framework, is a web standard "for representing information about resources" (this according to the [W3C's RDF Primer](http://www.w3.org/TR/2004/REC-rdf-primer-20040210/)). In brief, it's a flexible way to represent data in the form of sentences or "triples" that link a subject, a predicate, and an object. For example, let's say we want to represent the idea that "Mr. Smith takes atorvastatin". We might create the following triple
 
-<ul><li>subject Mr. Smith</li>
-    <li>predicate takes</li>
-    <li>object atorvastatin </li>
-	</ul>
+* subject Mr. Smith
+* predicate takes</li>
+* object atorvastatin 
+
 	
 There are two key ideas here
 
@@ -35,53 +35,47 @@ What about the predicate in our example, the word "takes"? Predicates in RDF are
 
 And finally, what about "atorvastatin"? Again, the best way to represent a concept like atorvastatin is as a URI that everyone can agree on. One possibility is to use the drug's RxNorm Concept ID (in this case, 83367) as part of the URI. For example, SMART uses the URI [http://link.informatics.stonybrook.edu/rxnorm/RXCUI/83367](http://link.informatics.stonybrook.edu/rxnorm/RXCUI/83367), sharing a vocabulary with Stonybrook. But recall we said almost everything is a resource. If we want, RDF lets us use a simple string as the object of a triple. So, for example, consider this representation of a Haiku
 
-<ul><li>subject [http://dilute.net/poems/25](http://dilute.net/poems/25)</li>
-    <li>predicate dcterms title (Dublin Core Terms vocabulary's 'title' predicate)</li>
-    <li>object "Haiku entitled Substitutability the SMART way to go." </li>
-</ul>
+* subject [http://dilute.net/poems/25](http://dilute.net/poems/25)
+* predicate dcterms title (Dublin Core Terms vocabulary's 'title' predicate)
+* object "Haiku entitled Substitutability the SMART way to go."
+
 In this case, I don't need to point to a resource as the title of my haiku. The title is really just a string, after all -- so I can just represent it as such. 
 
 ##Resources are related by triples
 
 In RDF, the only way to represent relations among resources is by creating triples. If graph theory is your thing, you can think of triples as arcs in a directed graph from subject to predicate to object. The same resource can be the subject (or object) or multiple triples. For example, consider my SMART haiku. In addition to the triple above, I could some more triples
 
-<ul><li>subject [http://dilute.net/poems/25](http://dilute.net/poems/25)</li>
-    <li>predicate dc:creator (Dublin Core vocabulary's 'creator' predicate)</li>
-    <li>object [http://joshuamandel.com/me](http://joshuamandel.com/me)</li>
-	</ul>
+* subject [http://dilute.net/poems/25](http://dilute.net/poems/25)
+* predicate dc:creator (Dublin Core vocabulary's 'creator' predicate)
+* object [http://joshuamandel.com/me](http://joshuamandel.com/me)
 
 
-<ul><li>subject [http://joshuamandel.com/me](http://joshuamandel.com/me)</li>
-    <li>predicate foaf:name (FOAF vocabulary's 'name' predicate)</li>
-    <li>object "Josh Mandel"</li>
-	</ul>
+* subject [http://joshuamandel.com/me](http://joshuamandel.com/me)
+* predicate foaf:name (FOAF vocabulary's 'name' predicate)
+* object "Josh Mandel"
 
 Note that I am the object of one triple (as the creator of the haiku) and the subject of another (as a person with a name)!
 
 What about more complex relationships? For example, what if I want to represent the fact that my breakfast this morning consisted of Joe's O's, milk, and coffee? This is an open-ended data-modeling exercise, but I'll just point out one approach which involves creaing a resource for "the stuff I had for breakfast this morning", and adding relations to that. So then (in sketch form) we'd have
 
-<ul><li>subject http://joshuamandel.com/me</li>
-    <li>predicate http://joshuamandel.com/my_food_vocabulary/ate</li>
-    <li>object _stuff_I_ate_this_morning </li>
-	</ul>
+* subject http://joshuamandel.com/me
+* predicate http://joshuamandel.com/my_food_vocabulary/ate
+* object _stuff_I_ate_this_morning 
 
 
-<ul><li>subject _stuff_I_ate_this_morning</li>
-    <li>predicate rdfli (RDF vocabulary's 'list item' predicate)</li>
-    <li>object "Joe's O's"</li>
-	</ul>
+* subject _stuff_I_ate_this_morning
+* predicate rdfli (RDF vocabulary's 'list item' predicate)
+* object "Joe's O's"
 
 
-<ul><li>subject _stuff_I_ate_this_morning</li>
-    <li>predicate rdf li </li>
-    <li>object "milk"</li>
-	</ul>
+* subject _stuff_I_ate_this_morning
+* predicate rdf li
+* object "milk"
 
 
-<ul><li>subject <tt>_stuff_I_ate_this_morning </li>
-    <li>predicate rdf li</li>
-    <li>object "coffee"</li> 
-	</ul>
+* subject <tt>_stuff_I_ate_this_morning 
+* predicate rdf li
+* object "coffee"
 
 Notice that I've loosely referred to a resource here as the "bunch of stuff I ate this morning". I didn't give it a formal URI, because it doesn't exist outside of the context of this particular RDF graph, and it's entirely defined by its relations above. For cases like this, RDF provides anonymous or blank nodes whose identifiers have meaning only within the context of a particular graph. 
 
