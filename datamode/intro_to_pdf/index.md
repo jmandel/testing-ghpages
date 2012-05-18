@@ -28,7 +28,7 @@ There are two key ideas here:
 
 Let's explore each in more depth.
 
-##Everything (almost!) is a resource
+## Everything (almost\!) is a resource
 
 In RDF, every triple has a resource as its subject. In our example, we call Mr. Smith a "resource" because he is a particular guy out there in the world. He is not just the string of letters "M-r-.-S-m-i-t-h." Importantly, if I know Mr. Alex Smith and you know Mr. Bob Smith, we are not talking about the same resource! To prevent these kinds of mix-ups, resources in RDF aren't just identified by strings like "Mr. Smith." Instead, they're represented by Uniform Resource Identifiers: basically URLs that provide a built-in namespace. For example, let's say my Mr. Smith maintains a web site at [http://alexsmith.somedomain.com](http://alexsmith.somedomain.com). I might refer to him by the URL [http://alexsmith.somedomain.com/me](http://alexsmith.somedomain.com/me]). Now you certainly wouldn't confuse my Mr. Smith for yours! (Note: there doesn't have to be an actual web page served at the address of a URI. The important thing is that the URI identifies a resource. Uniformly.) 
 
