@@ -26,7 +26,7 @@ There are two key ideas here:
     <li>Resources are related by triples</li>
 	</ul>
 
-Let's explore each in more depth... 
+Let's explore each in more depth.
 
 ##Everything (almost!) is a resource
 
