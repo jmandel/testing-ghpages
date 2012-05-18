@@ -1,11 +1,14 @@
 ---
 layout: page
-title: Developers Documentation: Quick Introduction to RDF and SPARQL
-tagline: for developer
+title: HOWTO Build SMART Background and Helper Apps
+tagline: third steps
 includenav: smartnav.markdown
 ---
 {% include JB/setup %}
 
 <div id="toc"> </div>
-#Developers Documentation: Quick Introduction to RDF and SPARQL
+
+##Background Apps
+
+<img src="http://wiki.chip.org/smart-project/images/d/d7/Background-app.png" style="float: right">
 
