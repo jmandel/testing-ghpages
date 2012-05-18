@@ -79,7 +79,8 @@ What about more complex relationships? For example, what if I want to represent 
 
 
 <ol><li>subject \<tt>\_stuff\_I\_ate\_this\_morning </li>
-    <li>predicate rdf\li </li>
+    <li>predicate rdf li</li>
     <li>object "coffee"</li> 
+	</ol>
 
 Notice that I've loosely referred to a resource here as the "bunch of stuff I ate this morning". I didn't give it a formal URI, because it doesn't exist outside of the context of this particular RDF graph, and it's entirely defined by its relations above. For cases like this, RDF provides anonymous or blank nodes whose identifiers have meaning only within the context of a particular graph. 
