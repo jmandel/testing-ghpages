@@ -18,9 +18,11 @@ You can use the form below to try out queries right away. Please note that to us
 
 Or you could run these examples on your own, via
 
-<ul><li>the command line using [rasqal](http://librdf.org/rasqal)</li>
-    
-	</ul>
+* the command line using [rasqal](http://librdf.org/rasqal)
+* Python, Perl, PHP, or Ruby using [librdf](http://librdf.org)
+* Java using [Jena](http://jena.sourceforge.net), [Sesame](http://www.openrdf.org), or [mulgara](http://www.mulgara.org).
+* Javascript When possible, we'll also provide examples that will work with the javascript library [rdfquery](http://code.google.com/p/rdfquery/), which is automatically provided by the [smart-api-client.js](http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_smart-api-client.js_Reference).
+	
 	
 #The Examples	
 
