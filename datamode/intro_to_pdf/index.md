@@ -60,27 +60,27 @@ Note that I am the object of one triple (as the creator of the haiku) and the su
 
 What about more complex relationships? For example, what if I want to represent the fact that my breakfast this morning consisted of Joe's O's, milk, and coffee? This is an open-ended data-modeling exercise, but I'll just point out one approach which involves creaing a resource for "the stuff I had for breakfast this morning", and adding relations to that. So then (in sketch form) we'd have
 
-<ol><li>subject http://joshuamandel.com/me</li>
+<ul><li>subject http://joshuamandel.com/me</li>
     <li>predicate http://joshuamandel.com/my_food_vocabulary/ate</li>
     <li>object _stuff_I_ate_this_morning </li>
-	</ol>
+	</ul>
 
 
-<ol><li>subject \_stuff\_I\_ate\_this\_morning</li>
+<ul><li>subject _stuff_I_ate_this_morning</li>
     <li>predicate rdfli (RDF vocabulary's 'list item' predicate)</li>
     <li>object "Joe's O's"</li>
-	</ol>
+	</ul>
 
 
-<ol><li>subject \_stuff\_I\_ate\_this_morning\</tt>
-    <li>predicate rdf\li </li>
+<ul><li>subject _stuff_I_ate_this_morning\</tt>
+    <li>predicate rdf li </li>
     <li>object "milk"</li>
-	</ol>
+	</ul>
 
 
-<ol><li>subject \<tt>\_stuff\_I\_ate\_this\_morning </li>
+<ul><li>subject <tt>_stuff_I_ate_this_morning </li>
     <li>predicate rdf li</li>
     <li>object "coffee"</li> 
-	</ol>
+	</ul>
 
 Notice that I've loosely referred to a resource here as the "bunch of stuff I ate this morning". I didn't give it a formal URI, because it doesn't exist outside of the context of this particular RDF graph, and it's entirely defined by its relations above. For cases like this, RDF provides anonymous or blank nodes whose identifiers have meaning only within the context of a particular graph. 
