@@ -100,13 +100,16 @@ We use the prefix sp to designate the http://smartplatforms.org/terms# namespace
 
 * Predicate names are designated by camelCase with a lower-case first character. Examples- sp medication or sp valueAndUnit. 
 
+
+You may wonder why classes and predicates tend to have similar names. For example, we define a class sp:Medication as well as a predicate sp:medication. Here's why: a predicate like sp:medication is used to indicate that a clinical statement is associated with a medication; a class like sp:Medication is used to indicate that a clinical statement is a medication. For example, each sp:Fulfillment statement is associated with a sp:Medication statement via the predicate sp:medication. This makes sense when we consider a few RDF triples that expresses the basic pattern, associating a fulfillment with its medication via the sp:medication predicate
+
 {% highlight html %}
-You may wonder why classes and predicates tend to have similar names. For example, we define a class sp:Medication as well as a predicate sp:medication. Here's why: a predicate like sp:medication is used to indicate that a clinical statement is associated with a medication; a class like sp:Medication is used to indicate that a clinical statement is a medication. For example, each sp:Fulfillment statement is associated with a sp:Medication statement via the predicate sp:medication. This makes sense when we consider a few RDF triples that expresses the basic pattern, associating a fulfillment with its medication via the sp:medication predicate:
 
 _:f123 rdf:type sp:Fulfillment.   # declares a Fulfillment statement
 _:m456 rdf:type sp:Medication.    # declares a Medication statement
 
 _f123 sp:medication _:m456.       # links the Fulfillment to its Medication
+
 {% endhighlight  %}
 
 #Clinical Statement Types
