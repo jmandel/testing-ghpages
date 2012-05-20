@@ -72,19 +72,19 @@ A common set of namespace prefixes is used for the examples below. These are
   
    <tr>
     <td>rdf</td>
-    <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns">http://www.w3.org/1999/02/22-rdf-syntax-ns</a></td>
+    <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a></td>
     <td>Resource description framework</td>
   </tr>
   
   <tr>
     <td>sp</td>
-    <td><a href="http://smartplatforms.org/terms">http://smartplatforms.org/terms</a></td>
+    <td><a href="http://smartplatforms.org/terms#">http://smartplatforms.org/terms#</a></td>
     <td>Smart platforms root namespace</td>
   </tr>
   
   <tr>
     <td>v</td>
-    <td><a href="http://www.w3.org/2006/vcard/ns">http://www.w3.org/2006/vcard/ns</a></td>
+    <td><a href="http://www.w3.org/2006/vcard/ns#">http://www.w3.org/2006/vcard/ns#</a></td>
     <td>vCard namespace</td>
   </tr>
   
