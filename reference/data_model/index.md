@@ -57,7 +57,7 @@ Or you could see the equivalent
 A common set of namespace prefixes is used for the examples below. These are
 
 
-<table width="100%" border="0" cellspacing="0">
+<table width="100%" border="0" cellspacing="0" class="table">
   <tr>
     <td>dcterms</td>
     <td>http://purl.org/dc/terms/</td>
