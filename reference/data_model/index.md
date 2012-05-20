@@ -507,32 +507,69 @@ In RDF/XML, patient Bob Odenkirk looks like this
 </rdf:RDF>
 {% endhighlight  %}
 
-{% highlight html %}
-belongsTo
-Required: exactly 1 	[sp:Demographics] 	Medical Record
-
-The medical record URI to which a clinical statement belongs. Each clinical statement points back to its medical record so that it can be treated in isolation.
-ethnicity
-Optional: 0 or 1 	[sp:Demographics] 	[rdfs:Literal]
-medicalRecordNumber
-Required: 1 or more 	[sp:Demographics] 	Code
-preferredLanguage
-Optional: 0 or 1 	[sp:Demographics] 	[rdfs:Literal]
-race
-Optional: 0 or 1 	[sp:Demographics] 	[rdfs:Literal]
-adr
-Optional: 0 or more 	[sp:Demographics] 	Address
-bday
-Required: exactly 1 	[sp:Demographics] 	[rdfs:Literal]
-email
-Optional: 0 or more 	[sp:Demographics] 	[rdfs:Literal]
-n
-Required: exactly 1 	[sp:Demographics] 	Name
-tel
-Optional: 0 or more 	[sp:Demographics] 	Tel
-gender
-Required: exactly 1 	[sp:Demographics] 	A person's (administrative) gender. This should consist of the string "male" or "female". [rdfs:Literal] 
-{% endhighlight  %}
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#Demographics" class="external free" title="http://smartplatforms.org/terms#Demographics" rel="nofollow">http://smartplatforms.org/terms#Demographics</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>belongsTo</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Demographics" class="external text" title="http://smartplatforms.org/terms#Demographics" rel="nofollow">sp:Demographics</a>]</small>
+</td><td width="50%"><a href="#Medical_Record_RDF" title=""> Medical Record</a>
+<p>The medical record URI to which a clinical statement belongs.  Each 
+clinical statement points back to its medical record so that it can be 
+treated in isolation.
+</p>
+</td></tr>
+<tr>
+<td width="30%">ethnicity<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Demographics" class="external text" title="http://smartplatforms.org/terms#Demographics" rel="nofollow">sp:Demographics</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>medicalRecordNumber</b><br><small>Required: 1 or more</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Demographics" class="external text" title="http://smartplatforms.org/terms#Demographics" rel="nofollow">sp:Demographics</a>]</small>
+</td><td width="50%"><a href="#Code_RDF" title=""> Code</a>
+</td></tr>
+<tr>
+<td width="30%">preferredLanguage<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Demographics" class="external text" title="http://smartplatforms.org/terms#Demographics" rel="nofollow">sp:Demographics</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">race<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Demographics" class="external text" title="http://smartplatforms.org/terms#Demographics" rel="nofollow">sp:Demographics</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">adr<br><small>Optional: 0 or more</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Demographics" class="external text" title="http://smartplatforms.org/terms#Demographics" rel="nofollow">sp:Demographics</a>]</small>
+</td><td width="50%"><a href="#Address_RDF" title=""> Address</a>
+</td></tr>
+<tr>
+<td width="30%"><b>bday</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Demographics" class="external text" title="http://smartplatforms.org/terms#Demographics" rel="nofollow">sp:Demographics</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">email<br><small>Optional: 0 or more</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Demographics" class="external text" title="http://smartplatforms.org/terms#Demographics" rel="nofollow">sp:Demographics</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>n</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Demographics" class="external text" title="http://smartplatforms.org/terms#Demographics" rel="nofollow">sp:Demographics</a>]</small>
+</td><td width="50%"><a href="#Name_RDF" title=""> Name</a>
+</td></tr>
+<tr>
+<td width="30%">tel<br><small>Optional: 0 or more</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Demographics" class="external text" title="http://smartplatforms.org/terms#Demographics" rel="nofollow">sp:Demographics</a>]</small>
+</td><td width="50%"><a href="#Tel_RDF" title=""> Tel</a>
+</td></tr>
+<tr>
+<td width="30%"><b>gender</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Demographics" class="external text" title="http://smartplatforms.org/terms#Demographics" rel="nofollow">sp:Demographics</a>]</small>
+</td><td width="50%">A person's (administrative) gender.  This should consist of the string "male" or "female". [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
 
 ##Encounter RDF
 
@@ -568,29 +605,50 @@ Encounter is a subtype of and inherits properties from [SMART Statement](http://
 {% endhighlight  %}
 
 
-{% highlight html %}
-belongsTo
-Required: exactly 1 	[sp:Encounter] 	Medical Record
-
-The medical record URI to which a clinical statement belongs. Each clinical statement points back to its medical record so that it can be treated in isolation.
-encounterType
-Required: exactly 1 	[sp:Encounter] 	Coded Value where code comes from EncounterType
-
-Type of encounter
-endDate
-Optional: 0 or 1 	[sp:Encounter] 	Date when encounter ended [xsd:dateTime]
-facility
-Optional: 0 or 1 	[sp:Encounter] 	Organization
-
-Facility where encounter occurred
-provider
-Optional: 0 or 1 	[sp:Encounter] 	Provider
-
-Provider responsible for encounter
-startDate
-Required: exactly 1 	[sp:Encounter] 	Date when encounter began [xsd:dateTime] 
-
-{% endhighlight  %}
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#Encounter" class="external free" title="http://smartplatforms.org/terms#Encounter" rel="nofollow">http://smartplatforms.org/terms#Encounter</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>belongsTo</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Encounter" class="external text" title="http://smartplatforms.org/terms#Encounter" rel="nofollow">sp:Encounter</a>]</small>
+</td><td width="50%"><a href="#Medical_Record_RDF" title=""> Medical Record</a>
+<p>The medical record URI to which a clinical statement belongs.  Each 
+clinical statement points back to its medical record so that it can be 
+treated in isolation.
+</p>
+</td></tr>
+<tr>
+<td width="30%"><b>encounterType</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Encounter" class="external text" title="http://smartplatforms.org/terms#Encounter" rel="nofollow">sp:Encounter</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#EncounterType_code_RDF" title=""> EncounterType</a>
+<p>Type of encounter
+</p>
+</td></tr>
+<tr>
+<td width="30%">endDate<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Encounter" class="external text" title="http://smartplatforms.org/terms#Encounter" rel="nofollow">sp:Encounter</a>]</small>
+</td><td width="50%">Date when encounter ended [<a href="http://www.w3.org/2001/XMLSchema#dateTime" class="external text" title="http://www.w3.org/2001/XMLSchema#dateTime" rel="nofollow">xsd:dateTime</a>]
+</td></tr>
+<tr>
+<td width="30%">facility<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Encounter" class="external text" title="http://smartplatforms.org/terms#Encounter" rel="nofollow">sp:Encounter</a>]</small>
+</td><td width="50%"><a href="#Organization_RDF" title=""> Organization</a>
+<p>Facility where encounter occurred
+</p>
+</td></tr>
+<tr>
+<td width="30%">provider<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Encounter" class="external text" title="http://smartplatforms.org/terms#Encounter" rel="nofollow">sp:Encounter</a>]</small>
+</td><td width="50%"><a href="#Provider_RDF" title=""> Provider</a>
+<p>Provider responsible for encounter
+</p>
+</td></tr>
+<tr>
+<td width="30%"><b>startDate</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Encounter" class="external text" title="http://smartplatforms.org/terms#Encounter" rel="nofollow">sp:Encounter</a>]</small>
+</td><td width="50%">Date when encounter began [<a href="http://www.w3.org/2001/XMLSchema#dateTime" class="external text" title="http://www.w3.org/2001/XMLSchema#dateTime" rel="nofollow">xsd:dateTime</a>]
+</td></tr>
+</tbody></table>
 
 ##Fulfillment RDF
 
@@ -647,34 +705,60 @@ Fulfillment is a subtype of and inherits properties from [SMART Statement](http:
 {% endhighlight  %}
 
 
-{% highlight html %}
-date
-Required: exactly 1 	[sp:Fulfillment] 	Date on which medication was dispensed [xsd:dateTime]
-belongsTo
-Required: exactly 1 	[sp:Fulfillment] 	Medical Record
-
-The medical record URI to which a clinical statement belongs. Each clinical statement points back to its medical record so that it can be treated in isolation.
-dispenseDaysSupply
-Required: exactly 1 	[sp:Fulfillment] 	The number of days' supply dispensed [rdfs:Literal]
-medication
-Required: exactly 1 	[sp:Fulfillment] 	Medication
-pbm
-Optional: 0 or 1 	[sp:Fulfillment] 	The PBM providing payment for medications [rdfs:Literal]
-pharmacy
-Optional: 0 or 1 	[sp:Fulfillment] 	Pharmacy
-
-The pharmacy that dispensed the medication
-provider
-Optional: 0 or 1 	[sp:Fulfillment] 	Provider
-
-Clinician who prescribed the medication
-quantityDispensed
-Optional: 0 or 1 	[sp:Fulfillment] 	ValueAndUnit
-
-Quantity dispensed, with units 
-
-{% endhighlight  %}
-
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#Fulfillment" class="external free" title="http://smartplatforms.org/terms#Fulfillment" rel="nofollow">http://smartplatforms.org/terms#Fulfillment</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>date</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Fulfillment" class="external text" title="http://smartplatforms.org/terms#Fulfillment" rel="nofollow">sp:Fulfillment</a>]</small>
+</td><td width="50%">Date on which medication was dispensed [<a href="http://www.w3.org/2001/XMLSchema#dateTime" class="external text" title="http://www.w3.org/2001/XMLSchema#dateTime" rel="nofollow">xsd:dateTime</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>belongsTo</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Fulfillment" class="external text" title="http://smartplatforms.org/terms#Fulfillment" rel="nofollow">sp:Fulfillment</a>]</small>
+</td><td width="50%"><a href="#Medical_Record_RDF" title=""> Medical Record</a>
+<p>The medical record URI to which a clinical statement belongs.  Each 
+clinical statement points back to its medical record so that it can be 
+treated in isolation.
+</p>
+</td></tr>
+<tr>
+<td width="30%"><b>dispenseDaysSupply</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Fulfillment" class="external text" title="http://smartplatforms.org/terms#Fulfillment" rel="nofollow">sp:Fulfillment</a>]</small>
+</td><td width="50%">The number of days' supply dispensed [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>medication</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Fulfillment" class="external text" title="http://smartplatforms.org/terms#Fulfillment" rel="nofollow">sp:Fulfillment</a>]</small>
+</td><td width="50%"><a href="#Medication_RDF" title=""> Medication</a>
+</td></tr>
+<tr>
+<td width="30%">pbm<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Fulfillment" class="external text" title="http://smartplatforms.org/terms#Fulfillment" rel="nofollow">sp:Fulfillment</a>]</small>
+</td><td width="50%">The PBM providing payment for medications [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">pharmacy<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Fulfillment" class="external text" title="http://smartplatforms.org/terms#Fulfillment" rel="nofollow">sp:Fulfillment</a>]</small>
+</td><td width="50%"><a href="#Pharmacy_RDF" title=""> Pharmacy</a>
+<p>The pharmacy that dispensed the medication
+</p>
+</td></tr>
+<tr>
+<td width="30%">provider<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Fulfillment" class="external text" title="http://smartplatforms.org/terms#Fulfillment" rel="nofollow">sp:Fulfillment</a>]</small>
+</td><td width="50%"><a href="#Provider_RDF" title=""> Provider</a>
+<p>Clinician who prescribed the medication
+</p>
+</td></tr>
+<tr>
+<td width="30%">quantityDispensed<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Fulfillment" class="external text" title="http://smartplatforms.org/terms#Fulfillment" rel="nofollow">sp:Fulfillment</a>]</small>
+</td><td width="50%"><a href="#ValueAndUnit_RDF" title=""> ValueAndUnit</a>
+<p>Quantity dispensed, with units
+</p>
+</td></tr>
+</tbody></table>
 
 ##Immunization RDF
 
@@ -758,42 +842,67 @@ Explicit record of an immunization given or not given to the patient.
 
 
 
-{% highlight html %}
-date
-Required: exactly 1 	[sp:Immunization] 	ISO8601 formatted date and time when the medication was administered or offered. [xsd:dateTime]
-administrationStatus
-Required: exactly 1 	[sp:Immunization] 	Coded Value where code comes from ImmunizationAdministrationStatus
-belongsTo
-Required: exactly 1 	[sp:Immunization] 	Medical Record
-
-The medical record URI to which a clinical statement belongs. Each clinical statement points back to its medical record so that it can be treated in isolation.
-productClass
-Optional: 0 or more 	[sp:Immunization] 	Coded Value where code comes from ImmunizationClass
-
-coded name for the product class, according to the set of codes in the CDC Vaccine Groups controlled vocabulary. For example, a class code meaning 'Rotavirus' would be assigned for a specific product such as Rotarix product.
-
-
-productClass codes are drawn from the CDC's Vaccine Group vocabulary. URIs are of the form: http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=vg#code
-
-
-For example, the URI for the ROTAVIRUS code is: http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=vg#ROTAVIRUS
-productName
-Required: exactly 1 	[sp:Immunization] 	Coded Value where code comes from ImmunizationProduct
-
-coded describing the product according to the set of codes in the CVX for immunizationa controlled vocabulary. CVX Code URIs should be represented as:
-
-http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=cvx#{code}
-
-
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#Immunization" class="external free" title="http://smartplatforms.org/terms#Immunization" rel="nofollow">http://smartplatforms.org/terms#Immunization</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>date</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Immunization" class="external text" title="http://smartplatforms.org/terms#Immunization" rel="nofollow">sp:Immunization</a>]</small>
+</td><td width="50%">ISO8601 formatted date and time when the medication was administered or offered. [<a href="http://www.w3.org/2001/XMLSchema#dateTime" class="external text" title="http://www.w3.org/2001/XMLSchema#dateTime" rel="nofollow">xsd:dateTime</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>administrationStatus</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Immunization" class="external text" title="http://smartplatforms.org/terms#Immunization" rel="nofollow">sp:Immunization</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#ImmunizationAdministrationStatus_code_RDF" title=""> ImmunizationAdministrationStatus</a>
+</td></tr>
+<tr>
+<td width="30%"><b>belongsTo</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Immunization" class="external text" title="http://smartplatforms.org/terms#Immunization" rel="nofollow">sp:Immunization</a>]</small>
+</td><td width="50%"><a href="#Medical_Record_RDF" title=""> Medical Record</a>
+<p>The medical record URI to which a clinical statement belongs.  Each 
+clinical statement points back to its medical record so that it can be 
+treated in isolation.
+</p>
+</td></tr>
+<tr>
+<td width="30%">productClass<br><small>Optional: 0 or more</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Immunization" class="external text" title="http://smartplatforms.org/terms#Immunization" rel="nofollow">sp:Immunization</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#ImmunizationClass_code_RDF" title=""> ImmunizationClass</a>
+<p>coded name for the product class, according to the set of codes in 
+the CDC Vaccine Groups controlled vocabulary.  For example, a class code
+ meaning 'Rotavirus' would be assigned for a specific product such as 
+Rotarix product.
+</p><p><br>
+productClass codes are drawn from the CDC's Vaccine Group vocabulary.  URIs are of the form:
+<a href="http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=vg#code" class="external free" title="http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=vg#code" rel="nofollow">http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=vg#code</a>
+</p><p><br>
+For example, the URI for the ROTAVIRUS code is:
+<a href="http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=vg#ROTAVIRUS" class="external free" title="http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=vg#ROTAVIRUS" rel="nofollow">http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=vg#ROTAVIRUS</a>
+</p>
+</td></tr>
+<tr>
+<td width="30%"><b>productName</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Immunization" class="external text" title="http://smartplatforms.org/terms#Immunization" rel="nofollow">sp:Immunization</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#ImmunizationProduct_code_RDF" title=""> ImmunizationProduct</a>
+<p>coded describing the product according to the set of codes in the CVX
+ for immunizationa controlled vocabulary.  CVX Code URIs should be 
+represented as:
+</p><p><a href="http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=cvx#%7Bcode%7D" class="external free" title="http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=cvx#{code}" rel="nofollow">http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=cvx#{code}</a>
+</p><p><br>
 For exampe, the code for "adenovirus, type 4" is 54, and its URI is:
-
-http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=cvx#54
-refusalReason
-Optional: 0 or 1 	[sp:Immunization] 	Coded Value where code comes from ImmunizationRefusalReason
-
-If the administration status indicates this vaccination was refused, refusalReason is a CodedValue whose code is belongs to a controlled vocabulary of refusal reasons. 
-
-{% endhighlight  %}
+</p><p><a href="http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=cvx#54" class="external free" title="http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=cvx#54" rel="nofollow">http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=cvx#54</a>
+</p>
+</td></tr>
+<tr>
+<td width="30%">refusalReason<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Immunization" class="external text" title="http://smartplatforms.org/terms#Immunization" rel="nofollow">sp:Immunization</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#ImmunizationRefusalReason_code_RDF" title=""> ImmunizationRefusalReason</a>
+<p>If the administration status indicates this vaccination was refused, 
+refusalReason is a CodedValue whose code is belongs to a controlled 
+vocabulary of refusal reasons.
+</p>
+</td></tr>
+</tbody></table>
 
 ##Lab Result RDF
 
@@ -919,41 +1028,71 @@ In RDF/XML, a serum sodium result looks like this
 
 
 
-{% highlight html %}
-abnormalInterpretation
-Optional: 0 or 1 	[sp:LabResult] 	Coded Value where code comes from LabResultInterpretation
-
-Abnormal interpretation status for this lab
-accessionNumber
-Optional: 0 or 1 	[sp:LabResult] 	External accession number for a lab result [rdfs:Literal]
-belongsTo
-Required: exactly 1 	[sp:LabResult] 	Medical Record
-
-The medical record URI to which a clinical statement belongs. Each clinical statement points back to its medical record so that it can be treated in isolation.
-labName
-Required: exactly 1 	[sp:LabResult] 	Coded Value where code comes from LOINC
-
-LOINC Coded Value for result (e.g. with title='Serum Sodium' and code=http://purl.bioontology.org/ontology/LNC/2951-2
-labStatus
-Optional: 0 or 1 	[sp:LabResult] 	Coded Value where code comes from LabResultStatus
-
-Workflow status of this lab value (e.g. "finalized")
-narrativeResult
-Optional: 0 or 1 	[sp:LabResult] 	NarrativeResult
-
-Narrative result, if any.
-notes
-Optional: 0 or 1 	[sp:LabResult] 	Free-text notes about this result. [rdfs:Literal]
-quantitativeResult
-Optional: 0 or 1 	[sp:LabResult] 	QuantitativeResult
-
-Qualitative result, if any
-specimenCollected
-Optional: 0 or 1 	[sp:LabResult] 	Attribution
-
-Attribution specificying when specimen was collected and who was responsible for them. 
-
-{% endhighlight  %}
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#LabResult" class="external free" title="http://smartplatforms.org/terms#LabResult" rel="nofollow">http://smartplatforms.org/terms#LabResult</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%">abnormalInterpretation<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#LabResult" class="external text" title="http://smartplatforms.org/terms#LabResult" rel="nofollow">sp:LabResult</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#LabResultInterpretation_code_RDF" title=""> LabResultInterpretation</a>
+<p>Abnormal interpretation status for this lab
+</p>
+</td></tr>
+<tr>
+<td width="30%">accessionNumber<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#LabResult" class="external text" title="http://smartplatforms.org/terms#LabResult" rel="nofollow">sp:LabResult</a>]</small>
+</td><td width="50%">External accession number for a lab result [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>belongsTo</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#LabResult" class="external text" title="http://smartplatforms.org/terms#LabResult" rel="nofollow">sp:LabResult</a>]</small>
+</td><td width="50%"><a href="#Medical_Record_RDF" title=""> Medical Record</a>
+<p>The medical record URI to which a clinical statement belongs.  Each 
+clinical statement points back to its medical record so that it can be 
+treated in isolation.
+</p>
+</td></tr>
+<tr>
+<td width="30%"><b>labName</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#LabResult" class="external text" title="http://smartplatforms.org/terms#LabResult" rel="nofollow">sp:LabResult</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#LOINC_code_RDF" title=""> LOINC</a>
+<p>LOINC Coded Value for result (e.g. with title='Serum Sodium' and code=<a href="http://purl.bioontology.org/ontology/LNC/2951-2" class="external free" title="http://purl.bioontology.org/ontology/LNC/2951-2" rel="nofollow">http://purl.bioontology.org/ontology/LNC/2951-2</a>
+</p>
+</td></tr>
+<tr>
+<td width="30%">labStatus<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#LabResult" class="external text" title="http://smartplatforms.org/terms#LabResult" rel="nofollow">sp:LabResult</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#LabResultStatus_code_RDF" title=""> LabResultStatus</a>
+<p>Workflow status of this lab value (e.g. "finalized")
+</p>
+</td></tr>
+<tr>
+<td width="30%">narrativeResult<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#LabResult" class="external text" title="http://smartplatforms.org/terms#LabResult" rel="nofollow">sp:LabResult</a>]</small>
+</td><td width="50%"><a href="#NarrativeResult_RDF" title=""> NarrativeResult</a>
+<p>Narrative result, if any.
+</p>
+</td></tr>
+<tr>
+<td width="30%">notes<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#LabResult" class="external text" title="http://smartplatforms.org/terms#LabResult" rel="nofollow">sp:LabResult</a>]</small>
+</td><td width="50%">Free-text notes about this result. [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">quantitativeResult<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#LabResult" class="external text" title="http://smartplatforms.org/terms#LabResult" rel="nofollow">sp:LabResult</a>]</small>
+</td><td width="50%"><a href="#QuantitativeResult_RDF" title=""> QuantitativeResult</a>
+<p>Qualitative result, if any
+</p>
+</td></tr>
+<tr>
+<td width="30%">specimenCollected<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#LabResult" class="external text" title="http://smartplatforms.org/terms#LabResult" rel="nofollow">sp:LabResult</a>]</small>
+</td><td width="50%"><a href="#Attribution_RDF" title=""> Attribution</a>
+<p>Attribution specificying when specimen was collected and who was responsible for them.
+</p>
+</td></tr>
+</tbody></table>
 
 ##Medication RDF
 
@@ -1007,45 +1146,102 @@ In RDF/XML notation, a patient on oral amitriptyline 50 mg tablets might provide
 
 
 
-{% highlight html %}
-belongsTo
-Required: exactly 1 	[sp:Medication] 	Medical Record
-
-The medical record URI to which a clinical statement belongs. Each clinical statement points back to its medical record so that it can be treated in isolation.
-drugName
-Required: exactly 1 	[sp:Medication] 	Coded Value where code comes from RxNorm_Semantic
-
-RxNorm Concept ID for this medication. Note: the RxNorm CUI for a SMART medication should have one of the following four types: SCD (Semantic Clinical Drug), SBD (Semantic Branded Drug), GPCK (Generic Pack), BPCK (Brand Name Pack). Restricting medications to these four RxNorm types can also be expressed as "TTY in ('SCD','SBD','GPCK','BPCK')" -- and this restriction ensures that SMART medications use concepts of the appropriate specificity: concepts like "650 mg generic acetaminophen" or "20 mg brand-name Claritin". Please note that SMART medications do not include explicit structured data about pill strength, concentration, or precise ingredients. These data are available through RxNorm, including through the free RxNav REST API. Code element with code drawn from http://purl.bioontology.org/ontology/RXNORM/{rxcui}
-endDate
-Optional: 0 or 1 	[sp:Medication] 	
-
-When the patient stopped taking a medication [xsd:dateTime]
-frequency
-Optional: 0 or 1 	[sp:Medication] 	ValueAndUnit
-
-
-For a medication with a simple dosing schedule, record how often to take the medication. The frequency should be recorded as a UCUM expression. In this case we use a restricted subset of UCUM that defines the following units only: "/d" (per day), "/wk" (per week), "/mo" (per month). For example, you would express the concept of "TID" or "three times daily" as a ValueAndUnit node with quantity="3", unit="/d".
-fulfillment
-Optional: 0 or more 	[sp:Medication] 	Fulfillment
-
-
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#Medication" class="external free" title="http://smartplatforms.org/terms#Medication" rel="nofollow">http://smartplatforms.org/terms#Medication</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>belongsTo</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Medication" class="external text" title="http://smartplatforms.org/terms#Medication" rel="nofollow">sp:Medication</a>]</small>
+</td><td width="50%"><a href="#Medical_Record_RDF" title=""> Medical Record</a>
+<p>The medical record URI to which a clinical statement belongs.  Each 
+clinical statement points back to its medical record so that it can be 
+treated in isolation.
+</p>
+</td></tr>
+<tr>
+<td width="30%"><b>drugName</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Medication" class="external text" title="http://smartplatforms.org/terms#Medication" rel="nofollow">sp:Medication</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#RxNorm_Semantic_code_RDF" title=""> RxNorm_Semantic</a>
+<p>RxNorm Concept ID for this medication.  Note: the RxNorm CUI for a 
+SMART medication should have one of the following four types:  SCD 
+(Semantic Clinical Drug), SBD (Semantic Branded Drug), GPCK (Generic 
+Pack), BPCK (Brand Name Pack).   Restricting medications to these four 
+RxNorm types can also be expressed as "TTY in 
+('SCD','SBD','GPCK','BPCK')" -- and this restriction ensures that SMART 
+medications use concepts of the appropriate specificity:  concepts like 
+"650 mg generic acetaminophen" or "20 mg brand-name Claritin".   Please 
+note that SMART medications do not include explicit structured data 
+about pill strength, concentration, or precise ingredients.  These data 
+are available through RxNorm, including through the free <a href="http://rxnav.nlm.nih.gov/RxNormRestAPI.html" class="external text" title="http://rxnav.nlm.nih.gov/RxNormRestAPI.html" rel="nofollow">RxNav REST API</a>.  Code element with code drawn from <a href="http://purl.bioontology.org/ontology/RXNORM/%7Brxcui%7D" class="external free" title="http://purl.bioontology.org/ontology/RXNORM/{rxcui}" rel="nofollow">http://purl.bioontology.org/ontology/RXNORM/{rxcui}</a>
+</p>
+</td></tr>
+<tr>
+<td width="30%">endDate<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Medication" class="external text" title="http://smartplatforms.org/terms#Medication" rel="nofollow">sp:Medication</a>]</small>
+</td><td width="50%">
+<p>	When the patient stopped taking a medication 
+	 [<a href="http://www.w3.org/2001/XMLSchema#dateTime" class="external text" title="http://www.w3.org/2001/XMLSchema#dateTime" rel="nofollow">xsd:dateTime</a>]
+</p>
+</td></tr>
+<tr>
+<td width="30%">frequency<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Medication" class="external text" title="http://smartplatforms.org/terms#Medication" rel="nofollow">sp:Medication</a>]</small>
+</td><td width="50%"><a href="#ValueAndUnit_RDF" title=""> ValueAndUnit</a>
+<p><br>
+For a medication with a simple dosing schedule, record how often to take the medication.  The frequency should be recorded as a <a href="http://www.unitsofmeasure.org/" class="external text" title="http://www.unitsofmeasure.org/" rel="nofollow">UCUM</a>
+ expression.  In this case we use a restricted subset of UCUM that 
+defines the following units only:  "/d" (per day), "/wk" (per week), 
+"/mo" (per month).  For example, you would express the concept of "TID" 
+or "three times daily" as a ValueAndUnit node with quantity="3", 
+unit="/d". 
+</p>
+</td></tr>
+<tr>
+<td width="30%">fulfillment<br><small>Optional: 0 or more</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Medication" class="external text" title="http://smartplatforms.org/terms#Medication" rel="nofollow">sp:Medication</a>]</small>
+</td><td width="50%"><a href="#Fulfillment_RDF" title=""> Fulfillment</a>
+<p><br>
 A single fulfillment event (that is, the medication was dispensed to the patient by a pharmacy)
-instructions
-Required: exactly 1 	[sp:Medication] 	
-
-Clinician-supplied instructions from the prescription signature [rdfs:Literal]
-provenance
-Optional: 0 or 1 	[sp:Medication] 	Code where code comes from MedicationProvenance
-quantity
-Optional: 0 or 1 	[sp:Medication] 	ValueAndUnit
-
-
-For a medication with a simple dosing schedule, record the amount to take with each administration. The quantity should be recorded as a UCUM expression. For some medications, the appoporiate quantity will be a volume (e.g. "5 mL" of an oral acetaminophen solution). For other medications, the appropriate quantity may be expresses in terms of tablets, puffs, or actuations: UCUM call these "non-units", and they should be written inside of curly braces to avoid confusion. For example, you would express "1 tablet" as a ValueAndUnit node with quantity="1", unit="{tablet}".
-startDate
-Required: exactly 1 	[sp:Medication] 	
-
-When the patient started taking a medication [xsd:dateTime] 
-{% endhighlight  %}
+</p>
+</td></tr>
+<tr>
+<td width="30%"><b>instructions</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Medication" class="external text" title="http://smartplatforms.org/terms#Medication" rel="nofollow">sp:Medication</a>]</small>
+</td><td width="50%">
+<p>	Clinician-supplied instructions from the prescription signature 
+	 [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</p>
+</td></tr>
+<tr>
+<td width="30%">provenance<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Medication" class="external text" title="http://smartplatforms.org/terms#Medication" rel="nofollow">sp:Medication</a>]</small>
+</td><td width="50%"><a href="#Code_RDF" title=""> Code</a> where code comes from <a href="#MedicationProvenance_code_RDF" title=""> MedicationProvenance</a>
+</td></tr>
+<tr>
+<td width="30%">quantity<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Medication" class="external text" title="http://smartplatforms.org/terms#Medication" rel="nofollow">sp:Medication</a>]</small>
+</td><td width="50%"><a href="#ValueAndUnit_RDF" title=""> ValueAndUnit</a>
+<p><br>
+For a medication with a simple dosing schedule, record the amount to 
+take with each administration.  The quantity should be recorded as a <a href="http://www.unitsofmeasure.org/" class="external text" title="http://www.unitsofmeasure.org/" rel="nofollow">UCUM</a>
+ expression.  For some medications, the appoporiate quantity will be a 
+volume (e.g. "5 mL" of an oral acetaminophen solution).  For other 
+medications, the appropriate quantity may be expresses in terms of 
+tablets, puffs, or actuations:  UCUM call these "non-units", and they 
+should be written inside of curly braces to avoid confusion.  For 
+example, you would express "1 tablet" as a ValueAndUnit node with 
+quantity="1", unit="{tablet}".
+</p>
+</td></tr>
+<tr>
+<td width="30%"><b>startDate</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Medication" class="external text" title="http://smartplatforms.org/terms#Medication" rel="nofollow">sp:Medication</a>]</small>
+</td><td width="50%">
+<p>	When the patient started taking a medication 
+	 [<a href="http://www.w3.org/2001/XMLSchema#dateTime" class="external text" title="http://www.w3.org/2001/XMLSchema#dateTime" rel="nofollow">xsd:dateTime</a>]
+</p>
+</td></tr>
+</tbody></table>
 
 ##Problem RDF
 
@@ -1079,30 +1275,668 @@ Problem is a subtype of and inherits properties from [SMART Statement](http://wi
 </rdf:RDF>
 {% endhighlight  %}
 
-{% highlight html %}
-belongsTo
-Required: exactly 1 	[sp:Problem] 	Medical Record
-
-The medical record URI to which a clinical statement belongs. Each clinical statement points back to its medical record so that it can be treated in isolation.
-endDate
-Optional: 0 or 1 	[sp:Problem] 	Date on which problem resolved, if any. [xsd:dateTime]
-notes
-Optional: 0 or 1 	[sp:Problem] 	Additional notes about the problem [rdfs:Literal]
-problemName
-Required: exactly 1 	[sp:Problem] 	Coded Value where code comes from SNOMED
-
-SNOMED-CT Concept for the problem
-startDate
-Required: exactly 1 	[sp:Problem] 	Date on which problem began [xsd:dateTime] 
-
-{% endhighlight  %}
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#Problem" class="external free" title="http://smartplatforms.org/terms#Problem" rel="nofollow">http://smartplatforms.org/terms#Problem</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>belongsTo</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Problem" class="external text" title="http://smartplatforms.org/terms#Problem" rel="nofollow">sp:Problem</a>]</small>
+</td><td width="50%"><a href="#Medical_Record_RDF" title=""> Medical Record</a>
+<p>The medical record URI to which a clinical statement belongs.  Each 
+clinical statement points back to its medical record so that it can be 
+treated in isolation.
+</p>
+</td></tr>
+<tr>
+<td width="30%">endDate<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Problem" class="external text" title="http://smartplatforms.org/terms#Problem" rel="nofollow">sp:Problem</a>]</small>
+</td><td width="50%">Date on which problem resolved, if any. [<a href="http://www.w3.org/2001/XMLSchema#dateTime" class="external text" title="http://www.w3.org/2001/XMLSchema#dateTime" rel="nofollow">xsd:dateTime</a>]
+</td></tr>
+<tr>
+<td width="30%">notes<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Problem" class="external text" title="http://smartplatforms.org/terms#Problem" rel="nofollow">sp:Problem</a>]</small>
+</td><td width="50%">Additional notes about the problem [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>problemName</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Problem" class="external text" title="http://smartplatforms.org/terms#Problem" rel="nofollow">sp:Problem</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#SNOMED_code_RDF" title=""> SNOMED</a>
+<p>SNOMED-CT Concept for the problem
+</p>
+</td></tr>
+<tr>
+<td width="30%"><b>startDate</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Problem" class="external text" title="http://smartplatforms.org/terms#Problem" rel="nofollow">sp:Problem</a>]</small>
+</td><td width="50%">Date on which problem began [<a href="http://www.w3.org/2001/XMLSchema#dateTime" class="external text" title="http://www.w3.org/2001/XMLSchema#dateTime" rel="nofollow">xsd:dateTime</a>]
+</td></tr>
+</tbody></table>
 
 ##SMART Statement RDF
 
-{% highlight html %}
-belongsTo
-Required: exactly 1 	[sp:Statement] 	Medical Record
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#Statement" class="external free" title="http://smartplatforms.org/terms#Statement" rel="nofollow">http://smartplatforms.org/terms#Statement</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>belongsTo</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Statement" class="external text" title="http://smartplatforms.org/terms#Statement" rel="nofollow">sp:Statement</a>]</small>
+</td><td width="50%"><a href="#Medical_Record_RDF" title=""> Medical Record</a>
+<p>The medical record URI to which a clinical statement belongs.  Each 
+clinical statement points back to its medical record so that it can be 
+treated in isolation.
+</p>
+</td></tr>
+</tbody></table>
 
-The medical record URI to which a clinical statement belongs. Each clinical statement points back to its medical record so that it can be treated in isolation. 
+##User Preferences RDF
+
+##VitalSigns RDF
+
+VitalSigns is a subtype of and inherits properties from [SMART Statement](http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_SMART_Data_Model#SMART_Statement_RDF)
+
+{% highlight html %}
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:sp="http://smartplatforms.org/terms#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:v="http://www.w3.org/2006/vcard/ns#"
+  xmlns:spcode="http://smartplatforms.org/terms/codes/"> 
+
+  <sp:VitalSigns>
+    <sp:belongsTo  rdf:resource="http://sandbox-api.smartplatforms.org/records/2169591" />
+    <dcterms:date>2010-05-12T04:00:00Z</dcterms:date>
+    <sp:encounter>
+      <sp:Encounter>
+        <sp:belongsTo  rdf:resource="http://sandbox-api.smartplatforms.org/records/2169591" />
+        <sp:startDate>2010-05-12T04:00:00Z</sp:startDate>
+        <sp:endDate>2010-05-12T04:20:00Z</sp:endDate>
+        <sp:encounterType>
+          <sp:CodedValue>
+            <dcterms:title>Ambulatory encounter</dcterms:title>
+            <sp:code>
+              <spcode:EncounterType rdf:about="http://smartplatforms.org/terms/codes/EncounterType#ambulatory">
+                <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+                <dcterms:title>Ambulatory encounter</dcterms:title>
+                <sp:system>http://smartplatforms.org/terms/codes/EncounterType#</sp:system>
+                <dcterms:identifier>ambulatory</dcterms:identifier> 
+              </spcode:EncounterType>       
+            </sp:code>
+          </sp:CodedValue>
+        </sp:encounterType>
+      </sp:Encounter>    
+    </sp:encounter>
+    <sp:height>
+      <sp:VitalSign>
+        <sp:vitalName>
+          <sp:CodedValue>
+            <dcterms:title>Body height</dcterms:title>
+            <sp:code>
+              <spcode:VitalSign rdf:about="http://purl.bioontology.org/ontology/LNC/8302-2">
+                <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+                <dcterms:title>Body height</dcterms:title>
+                <sp:system>http://purl.bioontology.org/ontology/LNC/</sp:system>
+                <dcterms:identifier>8302-2</dcterms:identifier> 
+              </spcode:VitalSign>    
+            </sp:code>
+          </sp:CodedValue>
+        </sp:vitalName>
+        <sp:value>1.80</sp:value>
+        <sp:unit>m</sp:unit>
+      </sp:VitalSign>
+    </sp:height>
+    <sp:weight>
+      <sp:VitalSign>
+        <sp:vitalName>
+          <sp:CodedValue>
+            <dcterms:title>Body weight</dcterms:title>
+            <sp:code>    
+              <spcode:VitalSign rdf:about="http://purl.bioontology.org/ontology/LNC/3141-9">
+                <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+                <dcterms:title>Body weight</dcterms:title>
+                <sp:system>http://purl.bioontology.org/ontology/LNC/</sp:system>
+                <dcterms:identifier>3141-9</dcterms:identifier> 
+              </spcode:VitalSign>
+            </sp:code>
+          </sp:CodedValue>
+        </sp:vitalName>
+        <sp:value>70.8</sp:value>
+        <sp:unit>kg</sp:unit>
+      </sp:VitalSign>
+    </sp:weight>
+    <sp:bodyMassIndex>
+      <sp:VitalSign>
+        <sp:vitalName>
+          <sp:CodedValue>
+            <dcterms:title>Body mass index</dcterms:title>
+            <sp:code>
+              <spcode:VitalSign rdf:about="http://purl.bioontology.org/ontology/LNC/39156-5">
+                <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+                <dcterms:title>Body mass index</dcterms:title>
+                <sp:system>http://purl.bioontology.org/ontology/LNC/</sp:system>
+                <dcterms:identifier>39156-5</dcterms:identifier> 
+              </spcode:VitalSign>        
+            </sp:code>
+          </sp:CodedValue>
+        </sp:vitalName>
+        <sp:value>21.8</sp:value>
+        <sp:unit>kg/m2</sp:unit>
+      </sp:VitalSign>
+    </sp:bodyMassIndex>
+    <sp:respiratoryRate>
+      <sp:VitalSign>
+        <sp:vitalName>
+          <sp:CodedValue>
+            <dcterms:title>Respiration rate</dcterms:title>
+            <sp:code>
+              <spcode:VitalSign rdf:about="http://purl.bioontology.org/ontology/LNC/9279-1">
+                <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+                <dcterms:title>Respiration rate</dcterms:title>
+                <sp:system>http://purl.bioontology.org/ontology/LNC/</sp:system>
+                <dcterms:identifier>9279-1</dcterms:identifier> 
+              </spcode:VitalSign>    
+            </sp:code>
+          </sp:CodedValue>
+        </sp:vitalName>
+        <sp:value>16</sp:value>
+        <sp:unit>{breaths}/min</sp:unit>
+      </sp:VitalSign>
+    </sp:respiratoryRate>
+    <sp:heartRate>
+      <sp:VitalSign>
+        <sp:vitalName>
+          <sp:CodedValue>
+            <dcterms:title>Heart rate</dcterms:title>
+            <sp:code>
+              <spcode:VitalSign rdf:about="http://purl.bioontology.org/ontology/LNC/8867-4">
+                <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+                <dcterms:title>Heart rate</dcterms:title>
+                <sp:system>http://purl.bioontology.org/ontology/LNC/</sp:system>
+                <dcterms:identifier>8867-4</dcterms:identifier> 
+              </spcode:VitalSign>
+            </sp:code>
+          </sp:CodedValue>
+        </sp:vitalName>
+        <sp:value>70</sp:value>
+        <sp:unit>{beats}/min</sp:unit>
+      </sp:VitalSign>
+    </sp:heartRate>
+    <sp:oxygenSaturation>
+      <sp:VitalSign>
+        <sp:vitalName>
+          <sp:CodedValue>
+            <dcterms:title>Oxygen saturation</dcterms:title>
+            <sp:code>
+              <spcode:VitalSign rdf:about="http://purl.bioontology.org/ontology/LNC/2710-2">
+                <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+                <dcterms:title>Oxygen saturation</dcterms:title>
+                <sp:system>http://purl.bioontology.org/ontology/LNC/</sp:system>
+                <dcterms:identifier>2710-2</dcterms:identifier> 
+              </spcode:VitalSign>        
+            </sp:code>
+          </sp:CodedValue>
+        </sp:vitalName>
+        <sp:value>99</sp:value>
+        <sp:unit>%{HemoglobinSaturation}</sp:unit>
+      </sp:VitalSign>
+    </sp:oxygenSaturation>
+    <sp:temperature>
+      <sp:VitalSign>
+        <sp:vitalName>
+          <sp:CodedValue>
+            <dcterms:title>Body temperature</dcterms:title>
+            <sp:code>
+              <spcode:VitalSign rdf:about="http://purl.bioontology.org/ontology/LNC/8310-5">
+                <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+                <dcterms:title>Body temperature</dcterms:title>
+                <sp:system>http://purl.bioontology.org/ontology/LNC/</sp:system>
+                <dcterms:identifier>8310-5</dcterms:identifier> 
+              </spcode:VitalSign>        
+            </sp:code>
+          </sp:CodedValue>
+        </sp:vitalName>
+        <sp:value>37</sp:value>
+        <sp:unit>Cel</sp:unit>
+      </sp:VitalSign>
+    </sp:temperature>
+    <sp:bloodPressure>
+      <sp:BloodPressure>
+        <sp:systolic>
+          <sp:VitalSign>
+            <sp:vitalName>
+              <sp:CodedValue>
+                <dcterms:title>Intravascular systolic</dcterms:title>
+                <sp:code>
+                  <spcode:VitalSign rdf:about="http://purl.bioontology.org/ontology/LNC/8480-6">
+                    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+                    <dcterms:title>Intravascular systolic</dcterms:title>
+                    <sp:system>http://purl.bioontology.org/ontology/LNC/</sp:system>
+                    <dcterms:identifier>8480-6</dcterms:identifier> 
+                  </spcode:VitalSign>        
+                </sp:code>
+              </sp:CodedValue>
+            </sp:vitalName>
+            <sp:value>132</sp:value>
+            <sp:unit>mm[Hg]</sp:unit>
+          </sp:VitalSign>
+        </sp:systolic>
+        <sp:diastolic>
+          <sp:VitalSign>
+            <sp:vitalName>
+              <sp:CodedValue>
+                <dcterms:title>Intravascular diastolic</dcterms:title>
+                <sp:code>
+                  <spcode:VitalSign rdf:about="http://purl.bioontology.org/ontology/LNC/8462-4">
+                    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+                    <dcterms:title>Intravascular diastolic</dcterms:title>
+                    <sp:system>http://purl.bioontology.org/ontology/LNC/</sp:system>
+                    <dcterms:identifier>8462-4</dcterms:identifier> 
+                  </spcode:VitalSign>        
+                </sp:code>
+              </sp:CodedValue>
+            </sp:vitalName>
+            <sp:value>82</sp:value>
+            <sp:unit>mm[Hg]</sp:unit>
+          </sp:VitalSign>
+        </sp:diastolic>
+        <sp:bodyPosition>
+          <sp:CodedValue>
+            <dcterms:title>Sitting</dcterms:title>
+            <sp:code>
+              <spcode:BloodPressureBodyPosition rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/33586001" >
+                <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+                <dcterms:title>Sitting</dcterms:title>
+                <sp:system>http://purl.bioontology.org/ontology/SNOMEDCT/</sp:system>
+                <dcterms:identifier>33586001</dcterms:identifier> 
+              </spcode:BloodPressureBodyPosition>        
+            </sp:code>
+          </sp:CodedValue>
+        </sp:bodyPosition>
+        <sp:bodySite>
+          <sp:CodedValue>
+            <dcterms:title>Right arm</dcterms:title>
+            <sp:code>
+              <spcode:BloodPressureBodySite rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/368209003" >
+                <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+                <dcterms:title>Right arm</dcterms:title>
+                <sp:system>http://purl.bioontology.org/ontology/SNOMEDCT/</sp:system>
+                <dcterms:identifier>368209003</dcterms:identifier> 
+              </spcode:BloodPressureBodySite>        
+            </sp:code>
+          </sp:CodedValue>
+        </sp:bodySite>
+      </sp:BloodPressure>
+    </sp:bloodPressure>
+  </sp:VitalSigns>
+</rdf:RDF>
 
 {% endhighlight  %}
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#VitalSigns" class="external free" title="http://smartplatforms.org/terms#VitalSigns" rel="nofollow">http://smartplatforms.org/terms#VitalSigns</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>date</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#VitalSigns" class="external text" title="http://smartplatforms.org/terms#VitalSigns" rel="nofollow">sp:VitalSigns</a>]</small>
+</td><td width="50%">Date + time when vital signs were recorded [<a href="http://www.w3.org/2001/XMLSchema#dateTime" class="external text" title="http://www.w3.org/2001/XMLSchema#dateTime" rel="nofollow">xsd:dateTime</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>belongsTo</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#VitalSigns" class="external text" title="http://smartplatforms.org/terms#VitalSigns" rel="nofollow">sp:VitalSigns</a>]</small>
+</td><td width="50%"><a href="#Medical_Record_RDF" title=""> Medical Record</a>
+<p>The medical record URI to which a clinical statement belongs.  Each 
+clinical statement points back to its medical record so that it can be 
+treated in isolation.
+</p>
+</td></tr>
+<tr>
+<td width="30%">bloodPressure<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#VitalSigns" class="external text" title="http://smartplatforms.org/terms#VitalSigns" rel="nofollow">sp:VitalSigns</a>]</small>
+</td><td width="50%"><a href="#BloodPressure_RDF" title=""> BloodPressure</a>
+<p>Patient's systolic + diastolic Blood Pressure in mmHg, with optinal position coding
+</p>
+</td></tr>
+<tr>
+<td width="30%">bodyMassIndex<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#VitalSigns" class="external text" title="http://smartplatforms.org/terms#VitalSigns" rel="nofollow">sp:VitalSigns</a>]</small>
+</td><td width="50%"><a href="#VitalSign_RDF" title=""> VitalSignwhere</a> unit has value: kg/m2
+<p>Patient's Body Mass Index.  
+</p>
+</td></tr>
+<tr>
+<td width="30%"><b>encounter</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#VitalSigns" class="external text" title="http://smartplatforms.org/terms#VitalSigns" rel="nofollow">sp:VitalSigns</a>]</small>
+</td><td width="50%"><a href="#Encounter_RDF" title=""> Encounter</a>
+<p>Encounter at which vital signs were measured. This should specify a date and encounter type, at minimum.
+</p>
+</td></tr>
+<tr>
+<td width="30%">heartRate<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#VitalSigns" class="external text" title="http://smartplatforms.org/terms#VitalSigns" rel="nofollow">sp:VitalSigns</a>]</small>
+</td><td width="50%"><a href="#VitalSign_RDF" title=""> VitalSignwhere</a> unit has value: {beats}/min
+<p>Patient's Heart Rate per minute. 
+</p>
+</td></tr>
+<tr>
+<td width="30%">height<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#VitalSigns" class="external text" title="http://smartplatforms.org/terms#VitalSigns" rel="nofollow">sp:VitalSigns</a>]</small>
+</td><td width="50%"><a href="#VitalSign_RDF" title=""> VitalSignwhere</a> unit has value: m
+<p>Patient's height in meters.  
+</p>
+</td></tr>
+<tr>
+<td width="30%">oxygenSaturation<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#VitalSigns" class="external text" title="http://smartplatforms.org/terms#VitalSigns" rel="nofollow">sp:VitalSigns</a>]</small>
+</td><td width="50%"><a href="#VitalSign_RDF" title=""> VitalSignwhere</a> unit has value: %{HemoglobinSaturation}
+<p>Patient's oxygen saturation in percent.  
+</p>
+</td></tr>
+<tr>
+<td width="30%">respiratoryRate<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#VitalSigns" class="external text" title="http://smartplatforms.org/terms#VitalSigns" rel="nofollow">sp:VitalSigns</a>]</small>
+</td><td width="50%"><a href="#VitalSign_RDF" title=""> VitalSignwhere</a> unit has value: {breaths}/min
+<p>Patient's Respiratory Rate per minute. 
+</p>
+</td></tr>
+<tr>
+<td width="30%">temperature<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#VitalSigns" class="external text" title="http://smartplatforms.org/terms#VitalSigns" rel="nofollow">sp:VitalSigns</a>]</small>
+</td><td width="50%"><a href="#VitalSign_RDF" title=""> VitalSignwhere</a> unit has value: Cel
+<p>Patient's Temperature in Celcius. 
+</p>
+</td></tr>
+<tr>
+<td width="30%">weight<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#VitalSigns" class="external text" title="http://smartplatforms.org/terms#VitalSigns" rel="nofollow">sp:VitalSigns</a>]</small>
+</td><td width="50%"><a href="#VitalSign_RDF" title=""> VitalSignwhere</a> unit has value: kg
+<p>Patient's weight in kg. 
+</p>
+</td></tr>
+</tbody></table>
+
+#Component Types
+##Address RDF
+
+Address is a subtype of and inherits properties from [Component](http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_SMART_Data_Model#Component_RDF)
+
+* Preferred Status (v Pref)
+* Home address (v Home)
+* Work address (v Work)
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://www.w3.org/2006/vcard/ns#Address" class="external free" title="http://www.w3.org/2006/vcard/ns#Address" rel="nofollow">http://www.w3.org/2006/vcard/ns#Address</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%">country-name<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://www.w3.org/2006/vcard/ns#Address" class="external text" title="http://www.w3.org/2006/vcard/ns#Address" rel="nofollow">v:Address</a>]</small>
+</td><td width="50%">Country name [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">extended-address<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://www.w3.org/2006/vcard/ns#Address" class="external text" title="http://www.w3.org/2006/vcard/ns#Address" rel="nofollow">v:Address</a>]</small>
+</td><td width="50%">City Name [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">locality<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://www.w3.org/2006/vcard/ns#Address" class="external text" title="http://www.w3.org/2006/vcard/ns#Address" rel="nofollow">v:Address</a>]</small>
+</td><td width="50%">City Name [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">postal-code<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://www.w3.org/2006/vcard/ns#Address" class="external text" title="http://www.w3.org/2006/vcard/ns#Address" rel="nofollow">v:Address</a>]</small>
+</td><td width="50%">Postal code [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">region<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://www.w3.org/2006/vcard/ns#Address" class="external text" title="http://www.w3.org/2006/vcard/ns#Address" rel="nofollow">v:Address</a>]</small>
+</td><td width="50%">e.g. state abbreviation [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">street-address<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://www.w3.org/2006/vcard/ns#Address" class="external text" title="http://www.w3.org/2006/vcard/ns#Address" rel="nofollow">v:Address</a>]</small>
+</td><td width="50%">Street address [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##Attribution RDF
+
+Attribution is a subtype of and inherits properties from [Component](http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_SMART_Data_Model#Component_RDF)
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#Attribution" class="external free" title="http://smartplatforms.org/terms#Attribution" rel="nofollow">http://smartplatforms.org/terms#Attribution</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%">endDate<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Attribution" class="external text" title="http://smartplatforms.org/terms#Attribution" rel="nofollow">sp:Attribution</a>]</small>
+</td><td width="50%">End Time of attributed event (if instantaneous, this is not provided) [<a href="http://www.w3.org/2001/XMLSchema#dateTime" class="external text" title="http://www.w3.org/2001/XMLSchema#dateTime" rel="nofollow">xsd:dateTime</a>]
+</td></tr>
+<tr>
+<td width="30%">participant<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Attribution" class="external text" title="http://smartplatforms.org/terms#Attribution" rel="nofollow">sp:Attribution</a>]</small>
+</td><td width="50%"><a href="#Participant_RDF" title=""> Participant</a>
+<p>Participant in Attribution
+</p>
+</td></tr>
+<tr>
+<td width="30%">startDate<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Attribution" class="external text" title="http://smartplatforms.org/terms#Attribution" rel="nofollow">sp:Attribution</a>]</small>
+</td><td width="50%">Start Time of attributed event (if instantaneous, this is the only time) [<a href="http://www.w3.org/2001/XMLSchema#dateTime" class="external text" title="http://www.w3.org/2001/XMLSchema#dateTime" rel="nofollow">xsd:dateTime</a>]
+</td></tr>
+</tbody></table>
+
+##BloodPressure RDF
+
+BloodPressure is a subtype of and inherits properties from [Component](http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_SMART_Data_Model#Component_RDF)
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#BloodPressure" class="external free" title="http://smartplatforms.org/terms#BloodPressure" rel="nofollow">http://smartplatforms.org/terms#BloodPressure</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%">bodyPosition<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#BloodPressure" class="external text" title="http://smartplatforms.org/terms#BloodPressure" rel="nofollow">sp:BloodPressure</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#BloodPressureBodyPosition_code_RDF" title=""> BloodPressureBodyPosition</a>
+<p>Position of patient when blood pressure was recorded
+</p>
+</td></tr>
+<tr>
+<td width="30%">bodySite<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#BloodPressure" class="external text" title="http://smartplatforms.org/terms#BloodPressure" rel="nofollow">sp:BloodPressure</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#BloodPressureBodySite_code_RDF" title=""> BloodPressureBodySite</a>
+<p>Site on patient's body where blood pressure was recorded
+</p>
+</td></tr>
+<tr>
+<td width="30%"><b>diastolic</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#BloodPressure" class="external text" title="http://smartplatforms.org/terms#BloodPressure" rel="nofollow">sp:BloodPressure</a>]</small>
+</td><td width="50%"><a href="#VitalSign_RDF" title=""> VitalSignwhere</a> unit has value: mm[Hg]
+<p>diastolic blood pressure in mmHG. 
+</p>
+</td></tr>
+<tr>
+<td width="30%">method<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#BloodPressure" class="external text" title="http://smartplatforms.org/terms#BloodPressure" rel="nofollow">sp:BloodPressure</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#BloodPressureMethod_code_RDF" title=""> BloodPressureMethod</a>
+<p>Method by which blood pressure was recorded.
+</p>
+</td></tr>
+<tr>
+<td width="30%"><b>systolic</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#BloodPressure" class="external text" title="http://smartplatforms.org/terms#BloodPressure" rel="nofollow">sp:BloodPressure</a>]</small>
+</td><td width="50%"><a href="#VitalSign_RDF" title=""> VitalSignwhere</a> unit has value: mm[Hg]
+<p>systolic blood pressure in mmHG.
+</p>
+</td></tr>
+</tbody></table>
+
+##Code RDF
+
+Code is a subtype of and inherits properties from [Component](http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_SMART_Data_Model#Component_RDF), [DataType](http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_SMART_Data_Model#DataType_RDF)
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#Code" class="external free" title="http://smartplatforms.org/terms#Code" rel="nofollow">http://smartplatforms.org/terms#Code</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Code" class="external text" title="http://smartplatforms.org/terms#Code" rel="nofollow">sp:Code</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Code" class="external text" title="http://smartplatforms.org/terms#Code" rel="nofollow">sp:Code</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Code" class="external text" title="http://smartplatforms.org/terms#Code" rel="nofollow">sp:Code</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##CodeProvenance RDF
+
+CodeProvenance is a subtype of and inherits properties from [Component](http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_SMART_Data_Model#Component_RDF)
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#CodeProvenance" class="external free" title="http://smartplatforms.org/terms#CodeProvenance" rel="nofollow">http://smartplatforms.org/terms#CodeProvenance</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#CodeProvenance" class="external text" title="http://smartplatforms.org/terms#CodeProvenance" rel="nofollow">sp:CodeProvenance</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>sourceCode</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#CodeProvenance" class="external text" title="http://smartplatforms.org/terms#CodeProvenance" rel="nofollow">sp:CodeProvenance</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2001/XMLSchema#anyURI" class="external text" title="http://www.w3.org/2001/XMLSchema#anyURI" rel="nofollow">xsd:anyURI</a>]
+</td></tr>
+<tr>
+<td width="30%">translationFidelity<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#CodeProvenance" class="external text" title="http://smartplatforms.org/terms#CodeProvenance" rel="nofollow">sp:CodeProvenance</a>]</small>
+</td><td width="50%"><a href="#TranslationFidelity_code_RDF" title=""> TranslationFidelity code</a>
+</td></tr>
+</tbody></table>
+
+##Coded Value RDF
+
+Coded Value is a subtype of and inherits properties from [Component](http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_SMART_Data_Model#Component_RDF), [DataType](http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_SMART_Data_Model#DataType_RDF)
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#CodedValue" class="external free" title="http://smartplatforms.org/terms#CodedValue" rel="nofollow">http://smartplatforms.org/terms#CodedValue</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#CodedValue" class="external text" title="http://smartplatforms.org/terms#CodedValue" rel="nofollow">sp:CodedValue</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>code</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#CodedValue" class="external text" title="http://smartplatforms.org/terms#CodedValue" rel="nofollow">sp:CodedValue</a>]</small>
+</td><td width="50%"><a href="#Code_RDF" title=""> Code</a>
+</td></tr>
+<tr>
+<td width="30%">provenance<br><small>Optional: 0 or more</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#CodedValue" class="external text" title="http://smartplatforms.org/terms#CodedValue" rel="nofollow">sp:CodedValue</a>]</small>
+</td><td width="50%"><a href="#CodeProvenance_RDF" title=""> CodeProvenance</a>
+</td></tr>
+</tbody></table>
+
+##DataType RDF
+
+DataType is a subtype of and inherits properties from [Component](http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_SMART_Data_Model#Component_RDF)
+
+##Name RDF
+
+Name is a subtype of and inherits properties from [Component](http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_SMART_Data_Model#Component_RDF)
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://www.w3.org/2006/vcard/ns#Name" class="external free" title="http://www.w3.org/2006/vcard/ns#Name" rel="nofollow">http://www.w3.org/2006/vcard/ns#Name</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%">additional-name<br><small>Optional: 0 or more</small>
+</td><td width="20%"><small>[<a href="http://www.w3.org/2006/vcard/ns#Name" class="external text" title="http://www.w3.org/2006/vcard/ns#Name" rel="nofollow">v:Name</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>family-name</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://www.w3.org/2006/vcard/ns#Name" class="external text" title="http://www.w3.org/2006/vcard/ns#Name" rel="nofollow">v:Name</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>given-name</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://www.w3.org/2006/vcard/ns#Name" class="external text" title="http://www.w3.org/2006/vcard/ns#Name" rel="nofollow">v:Name</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">honorific-prefix<br><small>Optional: 0 or more</small>
+</td><td width="20%"><small>[<a href="http://www.w3.org/2006/vcard/ns#Name" class="external text" title="http://www.w3.org/2006/vcard/ns#Name" rel="nofollow">v:Name</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">honorific-suffix<br><small>Optional: 0 or more</small>
+</td><td width="20%"><small>[<a href="http://www.w3.org/2006/vcard/ns#Name" class="external text" title="http://www.w3.org/2006/vcard/ns#Name" rel="nofollow">v:Name</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##NarrativeResult RDF
+
+NarrativeResult is a subtype of and inherits properties from Component
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#NarrativeResult" class="external free" title="http://smartplatforms.org/terms#NarrativeResult" rel="nofollow">http://smartplatforms.org/terms#NarrativeResult</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>value</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#NarrativeResult" class="external text" title="http://smartplatforms.org/terms#NarrativeResult" rel="nofollow">sp:NarrativeResult</a>]</small>
+</td><td width="50%">Value of result (free text) [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##NominalResult RDF
+
+NominalResult is a subtype of and inherits properties from Component 
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#NominalResult" class="external free" title="http://smartplatforms.org/terms#NominalResult" rel="nofollow">http://smartplatforms.org/terms#NominalResult</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>value</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#NominalResult" class="external text" title="http://smartplatforms.org/terms#NominalResult" rel="nofollow">sp:NominalResult</a>]</small>
+</td><td width="50%">value of result (free text). [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##OrdinalResult RDF
+
+OrdinalResult is a subtype of and inherits properties from Component 
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#OrdinalResult" class="external free" title="http://smartplatforms.org/terms#OrdinalResult" rel="nofollow">http://smartplatforms.org/terms#OrdinalResult</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>value</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#OrdinalResult" class="external text" title="http://smartplatforms.org/terms#OrdinalResult" rel="nofollow">sp:OrdinalResult</a>]</small>
+</td><td width="50%">value of result (free text). [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##Organization RDF
+
+Organization is a subtype of and inherits properties from Component
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#Organization" class="external free" title="http://smartplatforms.org/terms#Organization" rel="nofollow">http://smartplatforms.org/terms#Organization</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%">adr<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Organization" class="external text" title="http://smartplatforms.org/terms#Organization" rel="nofollow">sp:Organization</a>]</small>
+</td><td width="50%"><a href="#Address_RDF" title=""> Address</a>
+</td></tr>
+<tr>
+<td width="30%">organization-name<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Organization" class="external text" title="http://smartplatforms.org/terms#Organization" rel="nofollow">sp:Organization</a>]</small>
+</td><td width="50%">Name of the organization [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+
