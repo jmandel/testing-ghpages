@@ -60,31 +60,31 @@ A common set of namespace prefixes is used for the examples below. These are
 <table width="100%" border="0" cellspacing="0" class="table table-striped">
   <tr>
     <td>dcterms</td>
-    <td><a href="http://purl.org/dc/terms/](http://purl.org/dc/terms/">http://purl.org/dc/terms/](http://purl.org/dc/terms/</a></td>
+    <td><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a></td>
     <td>Dublin core terms</td>
   </tr>
   
    <tr>
     <td>foaf</td>
-    <td>[http://xmlns.com/foaf/0.1/](http://xmlns.com/foaf/0.1/)</td>
+    <td><a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a></td>
     <td>Friend of a friend</td>
   </tr>
   
    <tr>
     <td>rdf</td>
-    <td>[http://www.w3.org/1999/02/22-rdf-syntax-ns](http://www.w3.org/1999/02/22-rdf-syntax-ns)</td>
+    <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns">http://www.w3.org/1999/02/22-rdf-syntax-ns</a></td>
     <td>Resource description framework</td>
   </tr>
   
   <tr>
     <td>sp</td>
-    <td>[http://smartplatforms.org/terms](http://smartplatforms.org/terms)</td>
+    <td><a href="http://smartplatforms.org/terms">http://smartplatforms.org/terms</a></td>
     <td>Smart platforms root namespace</td>
   </tr>
   
   <tr>
     <td>v</td>
-    <td>[http://www.w3.org/2006/vcard/ns](http://www.w3.org/2006/vcard/ns)</td>
+    <td><a href="http://www.w3.org/2006/vcard/ns">http://www.w3.org/2006/vcard/ns</a></td>
     <td>vCard namespace</td>
   </tr>
   
