@@ -149,6 +149,44 @@ Alerts are a way for an application to generate a message (about a patient recor
 </rdf:RDF>
 {% endhighlight  %}
 
+
+
+<table width="100%" border="0" cellspacing="0" class="table table-striped">
+  <tr>
+    <td>alertLevel<br />Required: exactly 1</td>
+    <td><a href="http://smartplatforms.org/terms#Alert">[sp:Alert]</a></td>
+    <td><a href="http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_SMART_Data_Model#Coded_Value_RDF">Coded Value</a> where code comes from <a href="http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_SMART_Data_Model#AlertLevel_code_RDF">AlertLevel</a></td>
+  </tr>
+  
+   <tr>
+    <td>foaf</td>
+    <td><a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a></td>
+    <td>Friend of a friend</td>
+  </tr>
+  
+   <tr>
+    <td>rdf</td>
+    <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a></td>
+    <td>Resource description framework</td>
+  </tr>
+  
+  <tr>
+    <td>sp</td>
+    <td><a href="http://smartplatforms.org/terms#">http://smartplatforms.org/terms#</a></td>
+    <td>Smart platforms root namespace</td>
+  </tr>
+  
+  <tr>
+    <td>v</td>
+    <td><a href="http://www.w3.org/2006/vcard/ns#">http://www.w3.org/2006/vcard/ns#</a></td>
+    <td>vCard namespace</td>
+  </tr>
+  
+</table>
+
+
+
+
 {% highlight html %}
 alertLevel Required: exactly 1 	[sp:Alert] 	Coded Value where code comes from AlertLevel 
 
