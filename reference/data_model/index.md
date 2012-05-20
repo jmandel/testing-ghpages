@@ -176,58 +176,6 @@ treated in isolation.
 </tbody></table>
 
 
-
-
-
-<table width="100%" border="0" cellspacing="0" class="table table-striped">
-  <tr>
-    <td><b>alertLevel</b><br />Required: exactly 1</td>
-    <td><a href="http://smartplatforms.org/terms#Alert">[sp:Alert]</a></td>
-    <td><a href="http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_SMART_Data_Model#Coded_Value_RDF">Coded Value</a> where code comes from <a href="http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_SMART_Data_Model#AlertLevel_code_RDF">AlertLevel</a></td>
-  </tr>
-  
-   <tr>
-    <td>foaf</td>
-    <td><a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a></td>
-    <td>Friend of a friend</td>
-  </tr>
-  
-   <tr>
-    <td>rdf</td>
-    <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a></td>
-    <td>Resource description framework</td>
-  </tr>
-  
-  <tr>
-    <td>sp</td>
-    <td><a href="http://smartplatforms.org/terms#">http://smartplatforms.org/terms#</a></td>
-    <td>Smart platforms root namespace</td>
-  </tr>
-  
-  <tr>
-    <td>v</td>
-    <td><a href="http://www.w3.org/2006/vcard/ns#">http://www.w3.org/2006/vcard/ns#</a></td>
-    <td>vCard namespace</td>
-  </tr>
-  
-</table>
-
-
-
-
-{% highlight html %}
-alertLevel Required: exactly 1 	[sp:Alert] 	Coded Value where code comes from AlertLevel 
-
-belongs To Required: exactly 1 	[sp:Alert] 	Medical Record
-
-The medical record URI to which a clinical statement belongs. Each clinical statement points back to its medical record so that it can be treated in isolation.
-notes
-Optional: 0 or 1 	[sp:Alert] 	Message intended for a human recipient. [rdfs:Literal] 
-
-http://smartplatforms.org/terms#Alert Properties
-
-{% endhighlight  %}
-
 ##Allergy RDF
 
 Allergy is a subtype of and inherits properties from: SMART Statement
@@ -374,42 +322,63 @@ For instance, below are two allergies: first, an allergy to the entire class of 
 {% endhighlight  %}
 
 
-{% highlight html %}
-allergicReaction
-Required: exactly 1 	[sp:Allergy] 	Coded Value where code comes from SNOMED
-
-Reaction associated with an allergy. Code drawn from SNOMED-CT.
-belongsTo
-Required: exactly 1 	[sp:Allergy] 	Medical Record
-
-The medical record URI to which a clinical statement belongs. Each clinical statement points back to its medical record so that it can be treated in isolation.
-category
-Required: exactly 1 	[sp:Allergy] 	Coded Value where code comes from AllergyCategory
-
-Category of an allergy (food, drug, other substance).
-drugAllergen
-Optional: 0 or 1 	[sp:Allergy] 	Coded Value where code comes from RxNorm_Ingredient
-
-For drug allergies, an RxNorm Concept at the ingredient level (TTY='in').
-drugClassAllergen
-Optional: 0 or 1 	[sp:Allergy] 	Coded Value where code comes from NDFRT
-
-Class of allergen, e.g. Sulfonamides or ACE inhibitors. RDF Code node with code drawn from
-
-           NDF-RT: http://purl.bioontology.org/ontology/NDFRT/{NDFRT_ID}
-
-foodAllergen
-Optional: 0 or 1 	[sp:Allergy] 	Coded Value where code comes from UNII
-
-Substance acting as a food or environmental allergen. For environmental and food substance is a UNII:
-severity
-Required: exactly 1 	[sp:Allergy] 	Coded Value where code comes from AllergySeverity
-
-Severity of an allergy 
-
-http://smartplatforms.org/terms#Allergy Properties
-
-{% endhighlight  %}
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#Allergy" class="external free" title="http://smartplatforms.org/terms#Allergy" rel="nofollow">http://smartplatforms.org/terms#Allergy</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>allergicReaction</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Allergy" class="external text" title="http://smartplatforms.org/terms#Allergy" rel="nofollow">sp:Allergy</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#SNOMED_code_RDF" title=""> SNOMED</a>
+<p>Reaction associated with an allergy.  Code drawn from SNOMED-CT.
+</p>
+</td></tr>
+<tr>
+<td width="30%"><b>belongsTo</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Allergy" class="external text" title="http://smartplatforms.org/terms#Allergy" rel="nofollow">sp:Allergy</a>]</small>
+</td><td width="50%"><a href="#Medical_Record_RDF" title=""> Medical Record</a>
+<p>The medical record URI to which a clinical statement belongs.  Each 
+clinical statement points back to its medical record so that it can be 
+treated in isolation.
+</p>
+</td></tr>
+<tr>
+<td width="30%"><b>category</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Allergy" class="external text" title="http://smartplatforms.org/terms#Allergy" rel="nofollow">sp:Allergy</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#AllergyCategory_code_RDF" title=""> AllergyCategory</a>
+<p>Category of an allergy (food, drug, other substance).
+</p>
+</td></tr>
+<tr>
+<td width="30%">drugAllergen<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Allergy" class="external text" title="http://smartplatforms.org/terms#Allergy" rel="nofollow">sp:Allergy</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#RxNorm_Ingredient_code_RDF" title=""> RxNorm_Ingredient</a>
+<p>For drug allergies, an RxNorm Concept at the ingredient level (TTY='in').
+</p>
+</td></tr>
+<tr>
+<td width="30%">drugClassAllergen<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Allergy" class="external text" title="http://smartplatforms.org/terms#Allergy" rel="nofollow">sp:Allergy</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#NDFRT_code_RDF" title=""> NDFRT</a>
+<p>Class of allergen, e.g. Sulfonamides or ACE inhibitors.  RDF Code node with code drawn from
+</p>
+<pre>           NDF-RT: <a href="http://purl.bioontology.org/ontology/NDFRT/%7BNDFRT_ID%7D" class="external free" title="http://purl.bioontology.org/ontology/NDFRT/{NDFRT_ID}" rel="nofollow">http://purl.bioontology.org/ontology/NDFRT/{NDFRT_ID}</a>
+</pre>
+</td></tr>
+<tr>
+<td width="30%">foodAllergen<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Allergy" class="external text" title="http://smartplatforms.org/terms#Allergy" rel="nofollow">sp:Allergy</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#UNII_code_RDF" title=""> UNII</a>
+<p>Substance acting as a food or environmental allergen.  For environmental and food substance is a UNII:
+</p>
+</td></tr>
+<tr>
+<td width="30%"><b>severity</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Allergy" class="external text" title="http://smartplatforms.org/terms#Allergy" rel="nofollow">sp:Allergy</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#AllergySeverity_code_RDF" title=""> AllergySeverity</a>
+<p>Severity of an allergy	
+</p>
+</td></tr>
+</tbody></table>
 
 ##Allergy Exclusion RDF
 
