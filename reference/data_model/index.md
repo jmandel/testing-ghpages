@@ -153,7 +153,7 @@ Alerts are a way for an application to generate a message (about a patient recor
 
 <table width="100%" border="0" cellspacing="0" class="table table-striped">
   <tr>
-    <td>alertLevel<br />Required: exactly 1</td>
+    <td><b>alertLevel</b><br />Required: exactly 1</td>
     <td><a href="http://smartplatforms.org/terms#Alert">[sp:Alert]</a></td>
     <td><a href="http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_SMART_Data_Model#Coded_Value_RDF">Coded Value</a> where code comes from <a href="http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_SMART_Data_Model#AlertLevel_code_RDF">AlertLevel</a></td>
   </tr>
