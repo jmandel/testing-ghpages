@@ -417,16 +417,26 @@ While it might seem inelegant to expose explicit AllergyExclusion statements, th
 </rdf:RDF>
 {% endhighlight  %}
 
-{% highlight html %}
-allergyExclusionName
-Required: exactly 1 	[sp:AllergyExclusion] 	Coded Value where code comes from AllergyExclusion
-
-Nature of the allergy exclusion.
-belongsTo
-Required: exactly 1 	[sp:AllergyExclusion] 	Medical Record
-
-The medical record URI to which a clinical statement belongs. Each clinical statement points back to its medical record so that it can be treated in isolation. 
-{% endhighlight  %}
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#AllergyExclusion" class="external free" title="http://smartplatforms.org/terms#AllergyExclusion" rel="nofollow">http://smartplatforms.org/terms#AllergyExclusion</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>allergyExclusionName</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#AllergyExclusion" class="external text" title="http://smartplatforms.org/terms#AllergyExclusion" rel="nofollow">sp:AllergyExclusion</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#AllergyExclusion_code_RDF" title=""> AllergyExclusion</a>
+<p>Nature of the allergy exclusion.
+</p>
+</td></tr>
+<tr>
+<td width="30%"><b>belongsTo</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#AllergyExclusion" class="external text" title="http://smartplatforms.org/terms#AllergyExclusion" rel="nofollow">sp:AllergyExclusion</a>]</small>
+</td><td width="50%"><a href="#Medical_Record_RDF" title=""> Medical Record</a>
+<p>The medical record URI to which a clinical statement belongs.  Each 
+clinical statement points back to its medical record so that it can be 
+treated in isolation.
+</p>
+</td></tr>
+</tbody></table>
 
 ##Demographics RDF
 
