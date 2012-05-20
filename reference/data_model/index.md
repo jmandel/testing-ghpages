@@ -151,6 +151,34 @@ Alerts are a way for an application to generate a message (about a patient recor
 
 
 
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#Alert" class="external free" title="http://smartplatforms.org/terms#Alert" rel="nofollow">http://smartplatforms.org/terms#Alert</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>alertLevel</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Alert" class="external text" title="http://smartplatforms.org/terms#Alert" rel="nofollow">sp:Alert</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#AlertLevel_code_RDF" title=""> AlertLevel</a>
+</td></tr>
+<tr>
+<td width="30%"><b>belongsTo</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Alert" class="external text" title="http://smartplatforms.org/terms#Alert" rel="nofollow">sp:Alert</a>]</small>
+</td><td width="50%"><a href="#Medical_Record_RDF" title=""> Medical Record</a>
+<p>The medical record URI to which a clinical statement belongs.  Each 
+clinical statement points back to its medical record so that it can be 
+treated in isolation.
+</p>
+</td></tr>
+<tr>
+<td width="30%">notes<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Alert" class="external text" title="http://smartplatforms.org/terms#Alert" rel="nofollow">sp:Alert</a>]</small>
+</td><td width="50%">Message intended for a human recipient.	 [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+
+
+
+
 <table width="100%" border="0" cellspacing="0" class="table table-striped">
   <tr>
     <td><b>alertLevel</b><br />Required: exactly 1</td>
