@@ -1,169 +1,223 @@
 ---
 layout: page
-title: Developers Documentation SMART App Javascript Libraries
-tagline: for developers
+title: Developers Documentation REST API
+tagline: This is highly preliminary, not a commitment or final version of any particular API or data model. This is purely for internal collaboration and preview purposes.
 includenav: smartnav.markdown
 ---
 {% include JB/setup %}
 
 <div id="toc"> </div>
 
-#What is smart-api-client.js?
+The calls below are all written with respect to the base URL /. But any given SMART container will place all API calls its own base URL, e.g. [http://sample_smart_emr.com/smart-base/](http://sample_smart_emr.com/smart-base/).
 
-Every SMART UI app includes an
+Any individual item that can be retrieved via GET should have a fully-dereferenceable URI. To continue the example above, a medication in our sample EMR might have the URI [http://sample_smart_emr.com/smart-base/records/123456/medications/664373](http://sample_smart_emr.com/smart-base/records/123456/medications/664373). 
 
-<ol><li>
-index.html loads smart-api-client.js to provide the app's functionality.</li></ol>
+#Changelog
 
-This page describes the functionality that including `smart-api-client.js` provides.
+[Changes to API + Payloads](http://wiki.chip.org/smart-project/index.php?title=Developers_Documentation:_Changelog)
 
-##smart-api-client.js
+[Atom Feed](http://wiki.chip.org/smart-project/index.php?title=Developers_Documentation:_Changelog&action=history&feed=atom)
 
-You include this file in every additinal page of your app, e.g. via
+#Overview
 
-{% highlight html %}
- <script src="http://sandbox-dev.smartplatforms.org:8001/framework/smart/scripts/smart-api-client.js"></script>
-{% endhighlight  %}
+The SMART API provides access to individual resources (medications, fulfillment events, prescription events, problems, etc.) and groups of these resources. 
 
-Once this script loads, your app will have access to a javascript variable called SMART, which can be used to interact with the SMART container via the calls described below. 
+##Read-only API 
 
-##Interacting with the SMART Container via javascript
+Please note that for the time being, the SMART API remains read-only. We are excited about continuing to define our read/write API -- but we want make our early APIs as easy as possible for EMR and PHR vendors to expose. 
 
-Inside your index.html, you'll need to be sure the SMART library has finished loading before you can use it. Just put your code inside a call to `SMART.ready()` as shown below. Then you're all set to try out the features below!
+##REST Design Principles
+
+In general you can interact with a:
+
+* Group of resources using
+        * GET to retrieve a group of resources such as /medications/
+        * POST to add a group of resources such as /problems. POSTing will add new resources every time it is called; in other words, POST is not idempotent. 
+
+* Single resource using
+        * GET to retrieve a single resource such as /medications/{medication_id}
+        * DELETE to remove a single resource
+        * PUT to add a single resource tagged with an external_id. When a resource is PUT, it replaces any existing resource with the same external_id. In other words, PUT is idempotent. When PUTting a resource such as a medication that may contain child resources (e.g. fulfillment events), these child nodes must not be included in the graph. Rather, they must be separately attached with another API call once the parent medication is PUT and has received an internal SMART id. So, PUTting a medication with two fulfillments actually takes three API calls: one for the medication, and one for each (child) fulfillment event. 
+
+#OWL Ontology File
+
+The API calls listed below, as well as the RDF/XML payloads, are also defined in a machine-readable OWL file. The OWL file has been used to generate the documentation below, as well as our client-side REST libraries and API Playground app. 
+
+#Container Calls
+
+##App Manifest 
+
+RDF Payload description
+
+Returns a JSON SMART UI app manifest for the app matching {descriptor}, or 404. Note that {descriptor} can be an app ID like "got-statins@apps.smartplatforms.org" or an intent string like "view_medications".
+
+ GET /apps/{descriptor}/manifest
+
+Returns a JSON list of all SMART UI app manifests installed on the container.
+
+ GET /apps/manifests/
+ 
+##Capabilities
+
+RDF Payload description
+
+Get capabilities for a container
 
 
-The javascript SMART object contains some helpful context describing the current SMART container user and patient record
-
-* SMART.user  {id, full_name}
-* SMART.record  {id, full_name}
-	
-	
-	
-So, for example, to announce the patient's name, you could
-
-{% highlight html %}
-alert("The current patient is: " + SMART.record.full_name);
-{% endhighlight  %}
-
-If you're looking to make some SMART REST calls, you may be interested in using REST authentication tokens, which you can access via
-
-* SMART.credentials.rest_token
-* SMART.credentials.rest_sec
+ GET /capabilities/
 
 
-Or you can get the complete SMART OAuth header for your app via
+##Demographics
 
-<ul><li>SMART.credentials.oauth_header </li></ul>
+RDF Payload description
 
-##Subscribe to notifications from the SMART Container
-
-A container will notify an app when important events occur. Today the SMART API defines three Container-to-app notifications that your app can subscribe to
-
-* "backgrounded" -- the app has been hidden from view</li>
-* "foregrounded" -- the app has been restored to view</li>
-* "destroyed" -- the app is being shut down </li>
-
-	
-Your app can use the "on" directive to take action when a notification arrives. For example
-
-{% highlight html %}
-SMART.on("foregrounded", function() {
-  refreshAllData();
-  alert("Thanks for looking again!");
-});
-{% endhighlight  %}
-
-##Send notifications to the SMART Container
-
-Your app can also send notifications to the container. Today the SMART API defines only a single App-to-Container notification, which allows an app to request additional screen real estate when there's something big to display
+Get an RDF graph of sp:Demographics elements for all patients that match the query. Matching treats family_name and given_name as the *beginning* of a name. For instance given_name='J' matches /^J/i and thus matchs 'Josh'. Birthday is an ISO8601 string like "2008-03-21"; gender is "male" or "female". Gender, birthday, zipcode, and medical_record_number must match exactly.
 
 {% highlight html %}
-SMART.notify_host("request_fullscreen");
+ GET /records/search?given_name={given_name}&family_name={family_name}&zipcode={zipcode}&birthday={birthday}&gender={gender}&medical_record_number={medical_record_number}
+
 {% endhighlight  %}
 
-Please keep in mind that these app->container and container-->app notifications are "fire and forget"; they don't provide a callback mechanism.
+##Ontology 
 
-##Making API Calls
+RDF Payload description
 
-You can also use the SMART javascript object to make [any API call](http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_REST_API_Reference) by calling its api_call method, which takes two parameters
+Get the ontology used by a SMART container
+
+ GET /ontology
+ 
+##User
+
+RDF Payload description
+
+Get users by name (or all users if blank)
+
+ GET /users/search?given_name={given_name}&family_name={family_name}
+
+Get a single user by internal ID
+
+ GET /users/{user_id}
+
+#Record Calls
+
+##Alert
+
+RDF Payload description
+[edit] Allergy
+
+RDF Payload description
+
+Get all allergies for a patient
+
+ GET /records/{record_id}/allergies/
+
+Get allergies for a patient
+
+ GET /records/{record_id}/allergies/{allergy_id}
+
+##Demographics
+
+RDF Payload description
+
+Get all demographics for a patient
+
+ GET /records/{record_id}/demographics
+
+##Encounter
+
+RDF Payload description
+
+Get all encounters for a patient
+
+ GET /records/{record_id}/encounters/
+
+Get encounters for a patient
+
+ GET /records/{record_id}/encounters/{encounter_id}
+
+##Fulfillment
+
+RDF Payload description
+
+Get all fulfillments for a patient
+
+ GET /records/{record_id}/fulfillments/
+
+Get fulfillments for a patient
+
+ GET /records/{record_id}/fulfillments/{fulfillment_id}
+
+##Immunization
+
+RDF Payload description
+
+Get all immunizations for a patient
+
+ GET /records/{record_id}/immunizations/
+
+Get one immunization for a patient
+
+ GET /records/{record_id}/immunizations/{immunization_id}
+
+##Lab Result
+
+RDF Payload description
+
+Get all lab results for a patient
+
+ GET /records/{record_id}/lab_results/
+
+Get lab results for a patient
+
+ GET /records/{record_id}/lab_results/{lab_result_id}
+
+##Medical Record
+
+RDF Payload description
+##Medication
+
+RDF Payload description
+
+Get medication for a patient
+
+ GET /records/{record_id}/medications/{medication_id}
+
+Get all medications for a patient
+
+ GET /records/{record_id}/medications/
+
+##Problem
+
+RDF Payload description
+
+Get problems for a patient
+
+ GET /records/{record_id}/problems/{problem_id}
+
+Get all problems for a patient
+
+ GET /records/{record_id}/problems/
+
+##User Preferences
+
+RDF Payload description
+
+Get user preferences for an app
+
+ GET /accounts/{user_id}/apps/{smart_app_id}/preferences
+
+##VitalSigns
+
+RDF Payload description
+
+Get all vital signs for a patient
+
+ GET /records/{record_id}/vital_signs/
+
+Get vital signs for a patient
+
+ GET /records/{record_id}/vital_signs/{vital_signs_id}
 
 
-* A dictionary of
 
-<ol><li>method HTTP method as string ('GET', 'POST', 'PUT', or 'DELETE')</li>
-	<li>url URL to post to, relative to the SMART container's API base</li>
-	<li>contentType as string (defaults to 'application/x-www-form-urlencoded')</li>
-	<li>data as string (for data other than x-www-form-urlencoded data) or dictionary (for x-www-form-urlencoded data)</li>
-</ol>
 
-* A callback function of
-
-<ol><li>contentType string set according to the response header</li>
-<li>data string representation of data </li>
-</ol>
-
-For example, we could retrieve all medications for the in-context record by calling
-
-{% highlight html %}
- SMART.api_call({ 
-                   method: 'GET',
-                   url: "/records/" + SMART.record.id + "/medications/",
-                   data: {}
-                },
-
-	        function(response) {
-                   alert('data received: ' + response.body);
-                });
-{% endhighlight  %}
-
-#Convenience wrappers around common API calls
-
-But you shouldn't need to use the raw .api_call method very often, because the SMART javascript object also provides convenience wrappers around common API calls. The functions below all take a callback function of one argument: the RDF graph that holds the response data, parsed from raw RDF/XML via [rdfquery](http://code.google.com/p/rdfquery/).
-
-## SMART.ALLERGIES_get
-
-GETs all allergies from the in-context record 
-
-##SMART.DEMOGRAPHICS_get
-
-GETs all demographics from the in-context record 
-
-##SMART.FULFILLMENTS_get
-
-GETs the fulfillments from the in-context record 
-
-##SMART.LAB_RESULTS_get
-
-GETs all labs from the in-context record 
-
-##SMART.MANIFESTS_get
-
-GETs all SMART App manifests for apps installed in this container 
-
-##SMART.MANIFEST_get
-
-GETs a sing SMART App manifest 
-
-##GETs a sing SMART App manifest 
-
-GETs all medications from the in-context record 
-
-##SMART.NOTES_get
-
-GETs all notse from the in-context record 
-
-##SMART.PROBLEMS_get
-
-GETs all problems from the in-context record 
-
-##SMART.VITAL_SIGNS_get
-
-GETs all problems from the in-context record </pre> 
-
-#Pulling this together with a quick example...
-
-{% highlight html %}
-SMART.ready(function() {
-  alert("Hello, " + SMART.user.full_name);
-});
-{% endhighlight  %}
