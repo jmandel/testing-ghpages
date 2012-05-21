@@ -1939,4 +1939,1543 @@ Organization is a subtype of and inherits properties from Component
 </td></tr>
 </tbody></table>
 
+##Participant RDF
+
+Participant is a subtype of and inherits properties from Component
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#Participant" class="external free" title="http://smartplatforms.org/terms#Participant" rel="nofollow">http://smartplatforms.org/terms#Participant</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%">organization<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Participant" class="external text" title="http://smartplatforms.org/terms#Participant" rel="nofollow">sp:Participant</a>]</small>
+</td><td width="50%"><a href="#Organization_RDF" title=""> Organization</a>
+<p>Organization of participant
+</p>
+</td></tr>
+<tr>
+<td width="30%">person<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Participant" class="external text" title="http://smartplatforms.org/terms#Participant" rel="nofollow">sp:Participant</a>]</small>
+</td><td width="50%"><a href="#Person_RDF" title=""> Person</a>
+<p>Person who participated
+</p>
+</td></tr>
+<tr>
+<td width="30%">role<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Participant" class="external text" title="http://smartplatforms.org/terms#Participant" rel="nofollow">sp:Participant</a>]</small>
+</td><td width="50%">Role of participant (free text) [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##Person RDF
+
+Person is a subtype of and inherits properties from Component, VCard
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#Person" class="external free" title="http://smartplatforms.org/terms#Person" rel="nofollow">http://smartplatforms.org/terms#Person</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%">ethnicity<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Person" class="external text" title="http://smartplatforms.org/terms#Person" rel="nofollow">sp:Person</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">preferredLanguage<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Person" class="external text" title="http://smartplatforms.org/terms#Person" rel="nofollow">sp:Person</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">race<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Person" class="external text" title="http://smartplatforms.org/terms#Person" rel="nofollow">sp:Person</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">adr<br><small>Optional: 0 or more</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Person" class="external text" title="http://smartplatforms.org/terms#Person" rel="nofollow">sp:Person</a>]</small>
+</td><td width="50%"><a href="#Address_RDF" title=""> Address</a>
+</td></tr>
+<tr>
+<td width="30%">bday<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Person" class="external text" title="http://smartplatforms.org/terms#Person" rel="nofollow">sp:Person</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">email<br><small>Optional: 0 or more</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Person" class="external text" title="http://smartplatforms.org/terms#Person" rel="nofollow">sp:Person</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>n</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Person" class="external text" title="http://smartplatforms.org/terms#Person" rel="nofollow">sp:Person</a>]</small>
+</td><td width="50%"><a href="#Name_RDF" title=""> Name</a>
+</td></tr>
+<tr>
+<td width="30%">tel<br><small>Optional: 0 or more</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Person" class="external text" title="http://smartplatforms.org/terms#Person" rel="nofollow">sp:Person</a>]</small>
+</td><td width="50%"><a href="#Tel_RDF" title=""> Tel</a>
+</td></tr>
+<tr>
+<td width="30%">gender<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Person" class="external text" title="http://smartplatforms.org/terms#Person" rel="nofollow">sp:Person</a>]</small>
+</td><td width="50%">A person's (administrative) gender.  This should consist of the string "male" or "female". [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##Pharmacy RDF
+
+Pharmacy is a subtype of and inherits properties from Component, Organization
+
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#Pharmacy" class="external free" title="http://smartplatforms.org/terms#Pharmacy" rel="nofollow">http://smartplatforms.org/terms#Pharmacy</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%">ncpdpId<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Pharmacy" class="external text" title="http://smartplatforms.org/terms#Pharmacy" rel="nofollow">sp:Pharmacy</a>]</small>
+</td><td width="50%">Pharmacy's National Council for Prescription Drug Programs ID Number (NCPDP ID) [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">adr<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Pharmacy" class="external text" title="http://smartplatforms.org/terms#Pharmacy" rel="nofollow">sp:Pharmacy</a>]</small>
+</td><td width="50%"><a href="#Address_RDF" title=""> Address</a>
+</td></tr>
+<tr>
+<td width="30%">organization-name<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Pharmacy" class="external text" title="http://smartplatforms.org/terms#Pharmacy" rel="nofollow">sp:Pharmacy</a>]</small>
+</td><td width="50%">Name of the organization [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##Provider RDF
+
+Provider is a subtype of and inherits properties from Component, Person, VCard
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#Provider" class="external free" title="http://smartplatforms.org/terms#Provider" rel="nofollow">http://smartplatforms.org/terms#Provider</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%">deaNumber<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Provider" class="external text" title="http://smartplatforms.org/terms#Provider" rel="nofollow">sp:Provider</a>]</small>
+</td><td width="50%">Provider's Drug Enforcement Agency Number [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">ethnicity<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Provider" class="external text" title="http://smartplatforms.org/terms#Provider" rel="nofollow">sp:Provider</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">npiNumber<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Provider" class="external text" title="http://smartplatforms.org/terms#Provider" rel="nofollow">sp:Provider</a>]</small>
+</td><td width="50%">Provider's National Provider Identification Number [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">preferredLanguage<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Provider" class="external text" title="http://smartplatforms.org/terms#Provider" rel="nofollow">sp:Provider</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">race<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Provider" class="external text" title="http://smartplatforms.org/terms#Provider" rel="nofollow">sp:Provider</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">adr<br><small>Optional: 0 or more</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Provider" class="external text" title="http://smartplatforms.org/terms#Provider" rel="nofollow">sp:Provider</a>]</small>
+</td><td width="50%"><a href="#Address_RDF" title=""> Address</a>
+</td></tr>
+<tr>
+<td width="30%">bday<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Provider" class="external text" title="http://smartplatforms.org/terms#Provider" rel="nofollow">sp:Provider</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">email<br><small>Optional: 0 or more</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Provider" class="external text" title="http://smartplatforms.org/terms#Provider" rel="nofollow">sp:Provider</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>n</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Provider" class="external text" title="http://smartplatforms.org/terms#Provider" rel="nofollow">sp:Provider</a>]</small>
+</td><td width="50%"><a href="#Name_RDF" title=""> Name</a>
+</td></tr>
+<tr>
+<td width="30%">tel<br><small>Optional: 0 or more</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Provider" class="external text" title="http://smartplatforms.org/terms#Provider" rel="nofollow">sp:Provider</a>]</small>
+</td><td width="50%"><a href="#Tel_RDF" title=""> Tel</a>
+</td></tr>
+<tr>
+<td width="30%">gender<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#Provider" class="external text" title="http://smartplatforms.org/terms#Provider" rel="nofollow">sp:Provider</a>]</small>
+</td><td width="50%">A person's (administrative) gender.  This should consist of the string "male" or "female". [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##QuantitativeResult RDF
+
+QuantitativeResult is a subtype of and inherits properties from Component 
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#QuantitativeResult" class="external free" title="http://smartplatforms.org/terms#QuantitativeResult" rel="nofollow">http://smartplatforms.org/terms#QuantitativeResult</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%">nonCriticalRange<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#QuantitativeResult" class="external text" title="http://smartplatforms.org/terms#QuantitativeResult" rel="nofollow">sp:QuantitativeResult</a>]</small>
+</td><td width="50%"><a href="#ValueRange_RDF" title=""> ValueRange</a>
+<p>Non-critical range for result.  (Results outside this range are considered "critical.")
+</p>
+</td></tr>
+<tr>
+<td width="30%">normalRange<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#QuantitativeResult" class="external text" title="http://smartplatforms.org/terms#QuantitativeResult" rel="nofollow">sp:QuantitativeResult</a>]</small>
+</td><td width="50%"><a href="#ValueRange_RDF" title=""> ValueRange</a>
+<p>Normal range for result. (Results outside this range are considered "abnormal".)
+</p>
+</td></tr>
+<tr>
+<td width="30%"><b>valueAndUnit</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#QuantitativeResult" class="external text" title="http://smartplatforms.org/terms#QuantitativeResult" rel="nofollow">sp:QuantitativeResult</a>]</small>
+</td><td width="50%"><a href="#ValueAndUnit_RDF" title=""> ValueAndUnit</a>
+<p>Value and unit
+</p>
+</td></tr>
+</tbody></table>
+
+##Tel RDF
+
+Tel is a subtype of and inherits properties from Component 
+
+
+A v Tel element can be given additional types to indicate 
+
+* Preferred Status (v:Pref)
+* Cell phone (vCell)
+* Home phone (vHome)
+* Work phone (vWork)
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://www.w3.org/2006/vcard/ns#Tel" class="external free" title="http://www.w3.org/2006/vcard/ns#Tel" rel="nofollow">http://www.w3.org/2006/vcard/ns#Tel</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>value</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://www.w3.org/2006/vcard/ns#Tel" class="external text" title="http://www.w3.org/2006/vcard/ns#Tel" rel="nofollow">v:Tel</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##VCard RDF
+
+VCard is a subtype of and inherits properties from Component 
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://www.w3.org/2006/vcard/ns#VCard" class="external free" title="http://www.w3.org/2006/vcard/ns#VCard" rel="nofollow">http://www.w3.org/2006/vcard/ns#VCard</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%">adr<br><small>Optional: 0 or more</small>
+</td><td width="20%"><small>[<a href="http://www.w3.org/2006/vcard/ns#VCard" class="external text" title="http://www.w3.org/2006/vcard/ns#VCard" rel="nofollow">v:VCard</a>]</small>
+</td><td width="50%"><a href="#Address_RDF" title=""> Address</a>
+</td></tr>
+<tr>
+<td width="30%">bday<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://www.w3.org/2006/vcard/ns#VCard" class="external text" title="http://www.w3.org/2006/vcard/ns#VCard" rel="nofollow">v:VCard</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">email<br><small>Optional: 0 or more</small>
+</td><td width="20%"><small>[<a href="http://www.w3.org/2006/vcard/ns#VCard" class="external text" title="http://www.w3.org/2006/vcard/ns#VCard" rel="nofollow">v:VCard</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>n</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://www.w3.org/2006/vcard/ns#VCard" class="external text" title="http://www.w3.org/2006/vcard/ns#VCard" rel="nofollow">v:VCard</a>]</small>
+</td><td width="50%"><a href="#Name_RDF" title=""> Name</a>
+</td></tr>
+<tr>
+<td width="30%">tel<br><small>Optional: 0 or more</small>
+</td><td width="20%"><small>[<a href="http://www.w3.org/2006/vcard/ns#VCard" class="external text" title="http://www.w3.org/2006/vcard/ns#VCard" rel="nofollow">v:VCard</a>]</small>
+</td><td width="50%"><a href="#Tel_RDF" title=""> Tel</a>
+</td></tr>
+</tbody></table>
+
+##ValueAndUnit RDF
+
+ValueAndUnit is a subtype of and inherits properties from Component, DataType 
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#ValueAndUnit" class="external free" title="http://smartplatforms.org/terms#ValueAndUnit" rel="nofollow">http://smartplatforms.org/terms#ValueAndUnit</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>unit</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#ValueAndUnit" class="external text" title="http://smartplatforms.org/terms#ValueAndUnit" rel="nofollow">sp:ValueAndUnit</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>value</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#ValueAndUnit" class="external text" title="http://smartplatforms.org/terms#ValueAndUnit" rel="nofollow">sp:ValueAndUnit</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##ValueRange RDF
+
+ValueRange is a subtype of and inherits properties from Component, DataType 
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#ValueRange" class="external free" title="http://smartplatforms.org/terms#ValueRange" rel="nofollow">http://smartplatforms.org/terms#ValueRange</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>maximum</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#ValueRange" class="external text" title="http://smartplatforms.org/terms#ValueRange" rel="nofollow">sp:ValueRange</a>]</small>
+</td><td width="50%"><a href="#ValueAndUnit_RDF" title=""> ValueAndUnit</a>
+<p>Maximum value in range (not inclusive)
+</p>
+</td></tr>
+<tr>
+<td width="30%"><b>minimum</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#ValueRange" class="external text" title="http://smartplatforms.org/terms#ValueRange" rel="nofollow">sp:ValueRange</a>]</small>
+</td><td width="50%"><a href="#ValueAndUnit_RDF" title=""> ValueAndUnit</a>
+<p>Minimum value in range (inclusive)
+</p>
+</td></tr>
+</tbody></table>
+
+##ValueRatio RDF
+
+ValueRatio is a subtype of and inherits properties from Component, DataType 
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#ValueRatio" class="external free" title="http://smartplatforms.org/terms#ValueRatio" rel="nofollow">http://smartplatforms.org/terms#ValueRatio</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>denominator</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#ValueRatio" class="external text" title="http://smartplatforms.org/terms#ValueRatio" rel="nofollow">sp:ValueRatio</a>]</small>
+</td><td width="50%"><a href="#ValueAndUnit_RDF" title=""> ValueAndUnit</a>
+<p>Denominator of the ratio.
+</p>
+</td></tr>
+<tr>
+<td width="30%"><b>numerator</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#ValueRatio" class="external text" title="http://smartplatforms.org/terms#ValueRatio" rel="nofollow">sp:ValueRatio</a>]</small>
+</td><td width="50%"><a href="#ValueAndUnit_RDF" title=""> ValueAndUnit</a>
+<p>Numerator of the ratio.
+</p>
+</td></tr>
+</tbody></table>
+
+##VitalSign RDF
+
+VitalSign is a subtype of and inherits properties from Component, DataType, ValueAndUnit 
+
+Vital Sign: includes a LOINC code specifying which measurement is being reported, alongside a value and unit. 
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#VitalSign" class="external free" title="http://smartplatforms.org/terms#VitalSign" rel="nofollow">http://smartplatforms.org/terms#VitalSign</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>unit</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#VitalSign" class="external text" title="http://smartplatforms.org/terms#VitalSign" rel="nofollow">sp:VitalSign</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>value</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#VitalSign" class="external text" title="http://smartplatforms.org/terms#VitalSign" rel="nofollow">sp:VitalSign</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">vitalName<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#VitalSign" class="external text" title="http://smartplatforms.org/terms#VitalSign" rel="nofollow">sp:VitalSign</a>]</small>
+</td><td width="50%"><a href="#Coded_Value_RDF" title=""> Coded Value</a> where code comes from <a href="#VitalSign_code_RDF" title=""> VitalSign</a>
+<p>LOINC Coded Value for the vital sign type
+</p>
+</td></tr>
+</tbody></table>
+
+#Container-level Types
+
+##App Manifest RDF
+
+##Capabilities RDF
+
+A SMART Container exposes a set of capabilities as a JSON structure. The example below shows the capabilities of a container that provides Demographics, Encounters, and Vital Signs only. 
+
+{% highlight html %}
+{
+    "http://smartplatforms.org/terms#Demographics": {
+        "methods": [
+            "GET"
+        ]
+    }, 
+    "http://smartplatforms.org/terms#Encounter": {
+        "methods": [
+            "GET"
+        ]
+    }, 
+    "http://smartplatforms.org/terms#VitalSigns": {
+        "methods": [
+            "GET"
+        ]
+    }
+}
+{% endhighlight  %}
+
+##Ontology RDF
+
+User is a subtype of and inherits properties from Component, Person, VCard 
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms#User" class="external free" title="http://smartplatforms.org/terms#User" rel="nofollow">http://smartplatforms.org/terms#User</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%">department<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#User" class="external text" title="http://smartplatforms.org/terms#User" rel="nofollow">sp:User</a>]</small>
+</td><td width="50%">A user's department [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">ethnicity<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#User" class="external text" title="http://smartplatforms.org/terms#User" rel="nofollow">sp:User</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">preferredLanguage<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#User" class="external text" title="http://smartplatforms.org/terms#User" rel="nofollow">sp:User</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">race<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#User" class="external text" title="http://smartplatforms.org/terms#User" rel="nofollow">sp:User</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">role<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#User" class="external text" title="http://smartplatforms.org/terms#User" rel="nofollow">sp:User</a>]</small>
+</td><td width="50%">A user's role [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">adr<br><small>Optional: 0 or more</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#User" class="external text" title="http://smartplatforms.org/terms#User" rel="nofollow">sp:User</a>]</small>
+</td><td width="50%"><a href="#Address_RDF" title=""> Address</a>
+</td></tr>
+<tr>
+<td width="30%">bday<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#User" class="external text" title="http://smartplatforms.org/terms#User" rel="nofollow">sp:User</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%">email<br><small>Optional: 0 or more</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#User" class="external text" title="http://smartplatforms.org/terms#User" rel="nofollow">sp:User</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>n</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#User" class="external text" title="http://smartplatforms.org/terms#User" rel="nofollow">sp:User</a>]</small>
+</td><td width="50%"><a href="#Name_RDF" title=""> Name</a>
+</td></tr>
+<tr>
+<td width="30%">tel<br><small>Optional: 0 or more</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#User" class="external text" title="http://smartplatforms.org/terms#User" rel="nofollow">sp:User</a>]</small>
+</td><td width="50%"><a href="#Tel_RDF" title=""> Tel</a>
+</td></tr>
+<tr>
+<td width="30%">gender<br><small>Optional: 0 or 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms#User" class="external text" title="http://smartplatforms.org/terms#User" rel="nofollow">sp:User</a>]</small>
+</td><td width="50%">A person's (administrative) gender.  This should consist of the string "male" or "female". [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+#Data code Types
+
+##AlertLevel code RDF
+
+AlertLevel is a subtype of and inherits properties from Code, Component, DataType 
+
+Constrained to one of 
+
+{% highlight html %}
+<spcode:AlertLevel rdf:about="http://smartplatforms.org/terms/codes/AlertLevel#warning">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Warning</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/AlertLevel#</sp:system>
+    <dcterms:identifier>warning</dcterms:identifier> 
+</spcode:AlertLevel>
+<spcode:AlertLevel rdf:about="http://smartplatforms.org/terms/codes/AlertLevel#severe">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Severe</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/AlertLevel#</sp:system>
+    <dcterms:identifier>severe</dcterms:identifier> 
+</spcode:AlertLevel>
+<spcode:AlertLevel rdf:about="http://smartplatforms.org/terms/codes/AlertLevel#info">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Info</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/AlertLevel#</sp:system>
+    <dcterms:identifier>info</dcterms:identifier> 
+</spcode:AlertLevel>
+{% endhighlight  %}
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/AlertLevel" class="external free" title="http://smartplatforms.org/terms/codes/AlertLevel" rel="nofollow">http://smartplatforms.org/terms/codes/AlertLevel</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/AlertLevel" class="external text" title="http://smartplatforms.org/terms/codes/AlertLevel" rel="nofollow">spcode:AlertLevel</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/AlertLevel" class="external text" title="http://smartplatforms.org/terms/codes/AlertLevel" rel="nofollow">spcode:AlertLevel</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/AlertLevel" class="external text" title="http://smartplatforms.org/terms/codes/AlertLevel" rel="nofollow">spcode:AlertLevel</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##AllergyCategory code RDF
+
+AllergyCategory is a subtype of and inherits properties from Code, Component, DataType, SNOMED 
+
+Constrained to one of
+
+{% highlight html %}
+<spcode:AllergyCategory rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/414285001">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Food allergy</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/SNOMEDCT/</sp:system>
+    <dcterms:identifier>414285001</dcterms:identifier> 
+</spcode:AllergyCategory>
+<spcode:AllergyCategory rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/426232007">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Environmental allergy</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/SNOMEDCT/</sp:system>
+    <dcterms:identifier>426232007</dcterms:identifier> 
+</spcode:AllergyCategory>
+<spcode:AllergyCategory rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/416098002">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Drug allergy</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/SNOMEDCT/</sp:system>
+    <dcterms:identifier>416098002</dcterms:identifier> 
+</spcode:AllergyCategory>
+<spcode:AllergyCategory rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/59037007">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Drug intolerance</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/SNOMEDCT/</sp:system>
+    <dcterms:identifier>59037007</dcterms:identifier> 
+</spcode:AllergyCategory>
+<spcode:AllergyCategory rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/235719002">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Food intolerance</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/SNOMEDCT/</sp:system>
+    <dcterms:identifier>235719002</dcterms:identifier> 
+</spcode:AllergyCategory>
+{% endhighlight  %}
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/AllergyCategory" class="external free" title="http://smartplatforms.org/terms/codes/AllergyCategory" rel="nofollow">http://smartplatforms.org/terms/codes/AllergyCategory</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/AllergyCategory" class="external text" title="http://smartplatforms.org/terms/codes/AllergyCategory" rel="nofollow">spcode:AllergyCategory</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/AllergyCategory" class="external text" title="http://smartplatforms.org/terms/codes/AllergyCategory" rel="nofollow">spcode:AllergyCategory</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/AllergyCategory" class="external text" title="http://smartplatforms.org/terms/codes/AllergyCategory" rel="nofollow">spcode:AllergyCategory</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##AllergyExclusion code RDF
+
+AllergyExclusion is a subtype of and inherits properties from Code, Component, DataType, SNOMED 
+
+Constrained to one of
+
+{% highlight html %}
+<spcode:AllergyExclusion rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/160244002">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>No known allergies</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/SNOMEDCT/</sp:system>
+    <dcterms:identifier>160244002</dcterms:identifier> 
+</spcode:AllergyExclusion>
+<spcode:AllergyExclusion rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/428607008">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>No known environmental allergy</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/SNOMEDCT/</sp:system>
+    <dcterms:identifier>428607008</dcterms:identifier> 
+</spcode:AllergyExclusion>
+<spcode:AllergyExclusion rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/429625007">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>No known food allergy</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/SNOMEDCT/</sp:system>
+    <dcterms:identifier>429625007</dcterms:identifier> 
+</spcode:AllergyExclusion>
+<spcode:AllergyExclusion rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/409137002">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>No known history of drug allergy</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/SNOMEDCT/</sp:system>
+    <dcterms:identifier>409137002</dcterms:identifier> 
+</spcode:AllergyExclusion>
+{% endhighlight  %}
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/AllergyExclusion" class="external free" title="http://smartplatforms.org/terms/codes/AllergyExclusion" rel="nofollow">http://smartplatforms.org/terms/codes/AllergyExclusion</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/AllergyExclusion" class="external text" title="http://smartplatforms.org/terms/codes/AllergyExclusion" rel="nofollow">spcode:AllergyExclusion</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/AllergyExclusion" class="external text" title="http://smartplatforms.org/terms/codes/AllergyExclusion" rel="nofollow">spcode:AllergyExclusion</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/AllergyExclusion" class="external text" title="http://smartplatforms.org/terms/codes/AllergyExclusion" rel="nofollow">spcode:AllergyExclusion</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##AllergySeverity code RDF
+
+AllergySeverity is a subtype of and inherits properties from Code, Component, DataType, SNOMED 
+
+
+Constrained to one of 
+
+{% highlight html %}
+<spcode:AllergySeverity rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/255604002">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Mild</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/SNOMEDCT/</sp:system>
+    <dcterms:identifier>255604002</dcterms:identifier> 
+</spcode:AllergySeverity>
+<spcode:AllergySeverity rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/442452003">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Life threatening</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/SNOMEDCT/</sp:system>
+    <dcterms:identifier>442452003</dcterms:identifier> 
+</spcode:AllergySeverity>
+<spcode:AllergySeverity rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/6736007">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Moderate</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/SNOMEDCT/</sp:system>
+    <dcterms:identifier>6736007</dcterms:identifier> 
+</spcode:AllergySeverity>
+<spcode:AllergySeverity rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/399166001">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Fatal</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/SNOMEDCT/</sp:system>
+    <dcterms:identifier>399166001</dcterms:identifier> 
+</spcode:AllergySeverity>
+<spcode:AllergySeverity rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/24484000">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Severe</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/SNOMEDCT/</sp:system>
+    <dcterms:identifier>24484000</dcterms:identifier> 
+</spcode:AllergySeverity>
+{% endhighlight  %}
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/AllergySeverity" class="external free" title="http://smartplatforms.org/terms/codes/AllergySeverity" rel="nofollow">http://smartplatforms.org/terms/codes/AllergySeverity</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/AllergySeverity" class="external text" title="http://smartplatforms.org/terms/codes/AllergySeverity" rel="nofollow">spcode:AllergySeverity</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/AllergySeverity" class="external text" title="http://smartplatforms.org/terms/codes/AllergySeverity" rel="nofollow">spcode:AllergySeverity</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/AllergySeverity" class="external text" title="http://smartplatforms.org/terms/codes/AllergySeverity" rel="nofollow">spcode:AllergySeverity</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##BloodPressureBodyPosition code RDF
+
+BloodPressureBodyPosition is a subtype of and inherits properties from Code, Component, DataType, SNOMED 
+
+Constrained to one of 
+
+{% highlight html %}
+<spcode:BloodPressureBodyPosition rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/40199007">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Supine</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/SNOMEDCT/</sp:system>
+    <dcterms:identifier>40199007</dcterms:identifier> 
+</spcode:BloodPressureBodyPosition>
+<spcode:BloodPressureBodyPosition rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/33586001">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Sitting</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/SNOMEDCT/</sp:system>
+    <dcterms:identifier>33586001</dcterms:identifier> 
+</spcode:BloodPressureBodyPosition>
+<spcode:BloodPressureBodyPosition rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/10904000">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Standing</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/SNOMEDCT/</sp:system>
+    <dcterms:identifier>10904000</dcterms:identifier> 
+</spcode:BloodPressureBodyPosition>
+{% endhighlight  %}
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/BloodPressureBodyPosition" class="external free" title="http://smartplatforms.org/terms/codes/BloodPressureBodyPosition" rel="nofollow">http://smartplatforms.org/terms/codes/BloodPressureBodyPosition</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/BloodPressureBodyPosition" class="external text" title="http://smartplatforms.org/terms/codes/BloodPressureBodyPosition" rel="nofollow">spcode:BloodPressureBodyPosition</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/BloodPressureBodyPosition" class="external text" title="http://smartplatforms.org/terms/codes/BloodPressureBodyPosition" rel="nofollow">spcode:BloodPressureBodyPosition</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/BloodPressureBodyPosition" class="external text" title="http://smartplatforms.org/terms/codes/BloodPressureBodyPosition" rel="nofollow">spcode:BloodPressureBodyPosition</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##BloodPressureBodySite code RDF
+
+BloodPressureBodySite is a subtype of and inherits properties from Code, Component, DataType, SNOMED 
+
+Constrained to one of
+
+{% highlight html %}
+<spcode:BloodPressureMethod rdf:about="http://smartplatforms.org/terms/codes/BloodPressureMethod#invasive">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Invasive</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/BloodPressureMethod#</sp:system>
+    <dcterms:identifier>invasive</dcterms:identifier> 
+</spcode:BloodPressureMethod>
+<spcode:BloodPressureMethod rdf:about="http://smartplatforms.org/terms/codes/BloodPressureMethod#palpation">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Palpation</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/BloodPressureMethod#</sp:system>
+    <dcterms:identifier>palpation</dcterms:identifier> 
+</spcode:BloodPressureMethod>
+<spcode:BloodPressureMethod rdf:about="http://smartplatforms.org/terms/codes/BloodPressureMethod#machine">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Machine</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/BloodPressureMethod#</sp:system>
+    <dcterms:identifier>machine</dcterms:identifier> 
+</spcode:BloodPressureMethod>
+<spcode:BloodPressureMethod rdf:about="http://smartplatforms.org/terms/codes/BloodPressureMethod#auscultation">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Auscultation</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/BloodPressureMethod#</sp:system>
+    <dcterms:identifier>auscultation</dcterms:identifier> 
+</spcode:BloodPressureMethod>
+{% endhighlight  %}
+
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/BloodPressureMethod" class="external free" title="http://smartplatforms.org/terms/codes/BloodPressureMethod" rel="nofollow">http://smartplatforms.org/terms/codes/BloodPressureMethod</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/BloodPressureMethod" class="external text" title="http://smartplatforms.org/terms/codes/BloodPressureMethod" rel="nofollow">spcode:BloodPressureMethod</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/BloodPressureMethod" class="external text" title="http://smartplatforms.org/terms/codes/BloodPressureMethod" rel="nofollow">spcode:BloodPressureMethod</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/BloodPressureMethod" class="external text" title="http://smartplatforms.org/terms/codes/BloodPressureMethod" rel="nofollow">spcode:BloodPressureMethod</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##EncounterType code RDF
+
+EncounterType is a subtype of and inherits properties from Code, Component, DataType 
+
+Constrained to one of 
+
+{% highlight html %}
+<spcode:EncounterType rdf:about="http://smartplatforms.org/terms/codes/EncounterType#home">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Home encounter</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/EncounterType#</sp:system>
+    <dcterms:identifier>home</dcterms:identifier> 
+</spcode:EncounterType>
+<spcode:EncounterType rdf:about="http://smartplatforms.org/terms/codes/EncounterType#emergency">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Emergency encounter</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/EncounterType#</sp:system>
+    <dcterms:identifier>emergency</dcterms:identifier> 
+</spcode:EncounterType>
+<spcode:EncounterType rdf:about="http://smartplatforms.org/terms/codes/EncounterType#ambulatory">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Ambulatory encounter</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/EncounterType#</sp:system>
+    <dcterms:identifier>ambulatory</dcterms:identifier> 
+</spcode:EncounterType>
+<spcode:EncounterType rdf:about="http://smartplatforms.org/terms/codes/EncounterType#inpatient">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Inpatient encounter</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/EncounterType#</sp:system>
+    <dcterms:identifier>inpatient</dcterms:identifier> 
+</spcode:EncounterType>
+<spcode:EncounterType rdf:about="http://smartplatforms.org/terms/codes/EncounterType#field">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Field encounter</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/EncounterType#</sp:system>
+    <dcterms:identifier>field</dcterms:identifier> 
+</spcode:EncounterType>
+<spcode:EncounterType rdf:about="http://smartplatforms.org/terms/codes/EncounterType#virtual">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Virtual encounter</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/EncounterType#</sp:system>
+    <dcterms:identifier>virtual</dcterms:identifier> 
+</spcode:EncounterType>
+{% endhighlight  %}
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/EncounterType" class="external free" title="http://smartplatforms.org/terms/codes/EncounterType" rel="nofollow">http://smartplatforms.org/terms/codes/EncounterType</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/EncounterType" class="external text" title="http://smartplatforms.org/terms/codes/EncounterType" rel="nofollow">spcode:EncounterType</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/EncounterType" class="external text" title="http://smartplatforms.org/terms/codes/EncounterType" rel="nofollow">spcode:EncounterType</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/EncounterType" class="external text" title="http://smartplatforms.org/terms/codes/EncounterType" rel="nofollow">spcode:EncounterType</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##ImmunizationAdministrationStatus code RDF
+
+ImmunizationAdministrationStatus is a subtype of and inherits properties from Code, Component, DataType 
+
+Constrained to one of 
+
+{% highlight html %}
+<spcode:ImmunizationAdministrationStatus rdf:about="http://smartplatforms.org/terms/codes/ImmunizationAdministrationStatus#doseGiven">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Dose Given</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/ImmunizationAdministrationStatus#</sp:system>
+    <dcterms:identifier>doseGiven</dcterms:identifier> 
+</spcode:ImmunizationAdministrationStatus>
+<spcode:ImmunizationAdministrationStatus rdf:about="http://smartplatforms.org/terms/codes/ImmunizationAdministrationStatus#notAdministered">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Not Administered</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/ImmunizationAdministrationStatus#</sp:system>
+    <dcterms:identifier>notAdministered</dcterms:identifier> 
+</spcode:ImmunizationAdministrationStatus>
+<spcode:ImmunizationAdministrationStatus rdf:about="http://smartplatforms.org/terms/codes/ImmunizationAdministrationStatus#partialDose">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Dose Partially Administered</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/ImmunizationAdministrationStatus#</sp:system>
+    <dcterms:identifier>partialDose</dcterms:identifier> 
+</spcode:ImmunizationAdministrationStatus>
+{% endhighlight  %}
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/ImmunizationAdministrationStatus" class="external free" title="http://smartplatforms.org/terms/codes/ImmunizationAdministrationStatus" rel="nofollow">http://smartplatforms.org/terms/codes/ImmunizationAdministrationStatus</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/ImmunizationAdministrationStatus" class="external text" title="http://smartplatforms.org/terms/codes/ImmunizationAdministrationStatus" rel="nofollow">spcode:ImmunizationAdministrationStatus</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/ImmunizationAdministrationStatus" class="external text" title="http://smartplatforms.org/terms/codes/ImmunizationAdministrationStatus" rel="nofollow">spcode:ImmunizationAdministrationStatus</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/ImmunizationAdministrationStatus" class="external text" title="http://smartplatforms.org/terms/codes/ImmunizationAdministrationStatus" rel="nofollow">spcode:ImmunizationAdministrationStatus</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##ImmunizationClass code RDF
+
+ImmunizationClass is a subtype of and inherits properties from Code, Component, DataType 
+
+codes are drawn from the CDC's Vaccine Group vocabulary. URIs are of the form
+
+[http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=vg#code](http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=vg#code)
+
+system = [http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=vg#](http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=vg#)
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/ImmunizationClass" class="external free" title="http://smartplatforms.org/terms/codes/ImmunizationClass" rel="nofollow">http://smartplatforms.org/terms/codes/ImmunizationClass</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/ImmunizationClass" class="external text" title="http://smartplatforms.org/terms/codes/ImmunizationClass" rel="nofollow">spcode:ImmunizationClass</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/ImmunizationClass" class="external text" title="http://smartplatforms.org/terms/codes/ImmunizationClass" rel="nofollow">spcode:ImmunizationClass</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/ImmunizationClass" class="external text" title="http://smartplatforms.org/terms/codes/ImmunizationClass" rel="nofollow">spcode:ImmunizationClass</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##ImmunizationProduct code RDF
+
+ImmunizationProduct is a subtype of and inherits properties from Code, Component, DataType
+
+codes are drawn from the CDC's Vaccine Group vocabulary. URIs are of the form 
+
+[http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=cvx#code ](http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=cvx#code)
+
+
+system = [http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=cvx#](http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=cvx#)
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/ImmunizationProduct" class="external free" title="http://smartplatforms.org/terms/codes/ImmunizationProduct" rel="nofollow">http://smartplatforms.org/terms/codes/ImmunizationProduct</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/ImmunizationProduct" class="external text" title="http://smartplatforms.org/terms/codes/ImmunizationProduct" rel="nofollow">spcode:ImmunizationProduct</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/ImmunizationProduct" class="external text" title="http://smartplatforms.org/terms/codes/ImmunizationProduct" rel="nofollow">spcode:ImmunizationProduct</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/ImmunizationProduct" class="external text" title="http://smartplatforms.org/terms/codes/ImmunizationProduct" rel="nofollow">spcode:ImmunizationProduct</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##ImmunizationRefusalReason code RDF
+
+ImmunizationRefusalReason is a subtype of and inherits properties from Code, Component, DataType 
+
+
+Constrained to one of 
+{% highlight html %}
+<spcode:ImmunizationRefusalReason rdf:about="http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#vaccineUnavailable">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Vaccine unavailable at visit</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#</sp:system>
+    <dcterms:identifier>vaccineUnavailable</dcterms:identifier> 
+</spcode:ImmunizationRefusalReason>
+<spcode:ImmunizationRefusalReason rdf:about="http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#patientUndergoingDesensitizationTherapy">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Patient undergoing desensitization therapy</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#</sp:system>
+    <dcterms:identifier>patientUndergoingDesensitizationTherapy</dcterms:identifier> 
+</spcode:ImmunizationRefusalReason>
+<spcode:ImmunizationRefusalReason rdf:about="http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#notIndicatedPerGuidelines">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Not indicated per guidelines</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#</sp:system>
+    <dcterms:identifier>notIndicatedPerGuidelines</dcterms:identifier> 
+</spcode:ImmunizationRefusalReason>
+<spcode:ImmunizationRefusalReason rdf:about="http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#recentChemoOrRadiaton">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Recent chemotherapy/radiaton</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#</sp:system>
+    <dcterms:identifier>recentChemoOrRadiaton</dcterms:identifier> 
+</spcode:ImmunizationRefusalReason>
+<spcode:ImmunizationRefusalReason rdf:about="http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#allergy">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Allergy to vaccine/vaccine components, or allergy to eggs</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#</sp:system>
+    <dcterms:identifier>allergy</dcterms:identifier> 
+</spcode:ImmunizationRefusalReason>
+<spcode:ImmunizationRefusalReason rdf:about="http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#providerDeferred">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Provider deferred</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#</sp:system>
+    <dcterms:identifier>providerDeferred</dcterms:identifier> 
+</spcode:ImmunizationRefusalReason>
+<spcode:ImmunizationRefusalReason rdf:about="http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#documentedImmunityOrPreviousDisease">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Documented immunity or previous disease</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#</sp:system>
+    <dcterms:identifier>documentedImmunityOrPreviousDisease</dcterms:identifier> 
+</spcode:ImmunizationRefusalReason>
+<spcode:ImmunizationRefusalReason rdf:about="http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#previouslyVaccinated">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Previously vaccinated</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#</sp:system>
+    <dcterms:identifier>previouslyVaccinated</dcterms:identifier> 
+</spcode:ImmunizationRefusalReason>
+<spcode:ImmunizationRefusalReason rdf:about="http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#contraindicated">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Contraindicated</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#</sp:system>
+    <dcterms:identifier>contraindicated</dcterms:identifier> 
+</spcode:ImmunizationRefusalReason>
+<spcode:ImmunizationRefusalReason rdf:about="http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#patientOrParentRefused">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Patient/parent refused</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#</sp:system>
+    <dcterms:identifier>patientOrParentRefused</dcterms:identifier> 
+</spcode:ImmunizationRefusalReason>
+<spcode:ImmunizationRefusalReason rdf:about="http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#comfortMeasuresOnly">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Comfort Measures Only</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#</sp:system>
+    <dcterms:identifier>comfortMeasuresOnly</dcterms:identifier> 
+</spcode:ImmunizationRefusalReason>
+<spcode:ImmunizationRefusalReason rdf:about="http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#possiblePriorAllergyOrReaction">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Possible allergy/reaction to prior dose</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#</sp:system>
+    <dcterms:identifier>possiblePriorAllergyOrReaction</dcterms:identifier> 
+</spcode:ImmunizationRefusalReason>
+<spcode:ImmunizationRefusalReason rdf:about="http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#recentOrganOrStemCellTransplant">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Recent organ/stem cell transplant</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#</sp:system>
+    <dcterms:identifier>recentOrganOrStemCellTransplant</dcterms:identifier> 
+</spcode:ImmunizationRefusalReason>
+{% endhighlight  %}
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/ImmunizationRefusalReason" class="external free" title="http://smartplatforms.org/terms/codes/ImmunizationRefusalReason" rel="nofollow">http://smartplatforms.org/terms/codes/ImmunizationRefusalReason</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/ImmunizationRefusalReason" class="external text" title="http://smartplatforms.org/terms/codes/ImmunizationRefusalReason" rel="nofollow">spcode:ImmunizationRefusalReason</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/ImmunizationRefusalReason" class="external text" title="http://smartplatforms.org/terms/codes/ImmunizationRefusalReason" rel="nofollow">spcode:ImmunizationRefusalReason</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/ImmunizationRefusalReason" class="external text" title="http://smartplatforms.org/terms/codes/ImmunizationRefusalReason" rel="nofollow">spcode:ImmunizationRefusalReason</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##LOINC code RDF
+
+LOINC is a subtype of and inherits properties from Code, Component, DataType 
+
+
+LOINC code where URI matches [http://purl.bioontology.org/ontology/LNC/](http://purl.bioontology.org/ontology/LNC/){loinc_code} 
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/LOINC" class="external free" title="http://smartplatforms.org/terms/codes/LOINC" rel="nofollow">http://smartplatforms.org/terms/codes/LOINC</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/LOINC" class="external text" title="http://smartplatforms.org/terms/codes/LOINC" rel="nofollow">spcode:LOINC</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/LOINC" class="external text" title="http://smartplatforms.org/terms/codes/LOINC" rel="nofollow">spcode:LOINC</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/LOINC" class="external text" title="http://smartplatforms.org/terms/codes/LOINC" rel="nofollow">spcode:LOINC</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##LabResultInterpretation code RDF
+
+LabResultInterpretation is a subtype of and inherits properties from Code, Component, DataType
+
+Constrained to one of 
+
+{% highlight html %}
+<spcode:LabResultInterpretation rdf:about="http://smartplatforms.org/terms/codes/LabResultInterpretation#normal">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Normal</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/LabResultInterpretation#</sp:system>
+    <dcterms:identifier>normal</dcterms:identifier> 
+</spcode:LabResultInterpretation>
+<spcode:LabResultInterpretation rdf:about="http://smartplatforms.org/terms/codes/LabResultInterpretation#critical">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Critical</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/LabResultInterpretation#</sp:system>
+    <dcterms:identifier>critical</dcterms:identifier> 
+</spcode:LabResultInterpretation>
+<spcode:LabResultInterpretation rdf:about="http://smartplatforms.org/terms/codes/LabResultInterpretation#abnormal">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Abnormal</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/LabResultInterpretation#</sp:system>
+    <dcterms:identifier>abnormal</dcterms:identifier> 
+</spcode:LabResultInterpretation>
+{% endhighlight  %}
+
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/LabResultInterpretation" class="external free" title="http://smartplatforms.org/terms/codes/LabResultInterpretation" rel="nofollow">http://smartplatforms.org/terms/codes/LabResultInterpretation</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/LabResultInterpretation" class="external text" title="http://smartplatforms.org/terms/codes/LabResultInterpretation" rel="nofollow">spcode:LabResultInterpretation</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/LabResultInterpretation" class="external text" title="http://smartplatforms.org/terms/codes/LabResultInterpretation" rel="nofollow">spcode:LabResultInterpretation</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/LabResultInterpretation" class="external text" title="http://smartplatforms.org/terms/codes/LabResultInterpretation" rel="nofollow">spcode:LabResultInterpretation</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##LabResultStatus code RDF
+
+LabResultStatus is a subtype of and inherits properties from Code, Component, DataType 
+
+Constrained to one of 
+
+{% highlight html %}
+<spcode:LabResultStatus rdf:about="http://smartplatforms.org/terms/codes/LabStatus#correction">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Correction</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/LabStatus#</sp:system>
+    <dcterms:identifier>correction</dcterms:identifier> 
+</spcode:LabResultStatus>
+<spcode:LabResultStatus rdf:about="http://smartplatforms.org/terms/codes/LabStatus#preliminary">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Preliminary</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/LabStatus#</sp:system>
+    <dcterms:identifier>preliminary</dcterms:identifier> 
+</spcode:LabResultStatus>
+<spcode:LabResultStatus rdf:about="http://smartplatforms.org/terms/codes/LabStatus#final">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Final</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/LabStatus#</sp:system>
+    <dcterms:identifier>final</dcterms:identifier> 
+</spcode:LabResultStatus>
+{% endhighlight  %}
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/LabResultStatus" class="external free" title="http://smartplatforms.org/terms/codes/LabResultStatus" rel="nofollow">http://smartplatforms.org/terms/codes/LabResultStatus</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/LabResultStatus" class="external text" title="http://smartplatforms.org/terms/codes/LabResultStatus" rel="nofollow">spcode:LabResultStatus</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/LabResultStatus" class="external text" title="http://smartplatforms.org/terms/codes/LabResultStatus" rel="nofollow">spcode:LabResultStatus</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/LabResultStatus" class="external text" title="http://smartplatforms.org/terms/codes/LabResultStatus" rel="nofollow">spcode:LabResultStatus</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##MedicalRecordNumber code RDF
+
+MedicalRecordNumber is a subtype of and inherits properties from Code, Component, DataType 
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/MedicalRecordNumber" class="external free" title="http://smartplatforms.org/terms/codes/MedicalRecordNumber" rel="nofollow">http://smartplatforms.org/terms/codes/MedicalRecordNumber</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/MedicalRecordNumber" class="external text" title="http://smartplatforms.org/terms/codes/MedicalRecordNumber" rel="nofollow">spcode:MedicalRecordNumber</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/MedicalRecordNumber" class="external text" title="http://smartplatforms.org/terms/codes/MedicalRecordNumber" rel="nofollow">spcode:MedicalRecordNumber</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/MedicalRecordNumber" class="external text" title="http://smartplatforms.org/terms/codes/MedicalRecordNumber" rel="nofollow">spcode:MedicalRecordNumber</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##MedicationProvenance code RDF
+
+MedicationProvenance is a subtype of and inherits properties from Code, Component, DataType 
+
+Constrained to one of 
+{% highlight html %}
+<spcode:MedicationProvenance rdf:about="http://smartplatforms.org/terms/codes/MedicationProvenance#prescription">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Derived by prescription</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/MedicationProvenance#</sp:system>
+    <dcterms:identifier>prescription</dcterms:identifier> 
+</spcode:MedicationProvenance>
+<spcode:MedicationProvenance rdf:about="http://smartplatforms.org/terms/codes/MedicationProvenance#fulfillment">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Derived by fulfillment</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/MedicationProvenance#</sp:system>
+    <dcterms:identifier>fulfillment</dcterms:identifier> 
+</spcode:MedicationProvenance>
+<spcode:MedicationProvenance rdf:about="http://smartplatforms.org/terms/codes/MedicationProvenance#administration">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Derived by administration</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/MedicationProvenance#</sp:system>
+    <dcterms:identifier>administration</dcterms:identifier> 
+</spcode:MedicationProvenance>
+<spcode:MedicationProvenance rdf:about="http://smartplatforms.org/terms/codes/MedicationProvenance#reconciliation">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Derived by medication reconciliation</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/MedicationProvenance#</sp:system>
+    <dcterms:identifier>reconciliation</dcterms:identifier> 
+</spcode:MedicationProvenance>
+<spcode:MedicationProvenance rdf:about="http://smartplatforms.org/terms/codes/MedicationProvenance#patientReport">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Derived by patient report</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/MedicationProvenance#</sp:system>
+    <dcterms:identifier>patientReport</dcterms:identifier> 
+</spcode:MedicationProvenance>
+{% endhighlight  %}
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/MedicationProvenance" class="external free" title="http://smartplatforms.org/terms/codes/MedicationProvenance" rel="nofollow">http://smartplatforms.org/terms/codes/MedicationProvenance</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/MedicationProvenance" class="external text" title="http://smartplatforms.org/terms/codes/MedicationProvenance" rel="nofollow">spcode:MedicationProvenance</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/MedicationProvenance" class="external text" title="http://smartplatforms.org/terms/codes/MedicationProvenance" rel="nofollow">spcode:MedicationProvenance</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/MedicationProvenance" class="external text" title="http://smartplatforms.org/terms/codes/MedicationProvenance" rel="nofollow">spcode:MedicationProvenance</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##NDFRT code RDF
+
+NDFRT is a subtype of and inherits properties from Code, Component, DataType 
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/NDFRT" class="external free" title="http://smartplatforms.org/terms/codes/NDFRT" rel="nofollow">http://smartplatforms.org/terms/codes/NDFRT</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/NDFRT" class="external text" title="http://smartplatforms.org/terms/codes/NDFRT" rel="nofollow">spcode:NDFRT</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/NDFRT" class="external text" title="http://smartplatforms.org/terms/codes/NDFRT" rel="nofollow">spcode:NDFRT</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/NDFRT" class="external text" title="http://smartplatforms.org/terms/codes/NDFRT" rel="nofollow">spcode:NDFRT</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+
+##RxNorm code RDF
+
+RxNorm is a subtype of and inherits properties from Code, Component, DataType 
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/RxNorm" class="external free" title="http://smartplatforms.org/terms/codes/RxNorm" rel="nofollow">http://smartplatforms.org/terms/codes/RxNorm</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/RxNorm" class="external text" title="http://smartplatforms.org/terms/codes/RxNorm" rel="nofollow">spcode:RxNorm</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/RxNorm" class="external text" title="http://smartplatforms.org/terms/codes/RxNorm" rel="nofollow">spcode:RxNorm</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/RxNorm" class="external text" title="http://smartplatforms.org/terms/codes/RxNorm" rel="nofollow">spcode:RxNorm</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##RxNorm_Ingredient code RDF
+
+RxNorm_Ingredient is a subtype of and inherits properties from Code, Component, DataType, RxNorm 
+
+RxNorm TTY='in' 
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/RxNorm_Ingredient" class="external free" title="http://smartplatforms.org/terms/codes/RxNorm_Ingredient" rel="nofollow">http://smartplatforms.org/terms/codes/RxNorm_Ingredient</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/RxNorm_Ingredient" class="external text" title="http://smartplatforms.org/terms/codes/RxNorm_Ingredient" rel="nofollow">spcode:RxNorm_Ingredient</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/RxNorm_Ingredient" class="external text" title="http://smartplatforms.org/terms/codes/RxNorm_Ingredient" rel="nofollow">spcode:RxNorm_Ingredient</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/RxNorm_Ingredient" class="external text" title="http://smartplatforms.org/terms/codes/RxNorm_Ingredient" rel="nofollow">spcode:RxNorm_Ingredient</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##RxNorm_Semantic code RDF
+
+xNorm_Semantic is a subtype of and inherits properties from Code, Component, DataType, RxNorm 
+
+
+RxNorm TTY in ('SCD','SBD','GPCK','BPCK') 
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/RxNorm_Semantic" class="external free" title="http://smartplatforms.org/terms/codes/RxNorm_Semantic" rel="nofollow">http://smartplatforms.org/terms/codes/RxNorm_Semantic</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/RxNorm_Semantic" class="external text" title="http://smartplatforms.org/terms/codes/RxNorm_Semantic" rel="nofollow">spcode:RxNorm_Semantic</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/RxNorm_Semantic" class="external text" title="http://smartplatforms.org/terms/codes/RxNorm_Semantic" rel="nofollow">spcode:RxNorm_Semantic</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/RxNorm_Semantic" class="external text" title="http://smartplatforms.org/terms/codes/RxNorm_Semantic" rel="nofollow">spcode:RxNorm_Semantic</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##SNOMED code RDF
+
+SNOMED is a subtype of and inherits properties from: Code, Component, DataType 
+
+
+SNOMED code with URI matchign [http://purl.bioontology.org/ontology/SNOMEDCT/](http://purl.bioontology.org/ontology/SNOMEDCT/){snomed_concept_id} 
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/SNOMED" class="external free" title="http://smartplatforms.org/terms/codes/SNOMED" rel="nofollow">http://smartplatforms.org/terms/codes/SNOMED</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/SNOMED" class="external text" title="http://smartplatforms.org/terms/codes/SNOMED" rel="nofollow">spcode:SNOMED</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/SNOMED" class="external text" title="http://smartplatforms.org/terms/codes/SNOMED" rel="nofollow">spcode:SNOMED</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/SNOMED" class="external text" title="http://smartplatforms.org/terms/codes/SNOMED" rel="nofollow">spcode:SNOMED</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##TranslationFidelity code RDF
+
+TranslationFidelity is a subtype of and inherits properties from Code, Component, DataType 
+
+Constrained to one of 
+{% highlight html %}
+<spcode:TranslationFidelity rdf:about="http://smartplatforms.org/terms/codes/TranslationFidelity#automated">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Automated</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/TranslationFidelity#</sp:system>
+    <dcterms:identifier>automated</dcterms:identifier> 
+</spcode:TranslationFidelity>
+<spcode:TranslationFidelity rdf:about="http://smartplatforms.org/terms/codes/TranslationFidelity#unmappable">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Unmappable</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/TranslationFidelity#</sp:system>
+    <dcterms:identifier>unmappable</dcterms:identifier> 
+</spcode:TranslationFidelity>
+<spcode:TranslationFidelity rdf:about="http://smartplatforms.org/terms/codes/TranslationFidelity#verified">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Verified</dcterms:title>
+    <sp:system>http://smartplatforms.org/terms/codes/TranslationFidelity#</sp:system>
+    <dcterms:identifier>verified</dcterms:identifier> 
+</spcode:TranslationFidelity>
+
+{% endhighlight  %}
+
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/TranslationFidelity" class="external free" title="http://smartplatforms.org/terms/codes/TranslationFidelity" rel="nofollow">http://smartplatforms.org/terms/codes/TranslationFidelity</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/TranslationFidelity" class="external text" title="http://smartplatforms.org/terms/codes/TranslationFidelity" rel="nofollow">spcode:TranslationFidelity</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/TranslationFidelity" class="external text" title="http://smartplatforms.org/terms/codes/TranslationFidelity" rel="nofollow">spcode:TranslationFidelity</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/TranslationFidelity" class="external text" title="http://smartplatforms.org/terms/codes/TranslationFidelity" rel="nofollow">spcode:TranslationFidelity</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##UNII code RDF
+
+UNII is a subtype of and inherits properties from Code, Component, DataType 
+
+UNII code with URI matching [http://fda.gov/UNII/{UNII}](http://fda.gov/UNII/)
+
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/UNII" class="external free" title="http://smartplatforms.org/terms/codes/UNII" rel="nofollow">http://smartplatforms.org/terms/codes/UNII</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/UNII" class="external text" title="http://smartplatforms.org/terms/codes/UNII" rel="nofollow">spcode:UNII</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/UNII" class="external text" title="http://smartplatforms.org/terms/codes/UNII" rel="nofollow">spcode:UNII</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/UNII" class="external text" title="http://smartplatforms.org/terms/codes/UNII" rel="nofollow">spcode:UNII</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
+
+##VitalSign code RDF
+
+VitalSign is a subtype of and inherits properties from Code, Component, DataType, LOINC
+
+Constrained to one of 
+
+{% highlight html %}
+<spcode:VitalSign rdf:about="http://purl.bioontology.org/ontology/LNC/8462-4">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Intravascular diastolic</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/LNC/</sp:system>
+    <dcterms:identifier>8462-4</dcterms:identifier> 
+</spcode:VitalSign>
+<spcode:VitalSign rdf:about="http://purl.bioontology.org/ontology/LNC/9279-1">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Respiration rate</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/LNC/</sp:system>
+    <dcterms:identifier>9279-1</dcterms:identifier> 
+</spcode:VitalSign>
+<spcode:VitalSign rdf:about="http://purl.bioontology.org/ontology/LNC/39156-5">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Body mass index</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/LNC/</sp:system>
+    <dcterms:identifier>39156-5</dcterms:identifier> 
+</spcode:VitalSign>
+<spcode:VitalSign rdf:about="http://purl.bioontology.org/ontology/LNC/8310-5">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Body temperature</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/LNC/</sp:system>
+    <dcterms:identifier>8310-5</dcterms:identifier> 
+</spcode:VitalSign>
+<spcode:VitalSign rdf:about="http://purl.bioontology.org/ontology/LNC/2710-2">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Oxygen saturation</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/LNC/</sp:system>
+    <dcterms:identifier>2710-2</dcterms:identifier> 
+</spcode:VitalSign>
+<spcode:VitalSign rdf:about="http://purl.bioontology.org/ontology/LNC/8302-2">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Body height</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/LNC/</sp:system>
+    <dcterms:identifier>8302-2</dcterms:identifier> 
+</spcode:VitalSign>
+<spcode:VitalSign rdf:about="http://purl.bioontology.org/ontology/LNC/8867-4">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Heart rate</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/LNC/</sp:system>
+    <dcterms:identifier>8867-4</dcterms:identifier> 
+</spcode:VitalSign>
+<spcode:VitalSign rdf:about="http://purl.bioontology.org/ontology/LNC/8480-6">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Intravascular systolic</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/LNC/</sp:system>
+    <dcterms:identifier>8480-6</dcterms:identifier> 
+</spcode:VitalSign>
+<spcode:VitalSign rdf:about="http://purl.bioontology.org/ontology/LNC/3141-9">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Body weight</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/LNC/</sp:system>
+    <dcterms:identifier>3141-9</dcterms:identifier> 
+</spcode:VitalSign>
+<spcode:VitalSign rdf:about="http://purl.bioontology.org/ontology/LNC/8306-3">
+    <rdf:type rdf:resource="http://smartplatforms.org/terms#Code" /> 
+    <dcterms:title>Body height (lying)</dcterms:title>
+    <sp:system>http://purl.bioontology.org/ontology/LNC/</sp:system>
+    <dcterms:identifier>8306-3</dcterms:identifier> 
+</spcode:VitalSign>
+{% endhighlight  %}
+
+<table class="table table-striped">
+<caption align="bottom"><i><a href="http://smartplatforms.org/terms/codes/VitalSign" class="external free" title="http://smartplatforms.org/terms/codes/VitalSign" rel="nofollow">http://smartplatforms.org/terms/codes/VitalSign</a> Properties</i>
+</caption>
+<tbody><tr>
+<td width="30%"><b>identifier</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/VitalSign" class="external text" title="http://smartplatforms.org/terms/codes/VitalSign" rel="nofollow">spcode:VitalSign</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>title</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/VitalSign" class="external text" title="http://smartplatforms.org/terms/codes/VitalSign" rel="nofollow">spcode:VitalSign</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+<tr>
+<td width="30%"><b>system</b><br><small>Required: exactly 1</small>
+</td><td width="20%"><small>[<a href="http://smartplatforms.org/terms/codes/VitalSign" class="external text" title="http://smartplatforms.org/terms/codes/VitalSign" rel="nofollow">spcode:VitalSign</a>]</small>
+</td><td width="50%"> [<a href="http://www.w3.org/2000/01/rdf-schema#Literal" class="external text" title="http://www.w3.org/2000/01/rdf-schema#Literal" rel="nofollow">rdfs:Literal</a>]
+</td></tr>
+</tbody></table>
 
