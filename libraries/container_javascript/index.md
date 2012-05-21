@@ -283,8 +283,5 @@ You can view the example live at [1] -- and be sure to view the source code!
 ##Some manifests online
 
 If you're building a container, here are some manifests you can try loading to get started, hosted in our sandbox
-
-    [http://sample-apps.smartplatforms.org/framework/got_statins/smart_manifest.json](http://sample-apps.smartplatforms.org/framework/got_statins/smart_manifest.json)
-    [http://sample-apps.smartplatforms.org/framework/cardio_risk_viz/smart_manifest.json](http://sample-apps.smartplatforms.org/framework/cardio_risk_viz/smart_manifest.json)
-    [http://sample-apps.smartplatforms.org/framework/med_list/smart_manifest.json](http://sample-apps.smartplatforms.org/framework/med_list/smart_manifest.json)
-    [http://sample-apps.smartplatforms.org/framework/problem_list/smart_manifest.json](http://sample-apps.smartplatforms.org/framework/problem_list/smart_manifest.json)
+  [http://sample-apps.smartplatforms.org/framework/got_statins/smart_manifest.json](http://sample-apps.smartplatforms.org/framework/got_statins/smart_manifest.json)
+    
