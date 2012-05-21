@@ -30,14 +30,14 @@ Please note that for the time being, the SMART API remains read-only. We are exc
 
 In general you can interact with a:
 
-* Group of resources using
-        * GET to retrieve a group of resources such as /medications/
-        * POST to add a group of resources such as /problems. POSTing will add new resources every time it is called; in other words, POST is not idempotent. 
+* <b>Group of resources using</b>
+* GET to retrieve a group of resources such as /medications/
+* POST to add a group of resources such as /problems. POSTing will add new resources every time it is called; in other words, POST is not idempotent. 
 
-* Single resource using
-        * GET to retrieve a single resource such as /medications/{medication_id}
-        * DELETE to remove a single resource
-        * PUT to add a single resource tagged with an external_id. When a resource is PUT, it replaces any existing resource with the same external_id. In other words, PUT is idempotent. When PUTting a resource such as a medication that may contain child resources (e.g. fulfillment events), these child nodes must not be included in the graph. Rather, they must be separately attached with another API call once the parent medication is PUT and has received an internal SMART id. So, PUTting a medication with two fulfillments actually takes three API calls: one for the medication, and one for each (child) fulfillment event. 
+* <b>Single resource using</b>
+* GET to retrieve a single resource such as /medications/{medication_id}
+* DELETE to remove a single resource
+* PUT to add a single resource tagged with an external_id. When a resource is PUT, it replaces any existing resource with the same external_id. In other words, PUT is idempotent. When PUTting a resource such as a medication that may contain child resources (e.g. fulfillment events), these child nodes must not be included in the graph. Rather, they must be separately attached with another API call once the parent medication is PUT and has received an internal SMART id. So, PUTting a medication with two fulfillments actually takes three API calls: one for the medication, and one for each (child) fulfillment event. 
 
 #OWL Ontology File
 
