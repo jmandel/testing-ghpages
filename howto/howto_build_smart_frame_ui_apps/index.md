@@ -1,7 +1,7 @@
 ---
 layout: page
 title: HOWTO Build SMART Frame UI Apps
-tagline: fourth steps
+tagline:
 includenav: smartnav.markdown
 ---
 {% include JB/setup %}
