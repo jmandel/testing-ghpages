@@ -1,7 +1,7 @@
 ---
 layout: page
 title: HOWTO Build a SMART App - REST API Calls
-tagline: second steps
+tagline:
 includenav: smartnav.markdown
 ---
 {% include JB/setup %}
