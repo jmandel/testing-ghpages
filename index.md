@@ -20,8 +20,8 @@ information. This app can then be deployed on Regenstrief's CareWeb EHR, Childre
 Harvard Medical School's i2b2 analytics engine. As other EMR vendors adopt the SMART platform, the app's reach increases
 ''without changing a single line of code''.
 
-<img src="http://wiki.chip.org/smart-project/images/thumb/e/e8/Demo.screenshot.smart-reference.png/300px-Demo.screenshot.smart-reference.png">
-<img src="http://wiki.chip.org/smart-project/images/thumb/9/90/Demo.screenshot.smart-i2b2.png/300px-Demo.screenshot.smart-i2b2.png">
+<img src="/smart-docs-testing/images/Demo.screenshot.smart-reference.png" width="300" height="212">
+<img src="/smart-docs-testing/images/Demo.screenshot.smart-i2b2.png" width="300" height="212">
 
 #Anatomy of a SMART App
 
