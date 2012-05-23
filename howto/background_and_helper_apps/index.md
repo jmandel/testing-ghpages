@@ -24,6 +24,7 @@ Importantly, a background app is not necessarily a web app, since it may not hav
 The first thing you need is, of course, a SmartClient instance to make REST API calls against the SMART container. If you don't have that library running yet, check out the SMART Python Client. Then
 
 
+
 {% highlight html %}
   smart_client = smart.SmartClient(
     'smart-background-app@apps.smartplatforms.org',
