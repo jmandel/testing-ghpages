@@ -25,7 +25,7 @@ Harvard Medical School's i2b2 analytics engine. As other EMR vendors adopt the S
 
 #Anatomy of a SMART App
 
-<img src="http://wiki.chip.org/smart-project/images/c/c0/Anatomy-smart-app.png" style="float: right">
+<img src="/smart-docs-testing/images/Anatomy-smart-app.png" style="float: right">
 
 A SMART app is a normal web application, embedded as a frame within the SMART Container's user interface, with access to
 the SMART API for interacting with health data. A patient, Penny, may use a medication browser app within her PCHR.
