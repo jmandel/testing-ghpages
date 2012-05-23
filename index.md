@@ -34,8 +34,7 @@ patient scheduled for an appointment next week. Penny's PCHR and Dave's EMR are 
 the SMART API; and they can both display the medication browser app. Though they may function very differently behind
 the scenes, they can both embed the exact same medication-list-manager app because they present the same API.
 Importantly, in any given user session (Penny's or Dave's), the medication-list-manager is connected to only ''one''
-SMART container. 
-
+SMART container.
 
 The screenshots to the right demonstrate the same medication list application running in the context of two different
 SMART containers: a simplified EMR, and the analytics platform i2b2.
