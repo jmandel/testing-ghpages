@@ -105,7 +105,7 @@ With our smart_client instance ready to go, loaded with the right credentials, w
     medications = smart_client.records_X_medications_GET(record_id = record_id)
 {% endhighlight  %}	
 Just like in the first SMART App we built, the result is an SMARTResponse object containing an RDF graph of data, which we can query for just the fields we want:
-{% highlight html %}
+
     query = """
         PREFIX dcterms:<http://purl.org/dc/terms/>
         PREFIX sp:<http://smartplatforms.org/terms#>
@@ -122,7 +122,7 @@ Just like in the first SMART App we built, the result is an SMARTResponse object
  
     med_names_and_cuis = medications.graph.query(query)
     meds = [{'name': med[0], 'rxcui': med[1]} for med in med_names_and_cuis]
-{% endhighlight  %}	
+
 
 So far, we're not doing anything novel compared to our SMART Connect App. Let's make use of this fully capable backend we have, and integrate this data with other information. We'll use [RxNav](http://rxnav.nlm.nih.gov/), the National Library of Medicine's resource for RxNorm. In particular, we'll pull out the ingredients for each medication:
 {% highlight html %}
