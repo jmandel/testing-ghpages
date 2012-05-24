@@ -37,67 +37,67 @@ The failure case is not handled in the code below, but a `.fail()` handler could
 
 ##The Code 
 
-{% highlight html %}
- // note: code simplified
-  var get_demographics = function() {
-      // create an instance of the jQuery Deferred object in the 
-      // initial "pending" state
-      var dfd = $.Deferred();
 
-      // do the SMART Connect Call and execute the associated callback
-      SMART.DEMOGRAPHICS_get().success(function(demos) {
+	// note: code simplified
+	var get_demographics = function() {
+		  // create an instance of the jQuery Deferred object in the 
+		  // initial "pending" state
+		  var dfd = $.Deferred();
+	
+		  // do the SMART Connect Call and execute the associated callback
+		  SMART.DEMOGRAPHICS_get().success(function(demos) {
+	
+			// extend the global object "p" with the returned data
+			$.extend(p, demos.graph.prefix('foaf', 'http://xmlns.com/foaf/0.1/')
+							 .prefix('v', 'http://www.w3.org/2006/vcard/ns#')
+							 .prefix('rdf', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+							 .where('?r v:n ?n')
+							 .where('?n rdf:type v:Name')
+							 .where('?n v:given-name ?givenName')
+							 .where('?n v:family-name ?familyName')
+							 .where('?r foaf:gender ?gender')
+							 .where('?r v:bday ?birthday')
+							 .get(0))
+	
+			// signal that this Deferred object is now "resolved"
+			dfd.resolve();
+		  });
+		
+		  // return a Promise object used by the observer 
+		  return dfd.promise();
+	  };
+	
+	  var get_labs = function() {
+		  var dfd = $.Deferred();
+	
+		  SMART.LAB_RESULTS_get().success(function(labs){
+			  labs.graph.where("?l rdf:type sp:LabResult")
+				  .where("?l sp:labName ?ln")
+				  .where("?ln sp:code <http://loinc.org/codes/30522-7>")
+				  .where("?l sp:quantitativeResult ?qr") // predicate
+				  .where("?qr rdf:type sp:QuantitativeResult") // type
+				  .where("?qr sp:valueAndUnit ?vu")
+				  .where("?vu sp:value ?v")
+				  .each(function(){ p.hsCRP.value = Number(this.v.value); })
+	
+			  dfd.resolve();
+		  });
+	
+		  return dfd.promise();
+	  }
+	
+	  ...
+	  
+	  SMART.ready(function() {
+		  // when the Promise objects of these two asynchronous functions
+		  // report that they both are in either the "resolved" or "rejected"
+		  // state, execute the callback function to draw the visualization
+		  $.when(get_demographics(), get_labs()).then(function() {
+			draw_visualization();
+		  });
+	  });
 
-        // extend the global object "p" with the returned data
-        $.extend(p, demos.graph.prefix('foaf', 'http://xmlns.com/foaf/0.1/')
-                         .prefix('v', 'http://www.w3.org/2006/vcard/ns#')
-                         .prefix('rdf', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#')
-                         .where('?r v:n ?n')
-                         .where('?n rdf:type v:Name')
-                         .where('?n v:given-name ?givenName')
-                         .where('?n v:family-name ?familyName')
-                         .where('?r foaf:gender ?gender')
-                         .where('?r v:bday ?birthday')
-                         .get(0))
 
-        // signal that this Deferred object is now "resolved"
-        dfd.resolve();
-      });
-    
-      // return a Promise object used by the observer 
-      return dfd.promise();
-  };
-
-  var get_labs = function() {
-      var dfd = $.Deferred();
-
-      SMART.LAB_RESULTS_get().success(function(labs){
-          labs.graph.where("?l rdf:type sp:LabResult")
-              .where("?l sp:labName ?ln")
-              .where("?ln sp:code <http://loinc.org/codes/30522-7>")
-              .where("?l sp:quantitativeResult ?qr") // predicate
-              .where("?qr rdf:type sp:QuantitativeResult") // type
-              .where("?qr sp:valueAndUnit ?vu")
-              .where("?vu sp:value ?v")
-              .each(function(){ p.hsCRP.value = Number(this.v.value); })
-
-          dfd.resolve();
-      });
-
-      return dfd.promise();
-  }
-
-  ...
-  
-  SMART.ready(function() {
-      // when the Promise objects of these two asynchronous functions
-      // report that they both are in either the "resolved" or "rejected"
-      // state, execute the callback function to draw the visualization
-      $.when(get_demographics(), get_labs()).then(function() {
-        draw_visualization();
-      });
-  });
-
-{% endhighlight  %}
 
 ##A Shorter Syntax 
 
