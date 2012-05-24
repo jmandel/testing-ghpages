@@ -45,7 +45,7 @@ Note that, in each iteration, the smart_client is modified to automatically use 
 
 So, using a simple query to read drug names: 
 
-{% highlight html %}
+
  QUERY = """
          PREFIX dcterms:<http://purl.org/dc/terms/>
          PREFIX sp:<http://smartplatforms.org/terms#>
@@ -57,7 +57,7 @@ So, using a simple query to read drug names:
             ?drugname_code dcterms:title ?drugname .
          }
          """
-{% endhighlight  %}
+
 
 We can simply iterate through the records, retrieve each record's medications, and print them to the screen: 
 
