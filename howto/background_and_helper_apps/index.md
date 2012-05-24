@@ -46,17 +46,17 @@ Note that, in each iteration, the smart_client is modified to automatically use 
 So, using a simple query to read drug names: 
 
 
- QUERY = """
-         PREFIX dcterms:<http://purl.org/dc/terms/>
-         PREFIX sp:<http://smartplatforms.org/terms#>
-         PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-         SELECT  ?drugname
-         WHERE {
-            ?med rdf:type sp:Medication .
-            ?med sp:drugName ?drugname_code .
-            ?drugname_code dcterms:title ?drugname .
-         }
-         """
+	QUERY = """
+			 PREFIX dcterms:<http://purl.org/dc/terms/>
+			 PREFIX sp:<http://smartplatforms.org/terms#>
+			 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+			 SELECT  ?drugname
+			 WHERE {
+				?med rdf:type sp:Medication .
+				?med sp:drugName ?drugname_code .
+				?drugname_code dcterms:title ?drugname .
+			 }
+			 """
 
 
 We can simply iterate through the records, retrieve each record's medications, and print them to the screen: 
