@@ -73,10 +73,9 @@ RDF Payload description
 
 Get an RDF graph of sp:Demographics elements for all patients that match the query. Matching treats family_name and given_name as the *beginning* of a name. For instance given_name='J' matches /^J/i and thus matchs 'Josh'. Birthday is an ISO8601 string like "2008-03-21"; gender is "male" or "female". Gender, birthday, zipcode, and medical_record_number must match exactly.
 
-{% highlight html %}
+
  GET /records/search?given_name={given_name}&family_name={family_name}&zipcode={zipcode}&birthday={birthday}&gender={gender}&medical_record_number={medical_record_number}
 
-{% endhighlight  %}
 
 ##Ontology 
 
