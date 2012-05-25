@@ -147,6 +147,6 @@ and we're done.
 #What Next?
 
 <ul>
-    <li>learn more about SMART REST API Calls with RxReminder.</li>
-    <li>learn HOWTO Build SMART Background and Helper Apps so your App can take action while the user is offline. </li>   
+    <li>learn more about SMART REST API Calls with <a href="/smart-docs-testing/howto/rx_reminder">RxReminder</a>.</li>
+    <li>learn <a href="/smart-docs-testing/howto/background_and_helper_apps">HOWTO Build SMART Background and Helper Apps</a> so your App can take action while the user is offline. </li>   
 </ul>
