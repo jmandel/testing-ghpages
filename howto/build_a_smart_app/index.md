@@ -176,9 +176,9 @@ And that's it! In a few lines of HTML and JavaScript code, we've got ourselves a
 #What Next?
 
 <ul>
-    <li>learn more about SMART Connect with [GotStatins](/smart-docs-testing/howto/got_statins).</li>
-    <li>build a more powerful SMART App, learn [HOWTO Build a SMART App - REST API Calls](/smart-docs-testing/howto/build_a_rest_app").</li>
-    <li>build SMART Apps that work while the user is offline: [HOWTO Build SMART Background and Helper Apps](/smart-docs-testing/howto/background_and_helper_apps).</li>
+    <li>learn more about SMART Connect with <a href="/smart-docs-testing/howto/got_statins">GotStatins</a>.</li>
+    <li>build a more powerful SMART App, learn <a href="/smart-docs-testing/howto/build_a_rest_app">HOWTO Build a SMART App - REST API Calls</a>.</li>
+    <li>build SMART Apps that work while the user is offline: <a href="/smart-docs-testing/howto/background_and_helper_apps">HOWTO Build SMART Background and Helper Apps</a>.</li>
 </ul>
 
 
