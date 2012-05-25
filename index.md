@@ -20,12 +20,12 @@ information. This app can then be deployed on Regenstrief's CareWeb EHR, Childre
 Harvard Medical School's i2b2 analytics engine. As other EMR vendors adopt the SMART platform, the app's reach increases
 ''without changing a single line of code''.
 
-<img src="/smart-docs-testing/images/Demo.screenshot.smart-reference.png" width="300" height="212">
-<img src="/smart-docs-testing/images/Demo.screenshot.smart-i2b2.png" width="300" height="212">
+<img src="{{BASE_PATH}}/images/Demo.screenshot.smart-reference.png" width="300" height="212">
+<img src="{{BASE_PATH}}/images/Demo.screenshot.smart-i2b2.png" width="300" height="212">
 
 #Anatomy of a SMART App
 
-<img src="/smart-docs-testing/images/Anatomy-smart-app.png" style="float: right">
+<img src="{{BASE_PATH}}/images/Anatomy-smart-app.png" style="float: right">
 
 A SMART app is a normal web application, embedded as a frame within the SMART Container's user interface, with access to
 the SMART API for interacting with health data. A patient, Penny, may use a medication browser app within her PCHR.
