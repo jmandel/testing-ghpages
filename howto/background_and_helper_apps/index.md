@@ -10,7 +10,7 @@ includenav: smartnav.markdown
 
 ##Background Apps
 
-<img src="/smart-docs-testing/images/Background-app.png" style="float: right">
+<a href="{{BASE_PATH}}/images/Background-app.png" target="_blank"><img src="{{BASE_PATH}}/images/Background-app.png" style="float: right"></a>
 
 So far, we have talked about SMART apps that access medical record data on behalf of an active user of the EMR/PCHR/data-mining platform. What about apps that autonomously take action when no one is logged in? An app might want to check every medical record for a particular datapoint (e.g. a recalled drug). The SMART Platform supports this background app use case as follows:
 <ul>
