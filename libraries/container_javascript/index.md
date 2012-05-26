@@ -79,12 +79,13 @@ Callback with
 
 handle_api is called whenever an already-running app needs to make a API call with SMART CONNECT. Its job is to obtain the results of the specified API call and return them back to the app.
 
-Inputs
+<b>Inputs</b>
 
     App Instance object with UUID, context, credentials (details below).
     API Call object with method, func, params (details below) 
 
-Callback on success with
+<b>Callback on success with</b>
+
 {% highlight html %}
     callback_success({'contentType': string, data: string}) 
 {% endhighlight  %}
