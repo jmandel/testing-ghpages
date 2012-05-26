@@ -162,7 +162,19 @@ SMART_HOST.handle_context_changed = function(){
 
 The SMART_CONNECT_HOST interface uses plain-old JavaScript objects to represent app instances as follows:
 
+{
+  uuid: "string",  // unique ID for this instance of the app (new with each launch.)
 
+  manifest:  // <SMART App Manifest JSON structure>, includes app ID, URL, etc. (see below).
+
+  iframe:  <iframe>, // DOM iframe element in which the app instance should render.
+
+  
+  },
+
+  credentials: // <SMART Credentials JSON structure>, see below
+
+}
 {% endhighlight %}
 
 ##App Instance Credentials
