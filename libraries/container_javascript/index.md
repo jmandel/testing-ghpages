@@ -160,7 +160,7 @@ SMART_HOST.handle_context_changed = function(){
 
 {% highlight html %}
 
-The SMART_CONNECT_HOST interface uses plain-old JavaScript objects to represent app instances as follows:
+
 
 {
   uuid: "string",  // unique ID for this instance of the app (new with each launch.)
