@@ -197,10 +197,10 @@ To support REST apps, your SMART Container should generate OAuth tokens each tim
 {% highlight html %}
 
 {
-   api_base: “string”, // Base URL for the container’s SMART API
-   rest_token: “string”, // SMART REST Token bound to this user/patient/session
-   rest_secret: “string”, // SMART REST Secret bound to this user/patient/session
-   oauth_header: “string”, // OAuth header string embedding context & tokens  (see below)
+   api_base: "string", // Base URL for the container's SMART API
+   rest_token: "string", // SMART REST Token bound to this user/patient/session
+   rest_secret: "string", // SMART REST Secret bound to this user/patient/session
+   oauth_header: "string", // OAuth header string embedding context & tokens  (see below)
  }
 {% endhighlight  %}
 
@@ -252,9 +252,9 @@ When an app makes an API Call, your handler function will be invoked with an arg
 {% highlight html %}
 
 {
- type:  “string”, // HTTP method (e.g. “GET”)
- func: “string”, // URL relative to container base (e.g. “/apps/manifests”)
- contentType: “string”, // sent to server (e.g. “application/x-www-form-urlencoded”)
+ type:  "string", // HTTP method (e.g. "GET")
+ func: "string", // URL relative to container base (e.g. "/apps/manifests")
+ contentType: "string", // sent to server (e.g. "application/x-www-form-urlencoded")
  params:  <object> // JS Object containing key/value URL parameters
 }
 {% endhighlight  %}
