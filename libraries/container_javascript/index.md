@@ -100,7 +100,7 @@ Note: your SMART Container may override additional functions if needed. Four fun
 
 ##Launch an app
 
-Your Container should provide some way for a user to trigger the launch of an app, for instance by clicking on the app's icon in a sidebar. When this occurs, you'll need to notify the SMART\_CONNECT\_HOST that an app launch has been requested. This will instigate the app launch process, beginning with the creation of an app_instance with a unique ID. The SMART\_CONNECT\_HOST uses app_instance objects to keep track of the currently-running apps.
+Your Container should provide some way for a user to trigger the launch of an app, for instance by clicking on the app's icon in a sidebar. When this occurs, you'll need to notify the SMART\_CONNECT\_HOST that an app launch has been requested. This will instigate the app launch process, beginning with the creation of an app_instance with a unique ID. The SMART\ _CONNECT\_HOST uses app_instance objects to keep track of the currently-running apps.
 
 {% highlight html %}
 SMART_HOST.launch_app(manifest, context, options); Inputs:
