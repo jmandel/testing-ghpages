@@ -55,11 +55,11 @@ smart-api-container attempts to handle the generic messaging and data routing th
 
 get_credentials is called automatically when a new app launches. Its job is to provide the fledgling app with SMART REST tokens, formatted as an App Instances Credential object (details below).
 
-Input
+<b>Input</b>
 
     App Instance object with UUID, context (details below) 
 
-Callback with
+<b>Callback with</b>
 
     App Instance Credentials object (details below) 
 
@@ -67,11 +67,11 @@ Callback with
 
 get\_credentials is called automatically when a new app launches -- right after get_credentials. Its job is to provide the fledgling app with an empty iframe DOM element in which to render.
 
-Input
+<b>Input</b>
 
     App Instance object with UUID, context, credentials (details below) 
 
-Callback with
+<b>Callback with</b>
 
     iframe DOM ojbect 
 
@@ -89,7 +89,8 @@ handle_api is called whenever an already-running app needs to make a API call wi
 {% highlight html %}
     callback_success({'contentType': string, data: string}) 
 {% endhighlight  %}
-Callback on error with:
+
+<b>Callback on error with:</b>
 
 {% highlight html %}
     callback_error(http_status, {'contentType': string, data: string}) 
