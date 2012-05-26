@@ -204,7 +204,7 @@ To support REST apps, your SMART Container should generate OAuth tokens each tim
  }
 {% endhighlight  %}
 
-The oauth_header field is particularly important, since it's sent to the app automatically, for a one-step way for the app to obtain access to the in-context record. The oauth_header is a string representing a well-formed OAuth header, which means that it must supply
+The oauth\_header field is particularly important, since it's sent to the app automatically, for a one-step way for the app to obtain access to the in-context record. The oauth_header is a string representing a well-formed OAuth header, which means that it must supply
 
 {% highlight html %}
 
@@ -262,7 +262,7 @@ You can use this object to determine how to respond appropriately.
 
 ##SMART Manifest Object
 
-You'll provide the SMART_CONNECT_HOST with details about an app to launch by passing a JavaScript manifest object that looks like the one below. For more details, see App Manifest Documentation.
+You'll provide the SMART\_CONNECT\_HOST with details about an app to launch by passing a JavaScript manifest object that looks like the one below. For more details, see App Manifest Documentation.
 {% highlight html %}
 {
   "name" : "Med List",
