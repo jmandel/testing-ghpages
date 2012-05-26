@@ -100,7 +100,7 @@ Note: your SMART Container may override additional functions if needed. Four fun
 
 ##Launch an app
 
-Your Container should provide some way for a user to trigger the launch of an app, for instance by clicking on the app's icon in a sidebar. When this occurs, you'll need to notify the SMART_CONNECT_HOST that an app launch has been requested. This will instigate the app launch process, beginning with the creation of an app_instance with a unique ID. The SMART_CONNECT_HOST uses app_instance objects to keep track of the currently-running apps.
+Your Container should provide some way for a user to trigger the launch of an app, for instance by clicking on the app's icon in a sidebar. When this occurs, you'll need to notify the SMART\_CONNECT\_HOST that an app launch has been requested. This will instigate the app launch process, beginning with the creation of an app_instance with a unique ID. The SMART\_CONNECT\_HOST uses app_instance objects to keep track of the currently-running apps.
 
 {% highlight html %}
 SMART_HOST.launch_app(manifest, context, options); Inputs:
@@ -112,7 +112,7 @@ SMART_HOST.launch_app(manifest, context, options); Inputs:
 
 ##Subscribe to app notifications
 
-Apps that you've launch may send notifications and requests. For example, an app that desires more screen real estate may sent a "request_fullscreen" notification. To subscribe to a notification, call SMART_HOST.on as in the example below
+Apps that you've launch may send notifications and requests. For example, an app that desires more screen real estate may sent a "request\_fullscreen" notification. To subscribe to a notification, call SMART\_HOST.on as in the example below
 
 {% highlight html %}
 SMART_HOST.on("request_fullscreen", function(app_instance) {
@@ -134,15 +134,15 @@ When important events occur, you should notify any running apps.
     "foregrounded" when an app instance is restored to view
     "destroyed" when an app instance is permanently closed 
 
-For example, if you permit a user to hide an app, you should call: SMART_HOST.notify_app(app_instance, "backgrounded");
+For example, if you permit a user to hide an app, you should call: SMART\_HOST.notify\_app(app_instance, "backgrounded");
 
-And if you restore it to view you should call SMART_HOST.notify_app(app_instance, "foregrounded");
+And if you restore it to view you should call SMART\_HOST.notify\_app(app_instance, "foregrounded");
 
 ##Closing apps when the patient record context changes
 
 The SMART Connect API works in a "one patient record at a time" paradigm: that is, within a given browser window, there is one "current patient record" in context, and all running apps share that context. When the patient record context changes, the set of running apps is effectively cleared by calling:
 
-SMART_HOST.record_context_changed();
+SMART\_HOST.record_context_changed();
 
 This will close all currently-running apps -- so apps never have to deal with a context change.
 
