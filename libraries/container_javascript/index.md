@@ -156,37 +156,14 @@ SMART_HOST.handle_context_changed = function(){
 {% endhighlight  %}
 
 ##Understanding App Instance, Manifest, and API Call JavaScript objects
-##App Instance Object
 
+##App Instance Object
 {% highlight html %}
 
+The SMART_CONNECT_HOST interface uses plain-old JavaScript objects to represent app instances as follows:
 
 
-{
-  uuid: "string",  // unique ID for this instance of the app (new with each launch.)
-
-  manifest:  // <SMART App Manifest JSON structure>, includes app ID, URL, etc. (see below).
-
-  iframe:  <iframe>, // DOM iframe element in which the app instance should render.
-
-  context:  {  // UI apps need user and patient context; Frame UI apps need user context.
-
- 	user: {
-          id: "string",	// User ID assigned by the SMART Container
-          full_name: "string" // Flattened string representation of the user’s name
-        },
-
-        record: {
-          id: "string",	// Patient Record ID assigned by the SMART Container
-          full_name: "string" // Flattened string representation of the patient’s name
-        }
-
-  },
-
-  credentials: // <SMART Credentials JSON structure>, see below
-
-}
-{% endhighlight  %}
+{% endhighlight %}
 
 ##App Instance Credentials
 
