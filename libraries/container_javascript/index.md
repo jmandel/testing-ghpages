@@ -169,6 +169,19 @@ The SMART_CONNECT_HOST interface uses plain-old JavaScript objects to represent 
 
   iframe:  <iframe>, // DOM iframe element in which the app instance should render.
 
+  context:  {  // UI apps need user and patient context; Frame UI apps need user context.
+
+ 	user: {
+          id: "string",	// User ID assigned by the SMART Container
+          full_name: "string" // Flattened string representation of the user's name
+        },
+
+        record: {
+          id: "string",	// Patient Record ID assigned by the SMART Container
+          full_name: "string" // Flattened string representation of the patient's name
+        }
+
+  
   
   },
 
