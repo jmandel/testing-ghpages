@@ -142,11 +142,11 @@ And if you restore it to view you should call SMART\_HOST.notify\_app(app_instan
 
 The SMART Connect API works in a "one patient record at a time" paradigm: that is, within a given browser window, there is one "current patient record" in context, and all running apps share that context. When the patient record context changes, the set of running apps is effectively cleared by calling:
 
-SMART\_HOST.record_context_changed();
+SMART\_HOST.record\_context\_changed();
 
 This will close all currently-running apps -- so apps never have to deal with a context change.
 
-You may want your container to automatically launch new apps after the record context changes . In this case, you can trigger the appropriate logic by defining a handle_context_changed function:
+You may want your container to automatically launch new apps after the record context changes . In this case, you can trigger the appropriate logic by defining a handle\_context\_changed function:
 
 {% highlight html %}
 
