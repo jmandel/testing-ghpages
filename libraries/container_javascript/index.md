@@ -43,15 +43,15 @@ If your existing JavaScript codebase employs the '$' variable and you don't want
 {% endhighlight  %}
 
 ##Exposing the SMART Connect Interface
-##Instantiate a SMART_CONNECT_HOST
+##Instantiate a SMART\_CONNECT\_HOST
 
-smart-api-container attempts to handle the generic messaging and data routing that SMART Connect apps require. To get things started, first instantiate a SMART_CONNECT_HOST object. By convention, we'll call it SMART_HOST
+smart-api-container attempts to handle the generic messaging and data routing that SMART Connect apps require. To get things started, first instantiate a SMART\_CONNECT\_HOST object. By convention, we'll call it SMART\_HOST
 
 {% highlight html %}
    	var SMART_HOST = new SMART_CONNECT_HOST();
 {% endhighlight  %}
 
-##Override SMART_HOST.get_credentials(app_instance, callback)
+##Override SMART\_HOST.get\_credentials(app\_instance, callback)
 
 get_credentials is called automatically when a new app launches. Its job is to provide the fledgling app with SMART REST tokens, formatted as an App Instances Credential object (details below).
 
@@ -63,7 +63,7 @@ Callback with
 
     App Instance Credentials object (details below) 
 
-##Override SMART_HOST.get_iframe(app_instance, callback)
+##Override SMART\_HOST.get\_iframe(app\_instance, callback)
 
 get_credentials is called automatically when a new app launches -- right after get_credentials. Its job is to provide the fledgling app with an empty iframe DOM element in which to render.
 
@@ -75,7 +75,7 @@ Callback with
 
     iframe DOM ojbect 
 
-##Override SMART_HOST.handle_api(app_instance, api_call, callback_success, callback_error)
+##Override SMART\_HOST.handle\_api(app\_instance, api\_call, callback\_success, callback\_error)
 
 handle_api is called whenever an already-running app needs to make a API call with SMART CONNECT. Its job is to obtain the results of the specified API call and return them back to the app.
 
