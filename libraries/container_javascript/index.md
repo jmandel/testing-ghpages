@@ -65,7 +65,7 @@ Callback with
 
 ##Override SMART\_HOST.get\_iframe(app\_instance, callback)
 
-get_credentials is called automatically when a new app launches -- right after get_credentials. Its job is to provide the fledgling app with an empty iframe DOM element in which to render.
+get\_credentials is called automatically when a new app launches -- right after get_credentials. Its job is to provide the fledgling app with an empty iframe DOM element in which to render.
 
 Input
 
