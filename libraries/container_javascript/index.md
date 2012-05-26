@@ -159,10 +159,11 @@ SMART_HOST.handle_context_changed = function(){
 ##App Instance Object
 
 {% highlight html %}
+
 The SMART_CONNECT_HOST interface uses plain-old JavaScript objects to represent app instances as follows:
 
 {
-  uuid: “string”,  // unique ID for this instance of the app (new with each launch.)
+  uuid: "string",  // unique ID for this instance of the app (new with each launch.)
 
   manifest:  // <SMART App Manifest JSON structure>, includes app ID, URL, etc. (see below).
 
@@ -171,13 +172,13 @@ The SMART_CONNECT_HOST interface uses plain-old JavaScript objects to represent 
   context:  {  // UI apps need user and patient context; Frame UI apps need user context.
 
  	user: {
-          id: “string”,	// User ID assigned by the SMART Container
-          full_name: “string” // Flattened string representation of the user’s name
+          id: "string",	// User ID assigned by the SMART Container
+          full_name: "string" // Flattened string representation of the user’s name
         },
 
         record: {
-          id: “string”,	// Patient Record ID assigned by the SMART Container
-          full_name: “string” // Flattened string representation of the patient’s name
+          id: "string",	// Patient Record ID assigned by the SMART Container
+          full_name: "string" // Flattened string representation of the patient’s name
         }
 
   },
@@ -186,6 +187,7 @@ The SMART_CONNECT_HOST interface uses plain-old JavaScript objects to represent 
 
 }
 {% endhighlight  %}
+
 ##App Instance Credentials
 
 To support REST apps, your SMART Container should generate OAuth tokens each time an app launches. The OAuth tokens are provided to the app as part of a credentials JavaScript object, which is automatically incorporated into the app_instance object. The credentials object includes
