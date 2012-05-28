@@ -28,7 +28,7 @@ For example, the Frame UI app in this screenshot allows a user to select two app
 ##Declaring a Frame UI App
 
 Because Frame UI apps have extra capabilities such as listing and launching other apps, they need extra permissions from the container. To communicate this fact, a Frame UI app include the following line in its SMART Manifest: 
-{% highlight html %}
+{% highlight javascript %}
  "mode" : "frame_ui"
 {% endhighlight  %}
 
@@ -47,7 +47,7 @@ Let's work through an example of a simple Frame UI app that can display three SM
 
 ##Displaying a "carousel" of available apps:
 
-{% highlight html %}
+{% highlight javascript %}
 SMART.MANIFESTS_get(function(response) {
 
            manifests = response.json;             
@@ -70,7 +70,7 @@ This code fetches a list of manifests from the container \(SMART.MANIFESTS\_get\
 ##Handling an app launch:
 
 When a user clicks on an app icon and SMART\_HOST.launch_app is called, the SMART libraries take care of most details of the app launch process. But the SMART libraries expect a little bit of \"help\" \(in the form of a helper function\) to determine which IFRAME element to use in positioning the newly-launched app. Since our Frame UI app will perform a pretty simple layout, this doesn't take much. We'll assume that three IFRAMES are available on the screen at all times, and we'll just populate them in order, looping back to the beginning when they're all full. 
-{% highlight html %}
+{% highlight javascript %}
      var current_iframe = 0;
      var iframes_available = 3;
 
