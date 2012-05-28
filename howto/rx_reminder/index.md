@@ -29,7 +29,7 @@ index.html: loads smart-api-client.js to provide the app's functionality.
 
 Just like the app in the HOWTO, we serve the index file as follows in webpy: 
 
-{% highlight javascript %}
+{% highlight python %}
  urls = ('/smartapp/index.html',     'RxReminder')
  
  class RxReminder:
@@ -42,7 +42,7 @@ Just like the app in the HOWTO, we serve the index file as follows in webpy:
 
 Now we're getting to the fun part: handling requests for index.html. We'll be using the Python SMART API client libraries to interact with the SMART container. For authentication, we'll use the OAuth token and secret provided in a URL parameter that came along with the request for our index.html, just like in the HOWTO. 
 
-{% highlight javascript %}
+{% highlight python %}
  smart_oauth_header = web.input().oauth_header
      smart_oauth_header = urllib.unquote(smart_oauth_header)
      
@@ -60,7 +60,7 @@ Now we're getting to the fun part: handling requests for index.html. We'll be us
 
 If you're building your application from scratch without using the sample code, you'll want to define SMART\_SERVER\_OAUTH and SMART\_SERVER\_PARAMS: 
 
-{% highlight javascript %}
+{% highlight python %}
 
 # Basic configuration:  the consumer key and secret we'll use
  # to OAuth-sign requests.
@@ -84,7 +84,7 @@ We use our SmartClient object called client to fetch a SMART Response object inc
 Then we'll get fancy with RDF, running a SPARQL query to find a list of fills for each medication in meds.graph. Finally, we'll loop through the fills to find the most recent one, using the dispensed quantity to determine when the patient will run out of medication. 
 
 
-{% highlight javascript %}
+{% highlight python %}
 
 	# Represent the list as an RDF graph
 			meds = client.records_X_medications_GET()
