@@ -115,7 +115,7 @@ meds.graph.where("?medication rdf:type sp:Medication")
 selects all of "objects" in the graph that have a datatype sp:Medication, where sp stands for [http://smartplatforms.org/ns#](http://smartplatforms.org/ns#), the location of the SMART vocabulary.
 
 Of course, we want more than just the raw "objects," we want their properties, in particular the name of the drug. The following selects the drug names, which are coded-values, and then the value of those coded values, which are the actual drug-name strings:
-{% highlight html %}
+{% highlight javascript %}
 meds.graph
 	.where("?medication rdf:type sp:Medication")
 	.where("?medication sp:drugName ?drug_name_code")
@@ -123,7 +123,7 @@ meds.graph
 {% endhighlight  %}	
 
 This is effectively a JavaScript query on the RDF graph, and it returns a set of JavaScript objects with properties we're interested in, in particular drugname. We can then iterate over the list of returned objects and extract the drugname property for each one:
-{% highlight html %}
+{% highlight javascript %}
 var med_names = meds.graph
 		 .where("?medication rdf:type sp:Medication")
 		 .where("?medication sp:drugName ?drug_name_code")
