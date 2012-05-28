@@ -25,7 +25,7 @@ The first thing you need is, of course, a SmartClient instance to make REST API 
 
 
 
-{% highlight html %}
+{% highlight python %}
   smart_client = smart.SmartClient(
     'smart-background-app@apps.smartplatforms.org',
     {'api_base' : 'http://sandbox-api.smartplatforms.org'},
@@ -36,7 +36,7 @@ The first thing you need is, of course, a SmartClient instance to make REST API 
 
 The important difference between this SmartClient and the one you created for use in SMART REST API calls is that this one has no resource-specific credentials. That's because, at first, you're not going to make API calls specific to any single medical record. In OAuth parlance, this is called a "2-legged call." Now, it's time to iterate through all records available at that SMART Container. The specific API calls to do this can be found in our REST API, but the SMART Python client library makes it easy for you: 
 
-{% highlight html %}
+{% highlight python %}
 for record_id in smart_client.loop_over_records():
    # do stuff with each record
 {% endhighlight  %}
@@ -45,6 +45,7 @@ Note that, in each iteration, the smart_client is modified to automatically use 
 
 So, using a simple query to read drug names: 
 
+{% highlight python %}
 
 	QUERY = """
 			 PREFIX dcterms:<http://purl.org/dc/terms/>
@@ -57,11 +58,11 @@ So, using a simple query to read drug names:
 				?drugname_code dcterms:title ?drugname .
 			 }
 			 """
-
+{% endhighlight  %}
 
 We can simply iterate through the records, retrieve each record's medications, and print them to the screen: 
 
-{% highlight html %}
+{% highlight python %}
   for record_id in smart_client.loop_over_records():
     medications = smart_client.records_X_medications_GET(record_id = record_id)
     med_names = medications.graph.query(QUERY)
