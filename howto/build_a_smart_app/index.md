@@ -92,7 +92,7 @@ At this point, your SMART app is ready to make API calls to obtain health data. 
 ##Asynchronous Calls
 
 Let's load the patient's medications using SMART.MEDICATIONS\_get(). The most important thing you need to know about all SMART JavaScript APIs is that they are asynchronous: you won't get the meds as a result of the SMART.MEDICATIONS\_get() call. Instead, you need to specify callback functions that will be invoked when the results are ready:
-{% highlight html %}
+{% highlight javascript %}
 	SMART.MEDICATIONS_get().success(function(meds) {
 	  // do something with those meds
 	}).error(function(err) {
@@ -109,7 +109,7 @@ When data becomes available, the SMART framework invokes your callback function,
 
 The bottom line is a SMART medication list is an RDF graph that can be easily navigated and queried. For example, if
 meds is an RDF graph, then:
-{% highlight html %}
+{% highlight javascript %}
 meds.graph.where("?medication rdf:type sp:Medication")
 {% endhighlight  %}		
 selects all of "objects" in the graph that have a datatype sp:Medication, where sp stands for [http://smartplatforms.org/ns#](http://smartplatforms.org/ns#), the location of the SMART vocabulary.
