@@ -107,14 +107,14 @@ SPARQL is a query language for interacting with RDF graphs. The syntax is design
 ##A simple SPARQL query
 
 Given our breakfast graph above, let's write a query to find all the things I ate! Here's a first attempt (not quite perfect) 
-{% highlight javascript %}
+
 
 	PREFIX food: <http://joshuamandel.com/my_food_vocabulary/> 
 	SELECT ?f WHERE
 	{
 	  <http://joshuamandel.com/me> food:ate ?f.
 	} 
-{% endhighlight  %}
+
 
 
 A bit of syntax I've defined a prefix called "food" which I'll use to refer to my personal food vocabualry. This is just for readability; it lets me later write foodate instead of the more verbose [http://joshuamandel.com/my_food_vocabulary/ate](http://joshuamandel.com/my_food_vocabulary/ate).
@@ -123,7 +123,7 @@ Now here's what the query does: it looks for triples that match the pattern insi
 
 But this query has a problem it returns the blank node \_stuff\_I\_ate\_this\_morning -- and not the actual foods! Let's fix it by adding to our WHERE clause
 
-{% highlight javascript %}
+
 	PREFIX food: <http://joshuamandel.com/my_food_vocabulary/>
 	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 	SELECT ?individual_food WHERE
@@ -131,7 +131,7 @@ But this query has a problem it returns the blank node \_stuff\_I\_ate\_this\_mo
 	  <http://joshuamandel.com/me> food:ate ?bunch_of_food.
 	  ?bunch_of_food rdf:li ?individual_food.
 	} 
-{% endhighlight  %}
+
 
 Now our where clause includes two statements we're looking for individual foods that are items in the list of foods eaten by me. In other words, now we're drilling down into the bunch of food to pull out individual items! This returns a list of three bindings for the ?individual_food "coffee", "milk", and "Joe's O's".
 
