@@ -43,15 +43,15 @@ SMART employs (1), but implements a much simpler approach to (2), providing your
 ##Passing Tokens via URL Parameter
 
 The SMART container will pass all necessary fields to your app via the `oauth_header` URL parameter. Specifically, the actual request sent to your app's backend server for index.html looks like this: 	
-{% highlight html %}GET /index.html?oauth_header={Header value here...}
+{% highlight javascript %}GET /index.html?oauth_header={Header value here...}
 {% endhighlight  %}		
 
 You need to first extract that header from the GET parameter: 
-{% highlight html %}oauth_header = web.input().oauth_header
+{% highlight javascript %}oauth_header = web.input().oauth_header
 {% endhighlight  %}	
 
 You'll also to need to URL-decode it:
-{% highlight html %}oauth_header = urllib.unquote(oauth_header)
+{% highlight javascript %}oauth_header = urllib.unquote(oauth_header)
 {% endhighlight  %}	
 
 The field contains a complete OAuth Authorization header that includes a few extra fields, including notably smart\_record\_id, smart\_oauth\_token and smart\_oauth\_token\_secret. smart\_record\_id indicates the medical record ID of the current context, while the OAuth token and secret are the credentials your app needs to make REST API calls back into the SMART EMR. Why, then, are they themselves delivered in OAuth authorization header format? So you can verify that these tokens are authentic before you actually use them!
@@ -60,13 +60,13 @@ In other words, the SMART container is sending you credentials you can use to si
 
 Thankfully, you don't need to worry too much about the details, because we provide you with the utilities you need to extract the fields you need quickly and efficiently: 
 
-{% highlight html %}
+{% highlight javascript %}
 # parse it into a python dictionary
  oauth_params = oauth.parse_header(oauth_header)
 {% endhighlight  %}	
 
 Then get the specific parameters you need to sign your own API calls: 
-{% highlight html %}
+{% highlight javascript %}
  record_id = oauth_params['smart_record_id']
  resource_credentials = {'oauth_token':        oauth_params['smart_oauth_token'],
                          'oauth_token_secret': oauth_params['smart_oauth_token_secret']}
@@ -88,7 +88,7 @@ In the simple case, yes, but in more advanced cases, your backend server might s
 Read up on the SMART Python Library.
 
 Using those instructions, you can instantiate a SmartClient with the credentials obtained above:
-{% highlight html %}
+{% highlight javascript %}
  client = SmartClient('my-app@apps.smartplatforms.org',
                       {'api_base' : 'http://sandbox-api.smartplatforms.org'},
                       {'consumer_key' : 'my-app@apps.smartplatforms.org',
@@ -101,11 +101,11 @@ Since we're working against the SMART Reference EMR Sandbox, the APP_ID and cons
 #Obtaining SMART Health Data
 
 With our smart_client instance ready to go, loaded with the right credentials, we can start making API calls. Let's get the medication list:
-{% highlight html %}
+{% highlight javascript %}
     medications = smart_client.records_X_medications_GET(record_id = record_id)
 {% endhighlight  %}	
 Just like in the first SMART App we built, the result is an SMARTResponse object containing an RDF graph of data, which we can query for just the fields we want:
-
+{% highlight javascript %}
     query = """
         PREFIX dcterms:<http://purl.org/dc/terms/>
         PREFIX sp:<http://smartplatforms.org/terms#>
@@ -122,10 +122,10 @@ Just like in the first SMART App we built, the result is an SMARTResponse object
  
     med_names_and_cuis = medications.graph.query(query)
     meds = [{'name': med[0], 'rxcui': med[1]} for med in med_names_and_cuis]
-
+{% endhighlight  %}	
 
 So far, we're not doing anything novel compared to our SMART Connect App. Let's make use of this fully capable backend we have, and integrate this data with other information. We'll use [RxNav](http://rxnav.nlm.nih.gov/), the National Library of Medicine's resource for RxNorm. In particular, we'll pull out the ingredients for each medication:
-{% highlight html %}
+{% highlight javascript %}
     for med in meds:
       rxnav_info_xml = urllib.urlopen("http://rxnav.nlm.nih.gov/REST/rxcui/%s/related?rela=has_ingredient" % med['rxcui']).read()
       info = ElementTree.fromstring(rxnav_info_xml)
@@ -136,7 +136,7 @@ Most of that code above is to quickly parse the XML we get back from RxNav and o
 
 Now that we've combined the SMART record data with a third-party data source, we can just render our HTML:
 
-{% highlight html %}
+{% highlight javascript %}
     meds_html = "\n".join(["<li>%s<br /><small>ingredients: %s</small><br /><br /></li>" % (str(med['name']), ", ".join(med['ingredients'])) for med in meds])
 {% endhighlight  %}	
 
