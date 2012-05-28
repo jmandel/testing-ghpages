@@ -16,7 +16,7 @@ Each SMART app should provide a JSON manifest to declare itself to the container
 
 If you're building a straightforward SMART UI App, here's a template you can use for your manifest file. Just replace the all-caps placeholders with your own values.
 
-{% highlight html %}
+{% highlight javascript %}
 {
   "name" : "YOUR APP NAME",
   "description" : "BRIEF DESCRIPTION FOR IN-LINE DISPLAY",
@@ -53,7 +53,7 @@ perform some function automatically in the background. A sample app in this cate
 
 A UI App provides an index file and an icon. Optionally, the manifest file can declare the SMART container version and the API calls that the app needs. For example, the Med List manifest:
 
-{% highlight html %}
+{% highlight javascript %}
 {
   "name" : "Med List",
   "description" : "Display medications in a table or timeline view",
@@ -82,7 +82,7 @@ A UI App provides an index file and an icon. Optionally, the manifest file can d
 
 A background app needn't provide an icon or activities. For example, the Surescripts Connector provides the following manifest:
 
-{% highlight html %}
+{{% highlight javascript %}
 {
   "name" : "SMART Connector",
   "description" : "Keeps SMART updated from a SureScripts feed (long-term, runs in background)",
