@@ -30,7 +30,7 @@ Inside index.html, we invoke SMART.ready() with a callback function so we can be
 
 And now we can fetch some data from the patient record: 
 
-{% highlight html %}
+{% highlight javascript %}
 SMART.MEDICATIONS_get().success(function(meds) { ... });
 {% endhighlight  %}
 
@@ -38,7 +38,7 @@ As you may remember from the HOWTO, meds is a SMART Response object that include
 
 In this demo app, we use a very low-tech way to figure out of a medication is a station: find its dcterms:title, and string match against the names of all known statins. 
 
-{% highlight html %}
+{% highlight javascript %}
 var medlist = meds.graph
                      .where("?m rdf:type sp:Medication")
                      .where("?m sp:drugName ?n")
