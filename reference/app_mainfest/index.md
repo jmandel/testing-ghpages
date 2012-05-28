@@ -53,7 +53,7 @@ perform some function automatically in the background. A sample app in this cate
 
 A UI App provides an index file and an icon. Optionally, the manifest file can declare the SMART container version and the API calls that the app needs. For example, the Med List manifest:
 
-{% highlight javascript %}
+{% highlight javascripts %}
 {
   "name" : "Med List",
   "description" : "Display medications in a table or timeline view",
