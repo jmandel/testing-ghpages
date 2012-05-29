@@ -86,6 +86,7 @@ import org.openrdf.query.BindingSet;
 
 When you instantiate a new SMART Client object, you'll need to supply an OAuth comsumer token + secret, as well as the base URL for the SMART Container. A good approach is to define these parameters in your servlet's web.xml (with the consumer token and secret set to our pre-defined "My App" values)
 
+{% highlight xml %}
 
 	<?xml version="1.0" encoding="UTF-8"?>
 	<web-app xmlns="http://java.sun.com/xml/ns/javaee"
@@ -119,12 +120,12 @@ When you instantiate a new SMART Client object, you'll need to supply an OAuth c
 			<url-pattern>/*</url-pattern>
 		</servlet-mapping>
 	</web-app>
-
+{% endhighlight  %}
 
 
 Then, in your app's code you can say:
 
-{% highlight html %}
+{% highlight javascript %}
 SMArtClient client = new SMArtClient(
   sConfig.getInitParameter("consumerKey"),
   sConfig.getInitParameter("consumerSecret"),
@@ -135,13 +136,13 @@ SMArtClient client = new SMArtClient(
 
 In order to get data from a patient record, you'll need to obtain a record-based access token and secret. For background details about how an access token and secret are supplied to your app in the oauth_header URL parameter see HOWTO Build a SMART App - REST API Calls. If you're responding to a javax.servlet.doGet() method, you can use the following method to extract an access token and secret from the request
 
-{% highlight html %}
+{% highlight javascript %}
   SMArtOAuthParser authParams = new SMArtOAuthParser(req);
   TokenSecret tokenSecret = new TokenSecret(authParams);
 {% endhighlight  %}
 
 If you're not working with a javax.servlet request, you'll first need to your framework's built-in tools to pull out the name and value of the authorization header:
-{% highlight html %}
+{% highlight java %}
   psdueo-code:
     String hval  = FIND THE HTTP GET PARAMETER CALLED "oauth_header"
     SMArtOAuthParser authParams = new SMArtOAuthParser(hval);
@@ -151,7 +152,7 @@ If you're not working with a javax.servlet request, you'll first need to your fr
 ##Make a REST API call
 
 Now that you've instantiated a SMART client object and obtained access tokens, you're ready to make a REST call to the SMART container. For example, you can obtain a patient's medication list via:
-{% highlight html %}
+{% highlight javascript %}
 
 RepositoryConnection meds = (RepositoryConnection) client.records_X_medications_GET(recordId, tokenSecret, null);
   
@@ -169,6 +170,7 @@ We'll use the following SPARQL query to pull out data from the repositoryconnect
 
 ##Make a REST API call
 
+{% highlight javascript %}
 
 	String sparqlForReminders = "PREFIX dc:<http://purl.org/dc/elements/1.1/>\n" + 
 	"PREFIX dcterms:<http://purl.org/dc/terms/>\n" + 
@@ -184,10 +186,11 @@ We'll use the following SPARQL query to pull out data from the repositoryconnect
 	"  ?fill dc:date ?when.\n" + 
 	"}"
 
+{% endhighlight  %}
 
 To execute the query and iterate through results
 
-{% highlight html %}
+{% highlight javascript %}
 TupleQuery tq = meds.prepareTupleQuery(QueryLanguage.SPARQL, sparqlForReminders);
 TupleQueryResult tqr = tq.evaluate();
 
