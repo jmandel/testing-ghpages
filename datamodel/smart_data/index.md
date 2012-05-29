@@ -20,7 +20,7 @@ But you can count on the logical structure: the RDF triples asserted in the grap
 
 When you retrieve data from a SMART Container, you can use SPARQL queries to loop through results and extract relevant fields. For example, to obtain the title and LOINC code for each lab test in the patient record, you could do
 
-{% highlight html %}
+{% highlight javascript %}
 SELECT  ?lab ?labTitle ?loincCode 
 WHERE { 
   ?lab rdf:type sp:LabResult. 
@@ -33,7 +33,7 @@ WHERE {
 ##Build flexible queries to focus on the data you need
 
 The query above works pretty well, but it doesn't do much. Let's build on it! For example, say we want to pull out the "abnormal interpretation" flag for a lab result. We could augment our query as follows
-{% highlight html %}
+{% highlight javascript %}
 SELECT  ?lab ?labTitle ?loincCode ?abnormalInterpretation
 WHERE { 
   ?lab rdf:type sp:LabResult. 
@@ -46,7 +46,7 @@ WHERE {
 
 But now something funny happens: if some lab results are missing the "abnormal interpretation" flag, this SPARQL query won't find them! That's because we've build a rigid query that requires each field to be present. If we want to query in a more flexible way, we can use the OPTIONAL keyword
 
-{% highlight html %}
+{% highlight javascript %}
 SELECT  ?lab ?labTitle ?loincCode ?abnormalInterpretation
 WHERE { 
   ?lab rdf:type sp:LabResult. 
