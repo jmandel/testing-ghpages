@@ -41,7 +41,7 @@ The javascript SMART object contains some helpful context describing the current
 	
 So, for example, to announce the patient's name, you could
 
-{% highlight html %}
+{% highlight javascript %}
 alert("The current patient is: " + SMART.record.full_name);
 {% endhighlight  %}
 
@@ -66,7 +66,7 @@ A container will notify an app when important events occur. Today the SMART API 
 	
 Your app can use the "on" directive to take action when a notification arrives. For example
 
-{% highlight html %}
+{% highlight javascript %}
 SMART.on("foregrounded", function() {
   refreshAllData();
   alert("Thanks for looking again!");
@@ -77,7 +77,7 @@ SMART.on("foregrounded", function() {
 
 Your app can also send notifications to the container. Today the SMART API defines only a single App-to-Container notification, which allows an app to request additional screen real estate when there's something big to display
 
-{% highlight html %}
+{% highlight javascript %}
 SMART.notify_host("request_fullscreen");
 {% endhighlight  %}
 
@@ -104,7 +104,7 @@ You can also use the SMART javascript object to make [any API call](http://wiki.
 
 For example, we could retrieve all medications for the in-context record by calling
 
-{% highlight html %}
+{% highlight javascript %}
  SMART.api_call({ 
                    method: 'GET',
                    url: "/records/" + SMART.record.id + "/medications/",
@@ -162,7 +162,7 @@ GETs all problems from the in-context record </pre>
 
 #Pulling this together with a quick example...
 
-{% highlight html %}
+{% highlight javascript %}
 SMART.ready(function() {
   alert("Hello, " + SMART.user.full_name);
 });
