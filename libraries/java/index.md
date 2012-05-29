@@ -22,14 +22,14 @@ Please note that you will need Java >= 1.6.0_20 to build the SMART client librar
 
 To obtain source code you'll need git; to build the Java client library and fetch dependencies, you'll also need ant >1.7. For example on Ununtu, you can:
 
-{% highlight html %}
+{% highlight rubi %}
 sudo apt-get install git
 sudo apt-get install ant
 {% endhighlight  %}
 
 Then, grab the SMART Java client library from github:
 
-{% highlight html %}
+{% highlight rubi %}
 git clone https://github.com/chb/smart_client_java.git
 {% endhighlight  %}
 
