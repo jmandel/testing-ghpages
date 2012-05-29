@@ -37,7 +37,7 @@ The failure case is not handled in the code below, but a `.fail()` handler could
 
 ##The Code 
 
-
+{% highlight javascript %}
 	// note: code simplified
 	var get_demographics = function() {
 		  // create an instance of the jQuery Deferred object in the 
@@ -97,14 +97,14 @@ The failure case is not handled in the code below, but a `.fail()` handler could
 		  });
 	  });
 
-
+{% endhighlight  %}
 
 ##A Shorter Syntax 
 
 
 
 The get_demographics() and get_labs() functions above can also be written using a more compact (but equivalent) syntax
-{% highlight html %}
+{% highlight javascript %}
  var get_demographics = function() {
   // using the shorter $.Deferred(fn).promise() signature
   return $.Deferred(function(dfd){
