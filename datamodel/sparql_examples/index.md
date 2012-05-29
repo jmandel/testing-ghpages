@@ -34,7 +34,7 @@ Note the use of the "distinct" keyword: as in SQL, distinct will prune the list 
 
 With rdfquery, we can achieve a similar result
 
-{% highlight html %}
+{% highlight javascript %}
 SMART.MEDS_get().success(function(response) {
      var fill_dates = response.graph
                            .where("?m rdf:type sp:Medication")
@@ -44,7 +44,7 @@ SMART.MEDS_get().success(function(response) {
 {% endhighlight  %}
 
 
-
+{% highlight javascript %}
 	Find Medication Quantities + Frequencies
 	
 	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -64,13 +64,13 @@ SMART.MEDS_get().success(function(response) {
 	  ?f sp:value ?freq_val.
 	  ?f sp:unit ?freq_unit.
 	}
-
+{% endhighlight  %}
 
 Note the use of the "distinct" keyword: as in SQL, distinct will prune the list for duplicates. So if the two medications in the patient record have the same name, this query will collapse them into one result. 
 
 Find Medication Fulfillment Dates
 
-
+{% highlight javascript %}
 	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 	PREFIX sp: <http://smartplatforms.org/terms#>
 	PREFIX dcterms: <http://purl.org/dc/terms/>
@@ -83,11 +83,11 @@ Find Medication Fulfillment Dates
 	  ?m sp:fulfillment ?fill.
 	  ?f dcterms:date ?fill_date.
 	}
-
+{% endhighlight  %}
 
 With rdfquery, we can achieve a similar result
 
-{% highlight html %}
+{% highlight javascript %}
  SMART.MEDS_get().success(function(response) {
      var fill_dates = response.graph
                            .where("?m rdf:type sp:Medication")
@@ -101,7 +101,7 @@ With rdfquery, we can achieve a similar result
 
 Find Medications Fulfilled Since January 2009
 
-
+{% highlight javascript %}
 	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 	PREFIX sp: <http://smartplatforms.org/terms#>
 	PREFIX dcterms: <http://purl.org/dc/terms/>
@@ -116,10 +116,11 @@ Find Medications Fulfilled Since January 2009
 	  FILTER( xsd:dateTime(?fill_date) > "2009-01-01T00:00:00Z"^^xsd:dateTime )
 	} ORDER BY (?t)
 
+{% endhighlight  %}
 
 Again a similar result with rdfquery
 
-
+{% highlight javascript %}
 	SMART.MEDS_get().success(function(response) {
 		 var fill_dates = response.graph
 							   .where("?m rdf:type sp:Medication")
@@ -132,7 +133,7 @@ Again a similar result with rdfquery
 								});
 	   });
 	   
-
+{% endhighlight  %}
 
 ##Getting some Demographics
 
@@ -140,7 +141,7 @@ Here's a query that pulls out the first and last name from a patient's demograph
 
 ##Find Patient's Name
 
-
+{% highlight javascript %}
 	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 	PREFIX sp: <http://smartplatforms.org/terms#>
 	PREFIX dcterms: <http://purl.org/dc/terms/>
@@ -154,25 +155,25 @@ Here's a query that pulls out the first and last name from a patient's demograph
 	  ?d foaf:givenName ?fn.
 	  ?d foaf:familyName ?ln.
 	}
-
+{% endhighlight  %}
 
 With rdfquery, we can achieve a similar result: 
 
-
+{% highlight javascript %}
 	SMART.DEMOGRAPHICS_get().success(function(response) {
 		 var person = response.graph
 							   .where("?d rdf:type <http://xmlns.com/foaf/0.1/Person>")
 							   .where("?d <http://xmlns.com/foaf/0.1/givenName> ?fn")
 							   .where("?d <http://xmlns.com/foaf/0.1/familyName> ?ln");
 	  });
-
+{% endhighlight  %}
 
 ##Getting some Problems
 
 Here's a query that pulls out the name of each problem
 
 ##Find Patient's Problems
-
+{% highlight javascript %}
 	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 	PREFIX sp: <http://smartplatforms.org/terms#>
 	PREFIX dcterms: <http://purl.org/dc/terms/>
@@ -184,12 +185,12 @@ Here's a query that pulls out the name of each problem
 	 ?pr sp:problemName ?pn .
 	 ?pn dcterms:title ?p .
 	}
-
+{% endhighlight  %}
 
 
 With rdfquery, we can achieve a similar result
 
-{% highlight html %}
+{% highlight javascript %}
 SMART.PROBLEMS_get().success(function(response) {
      var person = response.graph
                            .where("?pr rdf:type sp:Prblem")
@@ -205,7 +206,7 @@ Here's a query that pulls out the name of each problem
 
 ##Finding Quantitative Labs
 
-
+{% highlight javascript %}
 	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 	PREFIX sp: <http://smartplatforms.org/terms#> 
@@ -239,5 +240,5 @@ Here's a query that pulls out the name of each problem
 	  OPTIONAL{?status dcterms:title ?status_title .} 
 	  OPTIONAL{?lr sp:abnormalInterpretation ?abnormalInterpretation.} 
 	  }
-
+{% endhighlight  %}
 
