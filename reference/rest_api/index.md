@@ -51,21 +51,23 @@ RDF Payload description
 
 Returns a JSON SMART UI app manifest for the app matching {descriptor}, or 404. Note that {descriptor} can be an app ID like "got-statins@apps.smartplatforms.org" or an intent string like "view_medications".
 
+{% highlight javascript %}
  GET /apps/{descriptor}/manifest
+{% endhighlight  %}
 
 Returns a JSON list of all SMART UI app manifests installed on the container.
-
+{% highlight javascript %}
  GET /apps/manifests/
- 
+{% endhighlight  %}
 ##Capabilities
 
 RDF Payload description
 
 Get capabilities for a container
 
-
+{% highlight javascript %}
  GET /capabilities/
-
+{% endhighlight  %}
 
 ##Demographics
 
@@ -73,29 +75,33 @@ RDF Payload description
 
 Get an RDF graph of sp:Demographics elements for all patients that match the query. Matching treats family_name and given_name as the *beginning* of a name. For instance given_name='J' matches /^J/i and thus matchs 'Josh'. Birthday is an ISO8601 string like "2008-03-21"; gender is "male" or "female". Gender, birthday, zipcode, and medical_record_number must match exactly.
 
-
+{% highlight javascript %}
  GET /records/search?given_name={given_name}&family_name={family_name}&zipcode={zipcode}&birthday={birthday}&gender={gender}&medical_record_number={medical_record_number}
-
+{% endhighlight  %}
 
 ##Ontology 
 
 RDF Payload description
 
 Get the ontology used by a SMART container
-
+{% highlight javascript %}
  GET /ontology
- 
+{% endhighlight  %}
 ##User
 
 RDF Payload description
 
 Get users by name (or all users if blank)
 
+{% highlight javascript %}
  GET /users/search?given_name={given_name}&family_name={family_name}
+{% endhighlight  %}
 
 Get a single user by internal ID
 
+{% highlight javascript %}
  GET /users/{user_id}
+{% endhighlight  %}
 
 #Record Calls
 
@@ -107,44 +113,49 @@ RDF Payload description
 RDF Payload description
 
 Get all allergies for a patient
-
+{% highlight javascript %}
  GET /records/{record_id}/allergies/
-
+{% endhighlight  %}
 Get allergies for a patient
-
+{% highlight javascript %}
  GET /records/{record_id}/allergies/{allergy_id}
-
+{% endhighlight  %}
 ##Demographics
 
 RDF Payload description
 
 Get all demographics for a patient
-
+{% highlight javascript %}
  GET /records/{record_id}/demographics
+{% endhighlight  %}
 
 ##Encounter
 
 RDF Payload description
 
 Get all encounters for a patient
-
+{% highlight javascript %}
  GET /records/{record_id}/encounters/
+{% endhighlight  %}
 
 Get encounters for a patient
-
+{% highlight javascript %}
  GET /records/{record_id}/encounters/{encounter_id}
-
+{% endhighlight  %}
 ##Fulfillment
 
 RDF Payload description
 
 Get all fulfillments for a patient
-
+{% highlight javascript %}
  GET /records/{record_id}/fulfillments/
+{% endhighlight  %}
 
 Get fulfillments for a patient
 
+{% highlight javascript %}
  GET /records/{record_id}/fulfillments/{fulfillment_id}
+{% endhighlight  %}
 
 ##Immunization
 
@@ -152,11 +163,15 @@ RDF Payload description
 
 Get all immunizations for a patient
 
+{% highlight javascript %}
  GET /records/{record_id}/immunizations/
+{% endhighlight  %}
 
 Get one immunization for a patient
 
+{% highlight javascript %}
  GET /records/{record_id}/immunizations/{immunization_id}
+{% endhighlight  %}
 
 ##Lab Result
 
@@ -164,11 +179,15 @@ RDF Payload description
 
 Get all lab results for a patient
 
+{% highlight javascript %}
  GET /records/{record_id}/lab_results/
+{% endhighlight  %}
 
 Get lab results for a patient
 
+{% highlight javascript %}
  GET /records/{record_id}/lab_results/{lab_result_id}
+{% endhighlight  %}
 
 ##Medical Record
 
@@ -179,11 +198,15 @@ RDF Payload description
 
 Get medication for a patient
 
+{% highlight javascript %}
  GET /records/{record_id}/medications/{medication_id}
+{% endhighlight  %}
 
 Get all medications for a patient
 
+{% highlight javascript %}
  GET /records/{record_id}/medications/
+{% endhighlight  %}
 
 ##Problem
 
@@ -191,11 +214,15 @@ RDF Payload description
 
 Get problems for a patient
 
+{% highlight javascript %}
  GET /records/{record_id}/problems/{problem_id}
+{% endhighlight  %}
 
 Get all problems for a patient
 
+{% highlight javascript %}
  GET /records/{record_id}/problems/
+{% endhighlight  %}
 
 ##User Preferences
 
@@ -203,7 +230,9 @@ RDF Payload description
 
 Get user preferences for an app
 
+{% highlight javascript %}
  GET /accounts/{user_id}/apps/{smart_app_id}/preferences
+{% endhighlight  %}
 
 ##VitalSigns
 
@@ -211,12 +240,15 @@ RDF Payload description
 
 Get all vital signs for a patient
 
+{% highlight javascript %}
  GET /records/{record_id}/vital_signs/
+{% endhighlight  %}
 
 Get vital signs for a patient
 
+{% highlight javascript %}
  GET /records/{record_id}/vital_signs/{vital_signs_id}
-
+{% endhighlight  %}
 
 
 
