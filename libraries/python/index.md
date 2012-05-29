@@ -27,7 +27,7 @@ You will notice generate_api.py and generate_readme.py inside the newly formed d
 
 Also, you'll need rdflib, a Pythonic RDF library
 
-{% highlight html %}
+{% highlight python %}
 sudo apt-get install python-pyparsing
 sudo easy_install -U "rdflib>=3.0.0"
 sudo easy_install rdfextras
@@ -40,13 +40,13 @@ You need to make sure that smart_client_python (which you can rename without any
 ##Import the Right Modules
 
 For starters, you'll need the main module
-{% highlight html %}
+{% highlight python %}
 from smart_client_python import smart
 {% endhighlight  %}
 
 You will probably also need the oauth and util modules
 
-{% highlight html %}
+{% highlight python %}
 from smart_client_python import oauth
 from smart_client_python.common import util as smart_util
 {% endhighlight  %}
@@ -61,10 +61,12 @@ To make a SMART REST API call, you'll need to instantiate a SMART client object,
 
 You'll need to instantiate a SMART client object:
 
+{% highlight python %}
 client = SmartClient(APP_ID, 
                      SMART_SERVER_PARAMS, 
                      SMART_SERVER_OAUTH, 
                      resource_tokens)
+{% endhighlight  %}
 
 In this call
 
@@ -72,13 +74,17 @@ In this call
 
 * SMART_SERVER_PARAMS: a Python dictionary containing at least api_base, the URL base to which SMART API REST calls are made, e.g.: 
 
+{% highlight python %}
  SMART_SERVER_PARAMS = {'api_base' : 'http://sandbox-api.smartplatforms.org'}
 
     SMART_SERVER_OAUTH: a Python dictionary containing the OAuth consumer credentials: 
+{% endhighlight  %}
 
 * SMART_SERVER_OAUTH = {'consumer_key' : 'smartapp123', 'consumer_secret' : 'X1Y2Z3...'}
 
+{% highlight python %}
     resource_tokens: a Python dictionary containing the OAuth resource credentials: 
+{% endhighlight  %}
 
 * resource_tokens = {'oauth_token' : 'tok456', 'oauth_token_secret' : 'A7B4Z1...'}
 
@@ -89,15 +95,16 @@ Once instantiated, a SMART client object can be used for as many API calls as ne
 
 The SmartClient object contains a little bit of additional context: the record_id. This can be set like any normal Python attribute
 
+{% highlight python %}
 client.record_id = '157'
-
+{% endhighlight  %}
 If you do not set up this context, you will have to provide the record_id parameter on every API call.
 
 ##Where do I get tokens and context?
 
 The consumer key and secret are defined once for your app when it is set up within the SMART Container. If you're developing against the SMART Reference EMR Sandbox, you'll want to use
 
-{% highlight html %}
+{% highlight python %}
 {'consumer_key': 'my-app@apps.smartplatforms.org', 'consumer_secret': 'smartapp-secret'}
 {% endhighlight  %}
 
@@ -107,19 +114,19 @@ To get the resource token and patient-record context, you need to understand how
 
 To get, say, the list of medications on a record, you can simply make the following cal
 
-{% highlight html %}
+{% highlight python %}
 medications = client.records_X_medications_GET()
 {% endhighlight  %}
 
 Notice that the method signature follows the REST API signature
 
-{% highlight html %}
+{% highlight python %}
 GET /records/{record_id}/medications/
 {% endhighlight  %}
 
 with the HTTP method appended at the end. The X's in the method signature are markers for expected parameters. record_id is automatically pulled from the SmartClient context, or it can be provided as a parameter
 
-{% highlight html %}
+{% highlight python %}
 medications = client.records_X_medications_GET(record_id = '456')
 {% endhighlight  %}
 
@@ -128,7 +135,7 @@ medications = client.records_X_medications_GET(record_id = '456')
 The results of a SMART API call using the client library is an SMARTResponse object containing the RDF graph. For more on RDF graphs, please read our Quick Intro to RDF and SPARQL. At a high-level, the result is a dataset that can be manipulated and queried in a very flexible manner. You can use rdflib to do just that:
 
 For example, if we want the list of medication names
-
+{% highlight javascript %}
 	query = """
 			 PREFIX dcterms:<http://purl.org/dc/terms/>
 			 PREFIX sp:<http://smartplatforms.org/terms#>
@@ -144,12 +151,13 @@ For example, if we want the list of medication names
 
  
 med_names = medications.graph.query(query)
+{% endhighlight  %}
 
 #API Reference
 
 All REST API calls can be used by the SMART client library simply by mapping the REST URL signature to a Python method signature as described above for the medications use case. Check out our [REST API Reference](http://wiki.chip.org/smart-project/index.php/Developers_Documentation:_REST_API_Reference). You can also use
 
-{% highlight html %}
+{% highlight python %}
 python generate_readme.py
 {% endhighlight  %}
 
