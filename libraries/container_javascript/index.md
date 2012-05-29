@@ -47,7 +47,7 @@ If your existing JavaScript codebase employs the '$' variable and you don't want
 
 smart-api-container attempts to handle the generic messaging and data routing that SMART Connect apps require. To get things started, first instantiate a SMART\_CONNECT\_HOST object. By convention, we'll call it SMART\_HOST
 
-{% highlight html %}
+{% highlight javascript %}
    	var SMART_HOST = new SMART_CONNECT_HOST();
 {% endhighlight  %}
 
@@ -86,17 +86,17 @@ handle_api is called whenever an already-running app needs to make a API call wi
 
 <b>Callback on success with</b>
 
-{% highlight html %}
+{% highlight javascript %}
     callback_success({'contentType': string, data: string}) 
 {% endhighlight  %}
 
 <b>Callback on error with:</b>
 
-{% highlight html %}
+{% highlight javascript %}
     callback_error(http_status, {'contentType': string, data: string}) 
 {% endhighlight  %}
 
-{% highlight html %}
+{% highlight javascript %}
 Note: your SMART Container may override additional functions if needed. Four functions are provided as hooks for this purpose: SMART_HOST.on_app_launch_begin, SMART_HOST.on_app_launch_complete, SMART_HOST.on_app_launch_delegated_begin, SMART_HOST.on_app_launch_delegated_complete. The framework calls these functions at the beginning and end of launch (and delegated launch) operations
 {% endhighlight  %}
 
@@ -104,7 +104,7 @@ Note: your SMART Container may override additional functions if needed. Four fun
 
 Your Container should provide some way for a user to trigger the launch of an app, for instance by clicking on the app's icon in a sidebar. When this occurs, you'll need to notify the SMART\_CONNECT\_HOST that an app launch has been requested. This will instigate the app launch process, beginning with the creation of an app\_instance with a unique ID. The SMART\_CONNECT\_HOST uses app\_instance objects to keep track of the currently-running apps.
 
-{% highlight html %}
+{% highlight javascript %}
 SMART_HOST.launch_app(manifest, context, options); Inputs:
 
     SMART Manifest JSON (see below)
@@ -116,7 +116,7 @@ SMART_HOST.launch_app(manifest, context, options); Inputs:
 
 Apps that you've launch may send notifications and requests. For example, an app that desires more screen real estate may sent a "request\_fullscreen" notification. To subscribe to a notification, call SMART\_HOST.on as in the example below
 
-{% highlight html %}
+{% highlight javascript %}
 SMART_HOST.on("request_fullscreen", function(app_instance) {
    $(app_instance.iframe)
       .css({
@@ -150,7 +150,7 @@ This will close all currently-running apps -- so apps never have to deal with a 
 
 You may want your container to automatically launch new apps after the record context changes . In this case, you can trigger the appropriate logic by defining a handle\_context\_changed function:
 
-{% highlight html %}
+{% highlight javascript %}
 
 SMART_HOST.handle_context_changed = function(){
    // your code here
@@ -160,9 +160,10 @@ SMART_HOST.handle_context_changed = function(){
 ##Understanding App Instance, Manifest, and API Call JavaScript objects
 
 ##App Instance Object
-{% highlight html %}
+{% highlight javascript %}
 
 The SMART_CONNECT_HOST interface uses plain-old JavaScript objects to represent app instances as follows:
+
 
 {
   uuid: "string",  // unique ID for this instance of the app (new with each launch.)
@@ -196,7 +197,7 @@ The SMART_CONNECT_HOST interface uses plain-old JavaScript objects to represent 
 
 To support REST apps, your SMART Container should generate OAuth tokens each time an app launches. The OAuth tokens are provided to the app as part of a credentials JavaScript object, which is automatically incorporated into the app_instance object. The credentials object includes
 
-{% highlight html %}
+{% highlight javascript %}
 
 {
    api_base: "string", // Base URL for the container's SMART API
@@ -208,7 +209,7 @@ To support REST apps, your SMART Container should generate OAuth tokens each tim
 
 The oauth\_header field is particularly important, since it's sent to the app automatically, for a one-step way for the app to obtain access to the in-context record. The oauth_header is a string representing a well-formed OAuth header, which means that it must supply
 
-{% highlight html %}
+{% highlight javascript %}
 
     oauth_nonce: a one-time value that will not be sent again to this app
     oauth_timestamp: current UNIX epoch time
@@ -220,7 +221,7 @@ The oauth\_header field is particularly important, since it's sent to the app au
 
 The following SMART-specific fields are also required, to provide the launching app with necessary context
 
-{% highlight html %}
+{% highlight javascript %}
     smart_app_id: the ID of the app being launched (usually the same as the app's OAuth consumer key)
     smart_record_id: the ID of the patient record on which the app is being launched (should match context.record.id)
     smart_user_id: the ID of the user launching the app (should match context.user.id)
@@ -231,7 +232,7 @@ The following SMART-specific fields are also required, to provide the launching 
 
 Here's an example of a fully-formed oauth_header, with line breaks inserted for clarity:
 
-{% highlight html %}
+{% highlight javascript %}
 'oauth_header' : 'OAuth realm="", 
 smart_record_id="1768562",
 smart_app_id="problem-list%40apps.smartplatforms.org", 
@@ -251,7 +252,7 @@ oauth_consumer_key="problem-list%40apps.smartplatforms.org"'
 
 When an app makes an API Call, your handler function will be invoked with an argument that looks like
 
-{% highlight html %}
+{% highlight javascript %}
 
 {
  type:  "string", // HTTP method (e.g. "GET")
@@ -265,7 +266,7 @@ You can use this object to determine how to respond appropriately.
 ##SMART Manifest Object
 
 You'll provide the SMART\_CONNECT\_HOST with details about an app to launch by passing a JavaScript manifest object that looks like the one below. For more details, see App Manifest Documentation.
-{% highlight html %}
+{% highlight javascript %}
 {
   "name" : "Med List",
   "description" : "Display medications in a table or timeline view",
