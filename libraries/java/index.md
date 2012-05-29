@@ -69,7 +69,7 @@ For a complete example, please see src/org/smartplatforms/client/tests/Reminder.
 ##Import the SMART Java Client + Dependencies
 
 The two major components you'll need to import are the SMART client libraries and the openrdf RDF parsing/querying package:
-{% highlight html %}
+{% highlight java %}
 import org.smartplatforms.client.SMArtClient;
 import org.smartplatforms.client.SMArtClientException;
 import org.smartplatforms.client.SMArtOAuthParser;
